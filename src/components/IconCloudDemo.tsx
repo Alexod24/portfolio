@@ -36,7 +36,7 @@ export function IconCloudDemo() {
     (slug) => `https://cdn.simpleicons.org/${slug}/${slug}`
   )
   return (
-    <div className="relative flex size-full items-center justify-center overflow-hidden">
+    <div className="relative flex  items-center justify-center overflow-hidden">
       <IconCloud images={images} />
     </div>
   )
