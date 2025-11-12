@@ -8,8 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
-import { IconCloudDemo } from "@/components/IconCloudDemo"
-
+import { IconCloudDemo } from "@/components/IconCloudDemo";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -17,29 +16,29 @@ export default function Page() {
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
       <section id="hero">
-        <div className="mx-auto w-full max-w-5xl px-6 py-12">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+        <div className="mx-auto w-full max-w-2xl space-y-8">
+          <div className="gap-2 flex justify-between">
             <div className="flex-col flex flex-1 space-y-1.5">
               <BlurFadeText
                 delay={BLUR_FADE_DELAY}
-                className="text-3xl font-bold tracking-tighter sm:text-2xl xl:text-1xl/none"
+                className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
                 yOffset={8}
-                text={`Hola, soy ${DATA.name.split(" ")[0]}`}
+                text={`Hola, soy ${DATA.name.split(" ")[0]} 👋`}
               />
+
               <BlurFadeText
-                className="max-w-[600px] md:text-1xl"
+                className="max-w-[600px] md:text-xl"
                 delay={BLUR_FADE_DELAY}
                 text={DATA.description}
               />
             </div>
-            <BlurFade delay={BLUR_FADE_DELAY}>
-              {/* <Avatar className="size-28 border">
+
+            {/* <BlurFade delay={BLUR_FADE_DELAY}>
+              <Avatar className="size-28 border">
                 <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
                 <AvatarFallback>{DATA.initials}</AvatarFallback>
-              </Avatar> */}
-
-              <IconCloudDemo></IconCloudDemo>
-            </BlurFade>
+              </Avatar>
+            </BlurFade> */}
           </div>
         </div>
       </section>
@@ -56,7 +55,7 @@ export default function Page() {
       <section id="work">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
-            <h2 className="text-xl font-bold">Work Experience</h2>
+            <h2 className="text-xl font-bold">Experiencia laboral</h2>
           </BlurFade>
           {DATA.work.map((work, id) => (
             <BlurFade
