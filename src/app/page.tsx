@@ -18,7 +18,7 @@ export default function Page() {
   const { data } = useResume();
 
   return (
-    <main className="flex flex-col min-h-[100dvh] space-y-10">
+    <main className="flex flex-col min-h-[100dvh] space-y-24">
       <section id="hero">
         <div className="w-full space-y-8">
           <div className="gap-2 flex justify-between">
@@ -59,7 +59,7 @@ export default function Page() {
       <section id="work">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
-            <h2 className="text-xl font-bold">Experiencia laboral</h2>
+            <h2 className="text-2xl font-bold tracking-tighter">Experiencia laboral</h2>
           </BlurFade>
           {data.work.map((work, id) => (
             <BlurFade

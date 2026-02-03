@@ -60,7 +60,13 @@
       --destructive: 0 62.8% 30.6%;
       --destructive-foreground: 0 0% 98%;
 
-      --border: 0 0% 14.9%;
+      --border: 0 0% 14.9%; /* Retaining original hex but will use opacity in usage or adjust here if needed.
+                              Better approach for "subtle" is modifying usage or this variable.
+                              Let's try a slightly darker/more subtle border for dark mode if possible,
+                              or rely on opacity utils.
+                              Actually, standard shadcn border is fine, but user wants "softer".
+                              Let's use a lower contrast border color for dark mode. */
+      --border: 0 0% 20%; /* Slightly lighter than background but subtle */
       --input: 0 0% 14.9%;
       --ring: 0 0% 83.1%;
     }

@@ -74,15 +74,14 @@ export const DATA_EN = {
     {
       company: "La Base Cowork",
       badges: [],
-      href: "https://shopify.com",
-      location: "Remote",
-      title: "Software Engineer",
-      logoUrl:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmltCbeB-oyIL7sEe6veiY6klrX5z-ln46jQ&s",
+      href: "https://labase.pe",
+      location: "Huancayo, Perú",
+      title: "Full Stack Developer",
+      logoUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmltCbeB-oyIL7sEe6veiY6klrX5z-ln46jQ&s",
       start: "Mar 2024",
       end: "Jul 2025",
       description:
-        "Implemented a custom Kubernetes controller in Go to automate the deployment of MySQL and ProxySQL custom resources in order to enable 2,000+ internal developers to instantly deploy their app databases to production. Wrote several scripts in Go to automate MySQL database failovers while maintaining master-slave replication topologies and keeping Zookeeper nodes consistent with changes.",
+        "Colaboré en el desarrollo Full Stack de plataformas web y herramientas de gestión interna utilizando tecnologías como Next.js, TypeScript y Supabase. Participé en la implementación de soluciones digitales para optimizar procesos del coworking y apoyé en la construcción de MVPs para diversas startups incubadas en el ecosistema.",
     },
     {
       company: "TID",
