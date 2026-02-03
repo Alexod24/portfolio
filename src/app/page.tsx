@@ -18,53 +18,41 @@ export default function Page() {
   const { data } = useResume();
 
   return (
-    <main className="flex flex-col min-h-[100dvh] space-y-24">
-      <section id="hero">
-        <div className="w-full space-y-8">
-          <div className="gap-2 flex justify-between">
-            <div className="flex-col flex flex-1 space-y-1.5">
+    <main className="flex flex-col min-h-[100dvh] space-y-12">
+      <section id="hero" className="min-h-screen flex items-center justify-start py-12 pb-52">
+        <div className="w-full space-y-8 text-left max-w-3xl">
+          <div className="flex flex-col items-start gap-8">
+
+
+
+            <div className="flex flex-col space-y-4">
               <BlurFadeText
                 delay={BLUR_FADE_DELAY}
                 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
                 yOffset={8}
-                text={`Hola, soy ${data.name.split(" ")[0]} 👋`}
+                text={data.description}
               />
 
               <BlurFadeText
-                className="max-w-[600px] md:text-xl"
+                className="max-w-[700px] md:text-lg text-muted-foreground text-left"
                 delay={BLUR_FADE_DELAY}
-                text={data.description}
+                text={data.summary}
               />
             </div>
-
-            {/* <BlurFade delay={BLUR_FADE_DELAY}>
-              <Avatar className="size-28 border">
-                <AvatarImage alt={data.name} src={data.avatarUrl} />
-                <AvatarFallback>{data.initials}</AvatarFallback>
-              </Avatar>
-            </BlurFade> */}
           </div>
         </div>
       </section>
-      <section id="about">
-        <BlurFade delay={BLUR_FADE_DELAY * 3}>
-          <h2 className="text-xl font-bold">About</h2>
-        </BlurFade>
-        <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
-            {data.summary}
-          </Markdown>
-        </BlurFade>
-      </section>
+      {/* About section moved to Hero */}
       <section id="work">
         <div className="flex min-h-0 flex-col gap-y-3">
-          <BlurFade delay={BLUR_FADE_DELAY * 5}>
+          <BlurFade delay={BLUR_FADE_DELAY} inView>
             <h2 className="text-2xl font-bold tracking-tighter">Experiencia laboral</h2>
           </BlurFade>
           {data.work.map((work, id) => (
             <BlurFade
               key={work.company}
-              delay={BLUR_FADE_DELAY * 6 + id * 0.05}
+              delay={BLUR_FADE_DELAY * 2 + id * 0.05}
+              inView
             >
               <ResumeCard
                 key={work.company}
@@ -83,35 +71,38 @@ export default function Page() {
       </section>
       <section id="education">
         <div className="flex min-h-0 flex-col gap-y-3">
-          <BlurFade delay={BLUR_FADE_DELAY * 7}>
+          <BlurFade delay={BLUR_FADE_DELAY} inView>
             <h2 className="text-xl font-bold">Education</h2>
           </BlurFade>
           {data.education.map((education, id) => (
             <BlurFade
               key={education.school}
-              delay={BLUR_FADE_DELAY * 8 + id * 0.05}
+              delay={BLUR_FADE_DELAY * 2 + id * 0.05}
+              inView
             >
-              <ResumeCard
-                key={education.school}
-                href={education.href}
-                logoUrl={education.logoUrl}
-                altText={education.school}
-                title={education.school}
-                subtitle={education.degree}
-                period={`${education.start} - ${education.end}`}
-              />
+              <Link href={education.slug ? `/education/${education.slug}` : "#"}>
+                <ResumeCard
+                  key={education.school}
+                  href={education.href}
+                  logoUrl={education.logoUrl}
+                  altText={education.school}
+                  title={education.school}
+                  subtitle={education.degree}
+                  period={`${education.start} - ${education.end}`}
+                />
+              </Link>
             </BlurFade>
           ))}
         </div>
       </section>
       <section id="skills">
         <div className="flex min-h-0 flex-col gap-y-3">
-          <BlurFade delay={BLUR_FADE_DELAY * 9}>
+          <BlurFade delay={BLUR_FADE_DELAY} inView>
             <h2 className="text-xl font-bold">Habilidades</h2>
           </BlurFade>
           <div className="flex flex-wrap gap-1">
             {data.skills.map((skill, id) => (
-              <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
+              <BlurFade key={skill} delay={BLUR_FADE_DELAY * 2 + id * 0.05} inView>
                 <Badge key={skill}>{skill}</Badge>
               </BlurFade>
             ))}
@@ -120,7 +111,7 @@ export default function Page() {
       </section>
       <section id="projects">
         <div className="space-y-12 w-full py-12">
-          <BlurFade delay={BLUR_FADE_DELAY * 11}>
+          <BlurFade delay={BLUR_FADE_DELAY} inView>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
@@ -141,7 +132,8 @@ export default function Page() {
             {data.projects.map((project, id) => (
               <BlurFade
                 key={project.title}
-                delay={BLUR_FADE_DELAY * 12 + id * 0.05}
+                delay={BLUR_FADE_DELAY * 2 + id * 0.05}
+                inView
               >
                 <ProjectCard
                   href={project.href}
@@ -159,34 +151,30 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section id="hackathons">
+      <section id="certifications">
         <div className="space-y-12 w-full py-12">
-          <BlurFade delay={BLUR_FADE_DELAY * 13}>
+          <BlurFade delay={BLUR_FADE_DELAY} inView>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                  Hackathons
+                  Certificaciones
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  I like building things
+                  Logros y Aprendizaje
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  During my time in university, I attended{" "}
-                  {data.hackathons.length}+ hackathons. People from around the
-                  country would come together and build incredible things in 2-3
-                  days. It was eye-opening to see the endless possibilities
-                  brought to life by a group of motivated and passionate
-                  individuals.
+                  El aprendizaje continuo es clave. Aquí algunas de las certificaciones y reconocimientos que he obtenido en mi camino.
                 </p>
               </div>
             </div>
           </BlurFade>
-          <BlurFade delay={BLUR_FADE_DELAY * 14}>
+          <BlurFade delay={BLUR_FADE_DELAY * 2} inView>
             <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
               {data.hackathons.map((project, id) => (
                 <BlurFade
                   key={project.title + project.dates}
-                  delay={BLUR_FADE_DELAY * 15 + id * 0.05}
+                  delay={BLUR_FADE_DELAY * 3 + id * 0.05}
+                  inView
                 >
                   <HackathonCard
                     title={project.title}
@@ -204,7 +192,7 @@ export default function Page() {
       </section>
       <section id="contact">
         <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
-          <BlurFade delay={BLUR_FADE_DELAY * 16}>
+          <BlurFade delay={BLUR_FADE_DELAY} inView>
             <div className="space-y-3">
               <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
                 Contact

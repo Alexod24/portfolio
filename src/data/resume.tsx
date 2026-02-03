@@ -72,6 +72,18 @@ export const DATA_EN = {
 
   work: [
     {
+      company: "ArxaTEC",
+      badges: [],
+      href: "https://labase.pe",
+      location: "Huancayo, Perú",
+      title: "Full Stack Developer",
+      logoUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmltCbeB-oyIL7sEe6veiY6klrX5z-ln46jQ&s",
+      start: "Mar 2024",
+      end: "Jul 2025",
+      description:
+        "Colaboré en el desarrollo Full Stack de plataformas web y herramientas de gestión interna utilizando tecnologías como Next.js, TypeScript y Supabase. Participé en la implementación de soluciones digitales para optimizar procesos del coworking y apoyé en la construcción de MVPs para diversas startups incubadas en el ecosistema.",
+    },
+    {
       company: "La Base Cowork",
       badges: [],
       href: "https://labase.pe",
@@ -108,12 +120,58 @@ export const DATA_EN = {
     },
     {
       school: "Platzi",
-      href: "https://uwaterloo.ca",
+      href: "https://platzi.com/p/AlexCode/",
       degree:
         "Programación, desarrollo web, marketing, Inglés y habilidades digitales",
       logoUrl: "/platzi.png",
       start: "2024",
       end: "2025",
+      slug: "platzi",
+      banner: "/education/platzi.png",
+      courses: [
+        {
+          title: "Curso de Programación Básica",
+          date: "2023",
+          description: "Fundamentos de lógica de programación, algoritmos y estructuras de datos básicos.",
+          image: "/education/platzi/programacion-basica.png",
+          content: "",
+        },
+        {
+          title: "Curso Definitivo de HTML y CSS",
+          date: "2023",
+          description: "Maquetación web profesional, semántica, SEO y diseño responsivo.",
+          image: "/education/platzi/html-css.png",
+          content: "",
+        },
+        {
+          title: "Curso Básico de JavaScript",
+          date: "2023",
+          description: "Fundamentos del lenguaje, variables, funciones, arrays y manipulación del DOM.",
+          image: "/education/platzi/js.png",
+          content: "",
+        },
+        {
+          title: "English for Developers: Basic",
+          date: "2023",
+          description: "Vocabulario técnico y habilidades de comunicación en inglés para entornos de desarrollo.",
+          image: "/education/platzi/basic-english.png",
+          content: "",
+        },
+        {
+          title: "Curso de SQL y MySQL",
+          date: "2024",
+          description: "Gestión de bases de datos relacionales, consultas complejas y diseño de esquemas.",
+          image: "/education/platzi/sql-mysql.png",
+          content: "",
+        },
+        {
+          title: "Curso de Fundamentos de Python con Pandas y NumPy",
+          date: "2024",
+          description: "Análisis de datos, manipulación de arrays y estructuras de datos para ciencia de datos.",
+          image: "/education/platzi/pandas-numpy.png",
+          content: "",
+        }
+      ],
     },
 
     {
@@ -691,9 +749,9 @@ export const DATA_EN = {
 export const DATA_ES = {
   ...DATA_EN,
   description:
-    "Ingeniero de software. Emprendedor. Apasionado por convertir ideas en realidad.",
+    "Desarrollador Full Stack, Freelancer y Apasionado por la Tecnología.",
   summary:
-    "A finales de 2022, dejé mi trabajo como ingeniero de software para dedicarme a tiempo completo a crear y escalar mis propios negocios SaaS. En el pasado, obtuve una doble titulación en informática y negocios, hice prácticas en grandes empresas tecnológicas de Silicon Valley y competí en más de 21 hackatones por diversión.",
+    "Soy Alex, estudiante de Ingeniería de Sistemas en la Universidad Continental. Me dedico a crear aplicaciones web modernas con Next.js, TailwindCSS y Supabase. Apasionado por la productividad, la innovación y el desarrollo personal.",
   navbar: [
     { href: "/", icon: HomeIcon, label: "Inicio" },
     { href: "/blog", icon: NotebookIcon, label: "Blog" },
