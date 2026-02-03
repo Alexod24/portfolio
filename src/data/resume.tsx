@@ -1,14 +1,14 @@
 import { Icons } from "@/components/icons";
 import { HomeIcon, NotebookIcon } from "lucide-react";
 
-export const DATA = {
+export const DATA_EN = {
   name: "Alex",
   initials: "DV",
   url: "https://dillion.io",
   location: "San Francisco, CA",
   locationLink: "https://www.google.com/maps/place/sanfrancisco",
   description:
-    "Ingeniero de software. Emprendedor. Apasionado por convertir ideas en realidad.",
+    "Software Engineer. Entrepreneur. Passionate about turning ideas into reality.",
   summary:
     "At the end of 2022, I quit my job as a software engineer to go fulltime into building and scaling my own SaaS businesses. In the past, [I pursued a double degree in computer science and business](/#education), [interned at big tech companies in Silicon Valley](https://www.youtube.com/watch?v=d-LJ2e5qKdE), and [competed in over 21 hackathons for fun](/#hackathons). I also had the pleasure of being a part of the first ever in-person cohort of buildspace called [buildspace sf1](https://buildspace.so/sf1).",
   avatarUrl: "/me.png",
@@ -96,55 +96,6 @@ export const DATA = {
       description:
         "Implemented the Bitcoin discreet log contract (DLC) protocol specifications as an open source Typescript SDK. Dockerized all microservices and setup production kubernetes cluster. Architected a data lake using AWS S3 and Athena for historical backtesting of bitcoin trading strategies. Built a mobile app using react native and typescript.",
     },
-
-    // {
-    //   company: "Nvidia",
-    //   href: "https://nvidia.com/",
-    //   badges: [],
-    //   location: "Santa Clara, CA",
-    //   title: "Software Engineer",
-    //   logoUrl: "/nvidia.png",
-    //   start: "January 2020",
-    //   end: "April 2020",
-    //   description:
-    //     "Architected and wrote the entire MVP of the GeForce Now Cloud Gaming internal admin and A/B testing dashboard using React, Redux, TypeScript, and Python.",
-    // },
-    // {
-    //   company: "Splunk",
-    //   href: "https://splunk.com",
-    //   badges: [],
-    //   location: "San Jose, CA",
-    //   title: "Software Engineer",
-    //   logoUrl: "/splunk.svg",
-    //   start: "January 2019",
-    //   end: "April 2019",
-    //   description:
-    //     "Co-developed a prototype iOS app with another intern in Swift for the new Splunk Phantom security orchestration product (later publicly demoed and launched at .conf annual conference in Las Vegas). Implemented a realtime service for the iOS app in Django (Python) and C++; serialized data using protobufs transmitted over gRPC resulting in an approximate 500% increase in data throughput.",
-    // },
-    // {
-    //   company: "Lime",
-    //   href: "https://li.me/",
-    //   badges: [],
-    //   location: "San Francisco, CA",
-    //   title: "Software Engineer",
-    //   logoUrl: "/lime.svg",
-    //   start: "January 2018",
-    //   end: "April 2018",
-    //   description:
-    //     "Proposed and implemented an internal ruby API for sending/receiving commands to scooters over LTE networks. Developed a fully automated bike firmware update system to handle asynchronous firmware updates of over 100,000+ scooters worldwide, and provide progress reports in real-time using React, Ruby on Rails, PostgreSQL and AWS EC2 saving hundreds of developer hours.",
-    // },
-    // {
-    //   company: "Mitre Media",
-    //   href: "https://mitremedia.com/",
-    //   badges: [],
-    //   location: "Toronto, ON",
-    //   title: "Software Engineer",
-    //   logoUrl: "/mitremedia.png",
-    //   start: "May 2017",
-    //   end: "August 2017",
-    //   description:
-    //     "Designed and implemented a robust password encryption and browser cookie storage system in Ruby on Rails. Leveraged the Yahoo finance API to develop the dividend.com equity screener",
-    // },
   ],
   education: [
     {
@@ -718,6 +669,49 @@ export const DATA = {
           href: "https://github.com/UWPortalSDK/crowmark",
         },
       ],
+    },
+  ],
+} as const;
+
+export const DATA_ES = {
+  ...DATA_EN,
+  description:
+    "Ingeniero de software. Emprendedor. Apasionado por convertir ideas en realidad.",
+  summary:
+    "A finales de 2022, dejé mi trabajo como ingeniero de software para dedicarme a tiempo completo a crear y escalar mis propios negocios SaaS. En el pasado, obtuve una doble titulación en informática y negocios, hice prácticas en grandes empresas tecnológicas de Silicon Valley y competí en más de 21 hackatones por diversión.",
+  navbar: [
+    { href: "/", icon: HomeIcon, label: "Inicio" },
+    { href: "/blog", icon: NotebookIcon, label: "Blog" },
+  ],
+  education: DATA_EN.education.map((edu) => ({
+    ...edu,
+    degree: edu.degree,
+  })),
+  work: [
+    {
+      company: "La Base Cowork",
+      badges: [],
+      href: "https://shopify.com",
+      location: "Remoto",
+      title: "Ingeniero de Software",
+      logoUrl:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmltCbeB-oyIL7sEe6veiY6klrX5z-ln46jQ&s",
+      start: "Mar 2024",
+      end: "Jul 2025",
+      description:
+        "Implementé un controlador de Kubernetes personalizado en Go para automatizar el despliegue de recursos personalizados de MySQL y ProxySQL con el fin de permitir que más de 2.000 desarrolladores internos desplieguen instantáneamente sus bases de datos de aplicaciones en producción.",
+    },
+    {
+      company: "TID",
+      href: "https://atomic.finance",
+      badges: [],
+      location: "Híbrido",
+      title: "Ingeniero de Software",
+      logoUrl: "https://tid.com.pe/assets/img/logos/logo_tid_SF.png",
+      start: "Dic 2023",
+      end: "Abr 2024",
+      description:
+        "Implementé las especificaciones del protocolo Bitcoin discreet log contract (DLC) como un SDK de Typescript de código abierto. Dockericé todos los microservicios y configuré el clúster de kubernetes de producción.",
     },
   ],
 } as const;
