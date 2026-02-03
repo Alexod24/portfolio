@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { useResume } from "@/components/language-provider";
+import { Icons } from "@/components/icons/flags";
 
 export function LanguageToggle() {
     const { language, setLanguage } = useResume();
@@ -14,9 +15,11 @@ export function LanguageToggle() {
             className="px-2"
             onClick={() => setLanguage(language === "en" ? "es" : "en")}
         >
-            <span className="text-sm font-bold">
-                {language === "en" ? "EN" : "ES"}
-            </span>
+            {language === "en" ? (
+                <Icons.usa className="h-[1.2rem] w-[1.2rem]" />
+            ) : (
+                <Icons.peru className="h-[1.2rem] w-[1.2rem]" />
+            )}
             <span className="sr-only">Toggle language</span>
         </Button>
     );

@@ -164,43 +164,41 @@ export const DATA_EN = {
   ],
   projects: [
     {
-      title: "Chat Collect",
-      href: "https://chatcollect.com",
-      dates: "Jan 2024 - Feb 2024",
+      title: "Arxatec",
+      href: "https://arxatec.net",
+      dates: "2024 - Presente",
       active: true,
       description:
-        "With the release of the [OpenAI GPT Store](https://openai.com/blog/introducing-the-gpt-store), I decided to build a SaaS which allows users to collect email addresses from their GPT users. This is a great way to build an audience and monetize your GPT API usage.",
+        "Plataforma LegalTech que automatiza la gestión jurídica y la redacción de documentos con IA. Digitaliza expedientes tradicionales para convertirlos en un flujo de trabajo rápido, organizado y eficiente.",
       technologies: [
         "Next.js",
-        "Typescript",
+        "TypeScript",
         "PostgreSQL",
-        "Prisma",
+        "OpenAI API",
         "TailwindCSS",
-        "Stripe",
         "Shadcn UI",
         "Magic UI",
       ],
       links: [
         {
           type: "Website",
-          href: "https://chatcollect.com",
+          href: "https://arxatec.net",
           icon: <Icons.globe className="size-3" />,
         },
       ],
       image: "",
-      video:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
+      video: "/projects/arxatec.mov",
     },
     {
-      title: "Magic UI",
-      href: "https://magicui.design",
-      dates: "June 2023 - Present",
+      title: "Sistema POS",
+      href: "https://github.com/Alexod24/inventory-next",
+      dates: "Octubre 2025 - Diciembre 2025",
       active: true,
       description:
-        "Designed, developed and sold animated UI components for developers.",
+        "Solución integral de ventas e inventario diseñada para eliminar la desorganización operativa. Optimiza el control de stock en tiempo real y agiliza las transacciones en el punto de venta, permitiendo a los negocios escalar con una gestión automatizada.",
       technologies: [
         "Next.js",
-        "Typescript",
+        "TypeScript",
         "PostgreSQL",
         "Prisma",
         "TailwindCSS",
@@ -210,80 +208,98 @@ export const DATA_EN = {
       ],
       links: [
         {
-          type: "Website",
-          href: "https://magicui.design",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
           type: "Source",
-          href: "https://github.com/magicuidesign/magicui",
+          href: "https://github.com/Alexod24/inventory-next",
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "",
-      video: "https://cdn.magicui.design/bento-grid.mp4",
+      image: "/projects/inventory.png",
+
     },
+
     {
-      title: "llm.report",
-      href: "https://llm.report",
-      dates: "April 2023 - September 2023",
+      title: "AERIS",
+      href: "https://github.com/AERIS-UCCI/aeris",
+      dates: "Octubre 2025",
       active: true,
       description:
-        "Developed an open-source logging and analytics platform for OpenAI: Log your ChatGPT API requests, analyze costs, and improve your prompts.",
+        "Sistema de inteligencia ambiental que utiliza datos de la NASA para predecir la contaminación y recomendar rutas saludables basadas en el perfil respiratorio del usuario.",
       technologies: [
-        "Next.js",
-        "Typescript",
-        "PostgreSQL",
-        "Prisma",
-        "TailwindCSS",
-        "Shadcn UI",
-        "Magic UI",
-        "Stripe",
-        "Cloudflare Workers",
+        "React",
+        "TypeScript",
+        "Vite",
+        "Python",
+        "FastAPI",
+        "Tailwind CSS",
+        "OpenStreetMap",
+        "NASA Data APIs",
       ],
       links: [
         {
-          type: "Website",
-          href: "https://llm.report",
-          icon: <Icons.globe className="size-3" />,
+          type: "Source",
+          href: "https://github.com/AERIS-UCCI/aeris",
+          icon: <Icons.github className="size-3" />,
         },
         {
+          type: "Demo",
+          href: "https://youtu.be/5BJnOX0Mbtc",
+          icon: <Icons.youtube className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "/projects/aeris.mov", // O la ruta donde alojes el clip de 40s
+    },
+    {
+      title: "FocusFlow",
+      href: "https://github.com/Alexod24/pomodoro-app",
+      dates: "Octubre 2025",
+      active: true,
+      description:
+        "Estación de productividad integral que fusiona la técnica Pomodoro con un sistema dinámico de gestión de tareas y una atmósfera de concentración inmersiva.",
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Shadcn UI",
+        "Framer Motion",
+        "Zustand", // Asumiendo manejo de estado para el timer
+      ],
+      links: [
+        {
           type: "Source",
-          href: "https://github.com/dillionverma/llm.report",
+          href: "https://github.com/Alexod24/pomodoro-app",
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "",
-      video: "https://cdn.llm.report/openai-demo.mp4",
+      image: "/projects/catfocus.png",
+      video:
+        "",
     },
     {
-      title: "Automatic Chat",
-      href: "https://automatic.chat",
-      dates: "April 2023 - March 2024",
+      title: "OpenTravels",
+      href: "https://github.com/Alexod24/opentravels",
+      dates: "Noviembre 2024",
       active: true,
       description:
-        "Developed an AI Customer Support Chatbot which automatically responds to customer support tickets using the latest GPT models.",
+        "Esta plataforma incluye funciones de inicio de sesión y registro que permiten a los usuarios publicar los lugares que han visitado recientemente. De esta manera, todos los miembros de la comunidad pueden compartir experiencias y recomendaciones.",
       technologies: [
         "Next.js",
-        "Typescript",
-        "PostgreSQL",
+        "TypeScript",
+        "Tailwind CSS",
         "Prisma",
-        "TailwindCSS",
+        "PostgreSQL",
         "Shadcn UI",
         "Magic UI",
-        "Stripe",
-        "Cloudflare Workers",
       ],
       links: [
         {
-          type: "Website",
-          href: "https://automatic.chat",
-          icon: <Icons.globe className="size-3" />,
+          type: "Source",
+          href: "https://github.com/Alexod24/opentravels",
+          icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "",
-      video:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/automatic-chat.mp4",
+      image: "/projects/opentravels.png",
+      video: "",
     },
   ],
   hackathons: [
@@ -671,7 +687,7 @@ export const DATA_EN = {
       ],
     },
   ],
-} as const;
+};
 
 export const DATA_ES = {
   ...DATA_EN,
