@@ -21,17 +21,25 @@ const fontCinzel = Cinzel({
 export const metadata: Metadata = {
   metadataBase: new URL(DATA.url),
   title: {
-    default: DATA.name,
-    template: `%s | ${DATA.name}`,
+    default: "Alex | Full Stack Developer",
+    template: `%s | Alex Portfolio`,
   },
-  description: DATA.description,
+  description: "Specializing in designing scalable architectures and building high-performance digital products.",
   openGraph: {
-    title: `${DATA.name}`,
-    description: DATA.description,
+    title: "Alex | Full Stack Developer",
+    description: "Specializing in designing scalable architectures and building high-performance digital products.",
     url: DATA.url,
-    siteName: `${DATA.name}`,
+    siteName: "Alex Portfolio",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/me.png",
+        width: 1200,
+        height: 630,
+        alt: "Alex Portfolio",
+      },
+    ],
   },
   robots: {
     index: true,
@@ -45,8 +53,10 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: `${DATA.name}`,
+    title: "Alex | Full Stack Developer",
     card: "summary_large_image",
+    description: "Specializing in designing scalable architectures and building high-performance digital products.",
+    images: ["/me.png"],
   },
   verification: {
     google: "",

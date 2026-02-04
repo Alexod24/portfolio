@@ -58,7 +58,7 @@ export default function Page() {
       <section id="work">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY} inView>
-            <h2 className="text-2xl font-bold tracking-tighter">Experiencia laboral</h2>
+            <h2 className="text-2xl font-bold tracking-tighter">{data.sectionHeaders.work}</h2>
           </BlurFade>
           {data.work.map((work, id) => (
             <BlurFade
@@ -84,7 +84,7 @@ export default function Page() {
       <section id="education">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY} inView>
-            <h2 className="text-xl font-bold">Education</h2>
+            <h2 className="text-xl font-bold">{data.sectionHeaders.education}</h2>
           </BlurFade>
           {data.education.map((education, id) => (
             <BlurFade
@@ -111,7 +111,7 @@ export default function Page() {
       <section id="skills">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY} inView>
-            <h2 className="text-xl font-bold">Habilidades</h2>
+            <h2 className="text-xl font-bold">{data.sectionHeaders.skills}</h2>
           </BlurFade>
 
           <div className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background py-12 md:shadow-xl">
@@ -150,13 +150,13 @@ export default function Page() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                  My Projects
+                  {data.sectionHeaders.projects.tag}
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Echa un vistazo a mis últimos trabajos
+                  {data.sectionHeaders.projects.title}
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  He trabajado en diversos proyectos, desde sitios web sencillos hasta aplicaciones web complejas. Aquí tienes algunos de mis favoritos.
+                  {data.sectionHeaders.projects.description}
                 </p>
               </div>
             </div>
@@ -190,13 +190,13 @@ export default function Page() {
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
               <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                Sobre Mí
+                {data.sectionHeaders.about.tag}
               </div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                Conoce más sobre mí
+                {data.sectionHeaders.about.title}
               </h2>
               <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Un vistazo a mi trayectoria, pasiones y lo que me impulsa cada día.
+                {data.sectionHeaders.about.description}
               </p>
             </div>
           </div>
@@ -269,10 +269,10 @@ export default function Page() {
                 Contacto
               </div> */}
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                Contactame
+                {data.sectionHeaders.contact.title}
               </h2>
               <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Enviame un mensaje
+                {data.sectionHeaders.contact.description}
               </p>
               <div className="flex justify-center mt-4">
                 <Link
@@ -282,7 +282,7 @@ export default function Page() {
                 >
                   <Button className="gap-2 bg-[#25D366] hover:bg-[#25D366]/90 text-white text-lg px-8 py-6 rounded-full shadow-lg transition-transform hover:scale-105">
                     <Icons.whatsapp className="size-6" />
-                    Chatea en WhatsApp
+                    {data.sectionHeaders.contact.whatsapp}
                   </Button>
                 </Link>
               </div>

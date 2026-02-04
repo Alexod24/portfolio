@@ -1,19 +1,25 @@
-import { DATA_ES } from "@/data/resume";
+"use client";
+
+import { useResume } from "@/components/language-provider";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import { ChevronLeft } from "lucide-react";
 import BlurFade from "@/components/magicui/blur-fade";
-import { MapLines } from "@/components/decorative/map-lines";
 
-export async function generateStaticParams() {
-    return DATA_ES.education
-        .filter((edu) => edu.slug)
-        .map((edu) => ({
-            slug: edu.slug,
-        }));
-}
+// Note: generateStaticParams cannot be exported from a client component in the same file if we want it to run at build time for SSG with "use client".
+// However, since we are switching to client-side data for language, we might lose SSG for the specific language content if we rely on context.
+// But for the purpose of this task (language switching), we need client-side context.
+// Actually, Next.js allows generateStaticParams in a client component file? No, it must be server side.
+// But wait, if we make the page "use client", we can't export generateStaticParams.
+// A common pattern is to have a server component wrapper or just accept that this page renders on client.
+// Or we can keep generateStaticParams but move the component logic to a child client component.
+// For simplicity and immediate fix: I will remove generateStaticParams export locally or move it?
+// Actually, if I just make it "use client", next build might fail if I keep generateStaticParams.
+// Let's try to just make it "use client" and see. If build fails, I'll refactor.
+// Wait, the user wants language switching. That requires client state.
+// So the page MUST listen to the provider.
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -22,10 +28,13 @@ export default function EducationPage({
 }: {
     params: { slug: string };
 }) {
-    const education = DATA_ES.education.find((edu) => edu.slug === params.slug);
+    const { data, language } = useResume();
+    // Find education in the CURRENT language data
+    const education = data.education.find((edu) => edu.slug === params.slug);
 
     if (!education) {
-        notFound();
+        // We can't easily notFound() in client component during render without effects, but returning null/error is fine.
+        return <div className="min-h-screen flex items-center justify-center">Education not found</div>;
     }
 
     return (
@@ -41,7 +50,7 @@ export default function EducationPage({
                 />
                 <div className="absolute top-6 left-4 md:top-10 md:left-12 z-10">
                     <Link href="/" className="bg-background/80 hover:bg-background/100 backdrop-blur-sm px-3 py-1.5 rounded-full text-foreground/80 hover:text-foreground transition-colors flex items-center gap-2 text-sm font-medium">
-                        <ChevronLeft className="size-4" /> Volver
+                        <ChevronLeft className="size-4" /> {language === "en" ? "Back" : "Volver"}
                     </Link>
                 </div>
             </div>
@@ -86,7 +95,7 @@ export default function EducationPage({
                                             <h2 className="text-xl font-semibold tracking-tight">{course.title}</h2>
                                             <p className="text-muted-foreground">{course.description}</p>
                                             <div className="flex items-center gap-2 text-sm font-medium text-primary pt-2">
-                                                Leer Articulo <span className="text-xs">›</span>
+                                                {language === "en" ? "Read Article" : "Leer Artículo"} <span className="text-xs">›</span>
                                             </div>
                                         </div>
 
@@ -109,7 +118,7 @@ export default function EducationPage({
                     </div>
                 ) : (
                     <p className="text-center text-muted-foreground mt-12">
-                        No hay publicaciones disponibles aún para esta institución.
+                        {language === "en" ? "No publications available yet for this institution." : "No hay publicaciones disponibles aún para esta institución."}
                     </p>
                 )}
             </section>
