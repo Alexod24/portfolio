@@ -8,9 +8,11 @@ import BlurFade from "@/components/magicui/blur-fade";
 import { MapLines } from "@/components/decorative/map-lines";
 
 export async function generateStaticParams() {
-    return DATA_ES.education.map((edu) => ({
-        slug: edu.slug || "",
-    }));
+    return DATA_ES.education
+        .filter((edu) => edu.slug)
+        .map((edu) => ({
+            slug: edu.slug,
+        }));
 }
 
 const BLUR_FADE_DELAY = 0.04;

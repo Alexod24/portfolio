@@ -7,10 +7,9 @@ export const DATA_EN = {
   url: "https://dillion.io",
   location: "San Francisco, CA",
   locationLink: "https://www.google.com/maps/place/sanfrancisco",
-  description:
-    "Software Engineer. Entrepreneur. Passionate about turning ideas into reality.",
-  summary:
-    "At the end of 2022, I quit my job as a software engineer to go fulltime into building and scaling my own SaaS businesses. In the past, [I pursued a double degree in computer science and business](/#education), [interned at big tech companies in Silicon Valley](https://www.youtube.com/watch?v=d-LJ2e5qKdE), and [competed in over 21 hackathons for fun](/#hackathons). I also had the pleasure of being a part of the first ever in-person cohort of buildspace called [buildspace sf1](https://buildspace.so/sf1).",
+  description: "Full Stack Developer",
+  summary: "I'm Alex, specializing in designing scalable architectures and building high-performance digital products. A comprehensive approach focused on technical efficiency and excellence in software development.",
+  about: "Hello, I'm Alex. Developer by vocation and curious by choice.\n\nI study Software Engineering, and since my early years in the program, I fell in love with web development. I enjoy building functional projects, learning new technologies, and exploring how programming can improve productivity and daily life.\n\nBeyond coding, I enjoy learning about personal development, habits, discipline, and mindset. I firmly believe that professional growth begins with inner growth.\n\nI have worked on inventory management projects, process automation, and web platforms for co-working spaces, in addition to experimenting with new tools.",
   avatarUrl: "/me.png",
   skills: [
     "React",
@@ -79,40 +78,37 @@ export const DATA_EN = {
 
   work: [
     {
-      company: "ArxaTEC",
+      company: "Arxatec",
+      href: "https://arxatec.com",
       badges: [],
-      href: "https://labase.pe",
-      location: "Huancayo, Perú",
+      location: "Remote",
       title: "Full Stack Developer",
-      logoUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmltCbeB-oyIL7sEe6veiY6klrX5z-ln46jQ&s",
-      start: "Mar 2024",
-      end: "Jul 2025",
-      description:
-        "Colaboré en el desarrollo Full Stack de plataformas web y herramientas de gestión interna utilizando tecnologías como Next.js, TypeScript y Supabase. Participé en la implementación de soluciones digitales para optimizar procesos del coworking y apoyé en la construcción de MVPs para diversas startups incubadas en el ecosistema.",
+      logoUrl: "/logos/arxatec.jpg",
+      start: "2025",
+      end: "Present",
+      description: "Integral digital transformation platform for the legal sector. The software centralizes legal service management, automates administrative workflows, and optimizes interaction between legal professionals and their clients through a scalable and secure architecture.",
     },
     {
       company: "La Base Cowork",
       badges: [],
-      href: "https://labase.pe",
-      location: "Huancayo, Perú",
-      title: "Full Stack Developer",
+      href: "https://labasecowork.com",
+      location: "On-site",
+      title: "Web Developer",
       logoUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmltCbeB-oyIL7sEe6veiY6klrX5z-ln46jQ&s",
-      start: "Mar 2024",
-      end: "Jul 2025",
-      description:
-        "Colaboré en el desarrollo Full Stack de plataformas web y herramientas de gestión interna utilizando tecnologías como Next.js, TypeScript y Supabase. Participé en la implementación de soluciones digitales para optimizar procesos del coworking y apoyé en la construcción de MVPs para diversas startups incubadas en el ecosistema.",
+      start: "2024",
+      end: "2025",
+      description: "Development of corporate websites and custom management systems. Optimization of digital interfaces and processes for various clients in an agile environment.",
     },
     {
       company: "TID",
-      href: "https://atomic.finance",
+      href: "https://tid.com.pe",
       badges: [],
-      location: "Hibrido",
-      title: "Software Engineer",
+      location: "On-site",
+      title: "Systems Developer",
       logoUrl: "https://tid.com.pe/assets/img/logos/logo_tid_SF.png",
-      start: "Dic 2023",
-      end: "Abr 2024",
-      description:
-        "Implemented the Bitcoin discreet log contract (DLC) protocol specifications as an open source Typescript SDK. Dockerized all microservices and setup production kubernetes cluster. Architected a data lake using AWS S3 and Athena for historical backtesting of bitcoin trading strategies. Built a mobile app using react native and typescript.",
+      start: "2023",
+      end: "2024",
+      description: "Design and implementation of integral management systems (ERP) for educational institutions and the gastronomic sector, including robust electronic invoicing solutions.",
     },
   ],
   education: [
