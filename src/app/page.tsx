@@ -38,7 +38,7 @@ export default function Page() {
             <div className="flex flex-col space-y-4">
               <BlurFadeText
                 delay={BLUR_FADE_DELAY}
-                className="text-4xl md:text-7xl font-thin tracking-[0.15em] font-cinzel uppercase text-shadow-sm leading-tight"
+                className="text-2xl md:text-7xl font-thin tracking-widest md:tracking-[0.15em] font-cinzel uppercase text-shadow-sm leading-tight"
                 yOffset={8}
                 text={data.description}
               />
