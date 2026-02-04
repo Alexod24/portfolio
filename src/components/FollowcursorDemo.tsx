@@ -1,9 +1,9 @@
-import Followcursor from "@/components/ui/followcursor";
+import { FollowCursor } from "@/components/ui/followcursor";
 
 export function FollowCursorDemo() {
   return (
     <div className="w-screen h-[400px]  relative overflow-hidden">
-      <Followcursor
+      <FollowCursor
         className="my-custom-class"
         style={{ height: "400px" }}
         colors={["#FF6B6B", "#4ECDC4", "#3A86FF"]}

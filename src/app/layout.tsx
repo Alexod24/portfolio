@@ -52,6 +52,9 @@ export const metadata: Metadata = {
     google: "",
     yandex: "",
   },
+  icons: {
+    icon: "/me.png",
+  },
 };
 
 export default function RootLayout({
@@ -69,7 +72,7 @@ export default function RootLayout({
         )}
       >
         <LanguageProvider>
-          <ThemeProvider attribute="class" defaultTheme="light">
+          <ThemeProvider attribute="class" defaultTheme="dark">
             <TooltipProvider delayDuration={0}>
               {children}
               <Navbar />

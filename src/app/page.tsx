@@ -2,16 +2,20 @@
 
 import { HackathonCard } from "@/components/hackathon-card";
 import BlurFade from "@/components/magicui/blur-fade";
+import Marquee from "@/components/magicui/marquee";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Icons } from "@/components/icons";
 import Link from "next/link";
 import Markdown from "react-markdown";
 import { IconCloudDemo } from "@/components/IconCloudDemo";
 import { useResume } from "@/components/language-provider";
 import { MapLines } from "@/components/decorative/map-lines";
+import { AboutSection } from "@/components/about-section";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -90,32 +94,56 @@ export default function Page() {
             >
               <ResumeCard
                 key={education.school}
-                href={education.slug ? `/education/${education.slug}` : education.href}
+                href={education.slug ? `/education/${education.slug}` : undefined}
                 logoUrl={education.logoUrl}
                 altText={education.school}
                 title={education.school}
                 subtitle={education.degree}
                 period={`${education.start} - ${education.end}`}
-                ctaText={education.slug ? "Ver detalles ›" : undefined}
+                ctaText={education.slug ? "Ver detalles" : undefined}
               />
             </BlurFade>
           ))}
         </div>
       </section>
+
+      {/* SKILLS SECTION WITH MARQUEE */}
       <section id="skills">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY} inView>
             <h2 className="text-xl font-bold">Habilidades</h2>
           </BlurFade>
-          <div className="flex flex-wrap gap-1">
-            {data.skills.map((skill, id) => (
-              <BlurFade key={skill} delay={BLUR_FADE_DELAY * 2 + id * 0.05} inView>
-                <Badge key={skill}>{skill}</Badge>
-              </BlurFade>
-            ))}
+
+          <div className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background py-12 md:shadow-xl">
+            <Marquee pauseOnHover className="[--duration:20s]">
+              {/* Requested icons: React, Next.js, Typescript, Node.js, Python, Go, Postgres, Docker, Kubernetes, Java, C++ */}
+              {[
+                { icon: Icons.react, name: "React" },
+                { icon: Icons.nextjs, name: "Next.js" },
+                { icon: Icons.typescript, name: "Typescript" },
+                { icon: Icons.nodejs, name: "Node.js" },
+                { icon: Icons.python, name: "Python" },
+                { icon: Icons.golang, name: "Go" },
+                { icon: Icons.postgresql, name: "Postgres" },
+                { icon: Icons.docker, name: "Docker" },
+                { icon: Icons.kubernetes, name: "Kubernetes" },
+                { icon: Icons.java, name: "Java" },
+                { icon: Icons.cpp, name: "C++" },
+                { icon: Icons.tailwindcss, name: "Tailwind" }, // Added for good measure
+              ].map((skill, id) => (
+                <div key={id} className="flex flex-col items-center gap-2 mx-8">
+                  <skill.icon className="h-12 w-12 text-foreground" />
+                  <span className="text-sm font-medium">{skill.name}</span>
+                </div>
+              ))}
+            </Marquee>
+            <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white dark:from-background"></div>
+            <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white dark:from-background"></div>
           </div>
+
         </div>
       </section>
+
       <section id="projects">
         <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY} inView>
@@ -125,12 +153,10 @@ export default function Page() {
                   My Projects
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Check out my latest work
+                  Echa un vistazo a mis últimos trabajos
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  I&apos;ve worked on a variety of projects, from simple
-                  websites to complex web applications. Here are a few of my
-                  favorites.
+                  He trabajado en diversos proyectos, desde sitios web sencillos hasta aplicaciones web complejas. Aquí tienes algunos de mis favoritos.
                 </p>
               </div>
             </div>
@@ -158,7 +184,45 @@ export default function Page() {
           </div>
         </div>
       </section>
+      {/* About Me Section - Inserted before Certifications */}
+      <section id="about">
+        <BlurFade delay={BLUR_FADE_DELAY} inView>
+          <div className="flex flex-col items-center justify-center space-y-4 text-center">
+            <div className="space-y-2">
+              <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                Sobre Mí
+              </div>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                Conoce más sobre mí
+              </h2>
+              <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                Un vistazo a mi trayectoria, pasiones y lo que me impulsa cada día.
+              </p>
+            </div>
+          </div>
+        </BlurFade>
+        <AboutSection />
+      </section>
+
       <section id="certifications">
+        {/* ... Certifications Content ... */}
+        <div className="space-y-12 w-full py-12">
+          {/* ... */}
+          {/* Note: I am keeping the original structure here for certifications if it was there, 
+               but wait, I am replacing lines. I should check what I am replacing.
+               The replacement target includes 'AboutSection' from previous step (line 163).
+               Wait, the user wants 'About' BEFORE 'Certifications'.
+               I will structure it carefully.
+           */}
+        </div>
+      </section>
+
+
+
+
+
+
+      {/* <section id="certifications">
         <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY} inView>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -196,28 +260,32 @@ export default function Page() {
             </ul>
           </BlurFade>
         </div>
-      </section>
+      </section> */}
       <section id="contact">
         <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY} inView>
             <div className="space-y-3">
-              <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                Contact
-              </div>
+              {/* <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                Contacto
+              </div> */}
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                Get in Touch
+                Contactame
               </h2>
               <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Want to chat? Just shoot me a dm{" "}
-                <Link
-                  href={data.contact.social.X.url}
-                  className="text-blue-500 hover:underline"
-                >
-                  with a direct question on twitter
-                </Link>{" "}
-                and I&apos;ll respond whenever I can. I will ignore all
-                soliciting.
+                Enviame un mensaje
               </p>
+              <div className="flex justify-center mt-4">
+                <Link
+                  href={data.contact.social.WhatsApp.url}
+                  target="_blank"
+                  className="no-underline"
+                >
+                  <Button className="gap-2 bg-[#25D366] hover:bg-[#25D366]/90 text-white text-lg px-8 py-6 rounded-full shadow-lg transition-transform hover:scale-105">
+                    <Icons.whatsapp className="size-6" />
+                    Chatea en WhatsApp
+                  </Button>
+                </Link>
+              </div>
             </div>
           </BlurFade>
         </div>

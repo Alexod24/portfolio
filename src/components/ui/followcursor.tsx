@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, useState, useCallback, React } from "react";
+import React, { useEffect, useRef, useState, useCallback } from "react";
 import { Renderer, Transform, Vec3, Color, Polyline, Program } from "ogl";
 
 const vertexShader = `
