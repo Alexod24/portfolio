@@ -132,7 +132,7 @@ export default function Page() {
                 { icon: Icons.tailwindcss, name: "Tailwind" }, // Added for good measure
               ].map((skill, id) => (
                 <div key={id} className="flex flex-col items-center gap-2 mx-8">
-                  <skill.icon className="h-12 w-12 text-foreground" />
+                  <skill.icon className="h-12 w-12" />
                   <span className="text-sm font-medium">{skill.name}</span>
                 </div>
               ))}
