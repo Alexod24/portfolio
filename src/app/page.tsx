@@ -11,6 +11,7 @@ import Link from "next/link";
 import Markdown from "react-markdown";
 import { IconCloudDemo } from "@/components/IconCloudDemo";
 import { useResume } from "@/components/language-provider";
+import { MapLines } from "@/components/decorative/map-lines";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -18,9 +19,14 @@ export default function Page() {
   const { data } = useResume();
 
   return (
-    <main className="flex flex-col min-h-[100dvh] space-y-12">
-      <section id="hero" className="min-h-screen flex items-center justify-start py-12 pb-52">
-        <div className="w-full space-y-8 text-left max-w-3xl">
+    <main className="flex flex-col min-h-[100dvh] space-y-12 relative">
+      <section id="hero" className="min-h-screen flex items-center justify-start py-12 pb-52 relative overflow-hidden">
+        {/* Decorative Map Lines */}
+        <div className="absolute top-0 left-[-10%] h-full w-1/2 md:w-1/3 z-0 pointer-events-none opacity-60 text-foreground/20">
+          <MapLines className="w-full h-full" />
+        </div>
+
+        <div className="w-full space-y-8 text-left max-w-3xl relative z-10 px-4 md:px-0">
           <div className="flex flex-col items-start gap-8">
 
 
@@ -28,13 +34,15 @@ export default function Page() {
             <div className="flex flex-col space-y-4">
               <BlurFadeText
                 delay={BLUR_FADE_DELAY}
-                className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
+                className="text-4xl md:text-7xl font-thin tracking-[0.15em] font-cinzel uppercase text-shadow-sm leading-tight"
                 yOffset={8}
                 text={data.description}
               />
 
+              <div className="h-px w-24 bg-gradient-to-r from-transparent via-foreground/50 to-transparent my-4"></div>
+
               <BlurFadeText
-                className="max-w-[700px] md:text-lg text-muted-foreground text-left"
+                className="max-w-[700px] md:text-xl text-muted-foreground text-left font-light tracking-wide"
                 delay={BLUR_FADE_DELAY}
                 text={data.summary}
               />
@@ -80,17 +88,16 @@ export default function Page() {
               delay={BLUR_FADE_DELAY * 2 + id * 0.05}
               inView
             >
-              <Link href={education.slug ? `/education/${education.slug}` : "#"}>
-                <ResumeCard
-                  key={education.school}
-                  href={education.href}
-                  logoUrl={education.logoUrl}
-                  altText={education.school}
-                  title={education.school}
-                  subtitle={education.degree}
-                  period={`${education.start} - ${education.end}`}
-                />
-              </Link>
+              <ResumeCard
+                key={education.school}
+                href={education.slug ? `/education/${education.slug}` : education.href}
+                logoUrl={education.logoUrl}
+                altText={education.school}
+                title={education.school}
+                subtitle={education.degree}
+                period={`${education.start} - ${education.end}`}
+                ctaText={education.slug ? "Ver detalles ›" : undefined}
+              />
             </BlurFade>
           ))}
         </div>

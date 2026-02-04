@@ -35,28 +35,28 @@ export const DATA_EN = {
     social: {
       GitHub: {
         name: "GitHub",
-        url: "https://dub.sh/dillion-github",
+        url: "https://github.com/Alexod24",
         icon: Icons.github,
 
         navbar: true,
       },
       LinkedIn: {
         name: "LinkedIn",
-        url: "https://dub.sh/dillion-linkedin",
+        url: "https://www.linkedin.com/in/ordo%C3%B1ez-diego/",
         icon: Icons.linkedin,
 
         navbar: true,
       },
       X: {
-        name: "X",
-        url: "https://dub.sh/dillion-twitter",
-        icon: Icons.x,
+        name: "Kick",
+        url: "https://kick.com/alexcode24",
+        icon: Icons.kick,
 
         navbar: true,
       },
       Youtube: {
         name: "Youtube",
-        url: "https://dub.sh/dillion-youtube",
+        url: "https://www.youtube.com/@Alex.od2408",
         icon: Icons.youtube,
         navbar: true,
       },
@@ -749,9 +749,9 @@ export const DATA_EN = {
 export const DATA_ES = {
   ...DATA_EN,
   description:
-    "Desarrollador Full Stack, Freelancer y Apasionado por la Tecnología.",
+    "Desarrollador Full Stack",
   summary:
-    "Soy Alex, estudiante de Ingeniería de Sistemas en la Universidad Continental. Me dedico a crear aplicaciones web modernas con Next.js, TailwindCSS y Supabase. Apasionado por la productividad, la innovación y el desarrollo personal.",
+    "Soy Alex, estoy especializado en el diseño de arquitecturas escalables y la construcción de productos digitales de alto rendimiento. Enfoque integral centrado en la eficiencia técnica y la excelencia en el desarrollo de software.",
   navbar: [
     { href: "/", icon: HomeIcon, label: "Inicio" },
     { href: "/blog", icon: NotebookIcon, label: "Blog" },
@@ -762,29 +762,37 @@ export const DATA_ES = {
   })),
   work: [
     {
+      company: "Arxatec",
+      href: "https://arxatec.com",
+      badges: [],
+      location: "Remoto",
+      title: "Desarrollador Full Stack",
+      logoUrl: "/logos/arxatec.png",
+      start: "2025",
+      end: "Presente",
+      description: "Lideré el desarrollo y lanzamiento de la plataforma legal digital de la compañía, implementando arquitecturas modernas y escalables para la gestión de servicios jurídicos.",
+    },
+    {
       company: "La Base Cowork",
       badges: [],
-      href: "https://shopify.com",
-      location: "Remoto",
-      title: "Ingeniero de Software",
-      logoUrl:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmltCbeB-oyIL7sEe6veiY6klrX5z-ln46jQ&s",
-      start: "Mar 2024",
-      end: "Jul 2025",
-      description:
-        "Implementé un controlador de Kubernetes personalizado en Go para automatizar el despliegue de recursos personalizados de MySQL y ProxySQL con el fin de permitir que más de 2.000 desarrolladores internos desplieguen instantáneamente sus bases de datos de aplicaciones en producción.",
+      href: "https://labasecowork.com",
+      location: "Presencial",
+      title: "Desarrollador Web",
+      logoUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmltCbeB-oyIL7sEe6veiY6klrX5z-ln46jQ&s",
+      start: "2024",
+      end: "2025",
+      description: "Desarrollo de sitios web corporativos y sistemas de gestión a medida. Optimización de interfaces y procesos digitales para diversos clientes en un entorno ágil.",
     },
     {
       company: "TID",
-      href: "https://atomic.finance",
+      href: "https://tid.com.pe",
       badges: [],
-      location: "Híbrido",
-      title: "Ingeniero de Software",
+      location: "Presencial",
+      title: "Desarrollador de Sistemas",
       logoUrl: "https://tid.com.pe/assets/img/logos/logo_tid_SF.png",
-      start: "Dic 2023",
-      end: "Abr 2024",
-      description:
-        "Implementé las especificaciones del protocolo Bitcoin discreet log contract (DLC) como un SDK de Typescript de código abierto. Dockericé todos los microservicios y configuré el clúster de kubernetes de producción.",
+      start: "2023",
+      end: "2024",
+      description: "Diseño e implementación de sistemas integrales de gestión (ERP) para instituciones educativas y sector gastronómico, incluyendo soluciones robustas de facturación electrónica.",
     },
   ],
 } as const;

@@ -4,13 +4,18 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { DATA_EN as DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
-import { Inter as FontSans } from "next/font/google";
+import { Inter as FontSans, Cinzel } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/components/language-provider";
 
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
+});
+
+const fontCinzel = Cinzel({
+  subsets: ["latin"],
+  variable: "--font-cinzel",
 });
 
 export const metadata: Metadata = {
@@ -59,7 +64,8 @@ export default function RootLayout({
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased max-w-4xl mx-auto py-12 sm:py-24 px-6",
-          fontSans.variable
+          fontSans.variable,
+          fontCinzel.variable
         )}
       >
         <LanguageProvider>

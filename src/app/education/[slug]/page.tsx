@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import { ChevronLeft } from "lucide-react";
 import BlurFade from "@/components/magicui/blur-fade";
+import { MapLines } from "@/components/decorative/map-lines";
 
 export async function generateStaticParams() {
     return DATA_ES.education.map((edu) => ({
@@ -60,6 +61,7 @@ export default function EducationPage({
                     </div>
                 </div>
             </div>
+
 
             {/* Content Section - Blog Like Timeline */}
             <section className="flex-1 w-full max-w-3xl mx-auto py-12 px-4">

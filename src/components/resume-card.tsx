@@ -18,6 +18,7 @@ interface ResumeCardProps {
   badges?: readonly string[];
   period: string;
   description?: string;
+  ctaText?: string;
 }
 export const ResumeCard = ({
   logoUrl,
@@ -28,6 +29,7 @@ export const ResumeCard = ({
   badges,
   period,
   description,
+  ctaText,
 }: ResumeCardProps) => {
   const [isExpanded, setIsExpanded] = React.useState(false);
 
@@ -85,6 +87,11 @@ export const ResumeCard = ({
               </div>
             </div>
             {subtitle && <div className="font-sans text-xs">{subtitle}</div>}
+            {ctaText && (
+              <div className="font-sans text-xs text-primary font-medium mt-1 group-hover:underline">
+                {ctaText}
+              </div>
+            )}
           </CardHeader>
           {description && (
             <motion.div
