@@ -32,7 +32,7 @@ export const DATA_EN = {
   description: "Full Stack Developer",
   summary: "I'm Alex, specializing in designing scalable architectures and building high-performance digital products. A comprehensive approach focused on technical efficiency and excellence in software development.",
   about: "Hello, I'm Alex. Developer by vocation and curious by choice.\n\nI study Software Engineering, and since my early years in the program, I fell in love with web development. I enjoy building functional projects, learning new technologies, and exploring how programming can improve productivity and daily life.\n\nBeyond coding, I enjoy learning about personal development, habits, discipline, and mindset. I firmly believe that professional growth begins with inner growth.\n\nI have worked on inventory management projects, process automation, and web platforms for co-working spaces, in addition to experimenting with new tools.",
-  avatarUrl: "/me.png",
+  avatarUrl: "/alex.png",
   skills: [
     "React",
     "Next.js",

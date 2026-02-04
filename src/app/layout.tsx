@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/me.png",
+        url: "/alex.png",
         width: 1200,
         height: 630,
         alt: "Alex Portfolio",
@@ -56,14 +56,14 @@ export const metadata: Metadata = {
     title: "Alex | Full Stack Developer",
     card: "summary_large_image",
     description: "Specializing in designing scalable architectures and building high-performance digital products.",
-    images: ["/me.png"],
+    images: ["/alex.png"],
   },
   verification: {
     google: "",
     yandex: "",
   },
   icons: {
-    icon: "/me.png",
+    icon: "/alex.png",
   },
 };
 
