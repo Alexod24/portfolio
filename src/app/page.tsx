@@ -39,16 +39,17 @@ export default function Page() {
             <div className="flex flex-col space-y-4">
               <BlurFadeText
                 delay={BLUR_FADE_DELAY}
-
+                className="text-3xl sm:text-4xl md:text-7xl font-bold tracking-tight md:tracking-widest font-cinzel uppercase text-shadow-sm leading-none"
                 yOffset={8}
                 text={data.description}
                 animateByCharacter={true}
+
               />
 
               <div className="h-px w-24 bg-gradient-to-r from-transparent via-foreground/50 to-transparent my-4"></div>
 
               <WordPullUp
-                className="max-w-[700px] md:text-xl text-muted-foreground text-left font-light tracking-wide"
+                className="max-w-[700px] text-base md:text-xl text-muted-foreground text-left font-light tracking-wide leading-relaxed"
                 words={data.summary}
               />
             </div>
