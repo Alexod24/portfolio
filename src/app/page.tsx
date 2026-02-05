@@ -4,6 +4,7 @@ import { HackathonCard } from "@/components/hackathon-card";
 import BlurFade from "@/components/magicui/blur-fade";
 import Marquee from "@/components/magicui/marquee";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
+import WordPullUp from "@/components/magicui/word-pull-up";
 import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -38,17 +39,17 @@ export default function Page() {
             <div className="flex flex-col space-y-4">
               <BlurFadeText
                 delay={BLUR_FADE_DELAY}
-                className="text-2xl md:text-7xl font-thin tracking-widest md:tracking-[0.15em] font-cinzel uppercase text-shadow-sm leading-tight"
+
                 yOffset={8}
                 text={data.description}
+                animateByCharacter={true}
               />
 
               <div className="h-px w-24 bg-gradient-to-r from-transparent via-foreground/50 to-transparent my-4"></div>
 
-              <BlurFadeText
+              <WordPullUp
                 className="max-w-[700px] md:text-xl text-muted-foreground text-left font-light tracking-wide"
-                delay={BLUR_FADE_DELAY}
-                text={data.summary}
+                words={data.summary}
               />
             </div>
           </div>

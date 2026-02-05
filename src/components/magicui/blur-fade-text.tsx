@@ -34,26 +34,31 @@ const BlurFadeText = ({
   const characters = useMemo(() => Array.from(text), [text]);
 
   if (animateByCharacter) {
+    const lines = text.split("\n");
     return (
-      <div className="flex">
+      <div className={cn("flex flex-col", className)}>
         <AnimatePresence>
-          {characters.map((char, i) => (
-            <motion.span
-              key={i}
-              initial="hidden"
-              animate="visible"
-              exit="hidden"
-              variants={combinedVariants}
-              transition={{
-                yoyo: Infinity,
-                delay: delay + i * characterDelay,
-                ease: "easeOut",
-              }}
-              className={cn("inline-block", className)}
-              style={{ width: char.trim() === "" ? "0.2em" : "auto" }}
-            >
-              {char}
-            </motion.span>
+          {lines.map((line, lineIndex) => (
+            <div key={lineIndex} className="flex flex-wrap">
+              {Array.from(line).map((char, i) => (
+                <motion.span
+                  key={`${lineIndex}-${i}`}
+                  initial="hidden"
+                  animate="visible"
+                  exit="hidden"
+                  variants={combinedVariants}
+                  transition={{
+                    yoyo: Infinity,
+                    delay: delay + (lineIndex * line.length + i) * characterDelay,
+                    ease: "easeOut",
+                  }}
+                  className={cn("inline-block", className ? "" : className)} // Removed className prop from span to avoid conflict/duplication if passed to wrapper
+                  style={{ width: char.trim() === "" ? "0.2em" : "auto" }}
+                >
+                  {char}
+                </motion.span>
+              ))}
+            </div>
           ))}
         </AnimatePresence>
       </div>
