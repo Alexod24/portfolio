@@ -315,4 +315,14 @@ export const Icons = {
       {...props}
     />
   ),
+  mysql: (props: IconProps) => (
+    <img
+      src="/icons/mysql.svg"
+      alt="MySQL"
+      width={24}
+      height={24}
+      className={props.className || "size-8"}
+      {...props}
+    />
+  ),
 };

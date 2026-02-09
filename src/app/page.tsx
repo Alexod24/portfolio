@@ -133,6 +133,7 @@ export default function Page() {
                 { icon: Icons.cpp, name: "C++" },
                 { icon: Icons.tailwindcss, name: "Tailwind" },
                 { icon: Icons.supabase, name: "Supabase" },
+                { icon: Icons.mysql, name: "MySQL" },
               ].map((skill, id) => (
                 <div key={id} className="flex flex-col items-center gap-2 mx-8">
                   <skill.icon className="h-12 w-12" />
