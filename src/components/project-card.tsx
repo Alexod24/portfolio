@@ -25,6 +25,7 @@ interface Props {
     type: string;
     href: string;
   }[];
+  slug?: string;
   className?: string;
 }
 
@@ -38,8 +39,14 @@ export function ProjectCard({
   image,
   video,
   links,
+  slug,
   className,
 }: Props) {
+  const isExternal = !slug;
+  const target = isExternal ? "_blank" : undefined;
+  // If slug exists, link to /projects/slug, otherwise use external href
+  const destination = slug ? `/projects/${slug}` : href || "#";
+
   return (
     <Card
       className={
@@ -47,9 +54,9 @@ export function ProjectCard({
       }
     >
       <Link
-        href={href || "#"}
+        href={destination}
         className={cn("block cursor-pointer", className)}
-        target="_blank"
+        target={target}
       >
         {video && (
           <video

@@ -305,4 +305,14 @@ export const Icons = {
       {...props}
     />
   ),
+  supabase: (props: IconProps) => (
+    <img
+      src="/icons/supabase.svg"
+      alt="Supabase"
+      width={24}
+      height={24}
+      className={props.className || "size-8"}
+      {...props}
+    />
+  ),
 };

@@ -131,7 +131,8 @@ export default function Page() {
                 { icon: Icons.kubernetes, name: "Kubernetes" },
                 { icon: Icons.java, name: "Java" },
                 { icon: Icons.cpp, name: "C++" },
-                { icon: Icons.tailwindcss, name: "Tailwind" }, // Added for good measure
+                { icon: Icons.tailwindcss, name: "Tailwind" },
+                { icon: Icons.supabase, name: "Supabase" },
               ].map((skill, id) => (
                 <div key={id} className="flex flex-col items-center gap-2 mx-8">
                   <skill.icon className="h-12 w-12" />
@@ -180,6 +181,7 @@ export default function Page() {
                   image={project.image}
                   video={project.video}
                   links={project.links}
+                  slug={project.slug}
                 />
               </BlurFade>
             ))}

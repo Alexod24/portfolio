@@ -1,6 +1,7 @@
 "use client";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Icons } from "@/components/icons";
 import { useResume } from "@/components/language-provider";
@@ -29,6 +30,16 @@ export const AboutSection = () => {
                             <Markdown>
                                 {data.about.split('\n').slice(1).join('\n')}
                             </Markdown>
+                        </div>
+                    </BlurFade>
+
+                    <BlurFade delay={BLUR_FADE_DELAY * 2.5} inView>
+                        <div className="pt-2">
+                            <Link href="/about-me">
+                                <Button className="rounded-full px-8 py-6 text-base font-medium transition-all hover:scale-105">
+                                    Ver más sobre mí
+                                </Button>
+                            </Link>
                         </div>
                     </BlurFade>
                 </div>

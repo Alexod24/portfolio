@@ -47,6 +47,7 @@ export const DATA_EN = {
     "Kubernetes",
     "Java",
     "C++",
+    "Supabase"
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
@@ -149,7 +150,7 @@ export const DATA_EN = {
       start: "2025",
       end: "2028",
       slug: "continental",
-      banner: "/education/continental.png",
+      banner: "/education/banners/continental.webp",
       courses: [
         {
           title: "Curso de Programación Básica",
@@ -272,7 +273,7 @@ export const DATA_EN = {
       start: "2024",
       end: "2025",
       slug: "devtalles",
-      banner: "/education/devtalles.png",
+      banner: "/education/banners/devtalles.png",
       courses: [
         {
           title: "Basic Programming Course",
@@ -333,7 +334,7 @@ export const DATA_EN = {
       start: "2024",
       end: "2024",
       slug: "edteam",
-      banner: "/education/edteam.png",
+      banner: "/education/banners/edteam.jpg",
       courses: [
         {
           title: "Basic Programming Course",
@@ -394,7 +395,7 @@ export const DATA_EN = {
       start: "2024",
       end: "2024",
       slug: "codigofacilito",
-      banner: "/education/codigofacilito.png",
+      banner: "/education/banners/codigo-facilito.png",
       courses: [
         {
           title: "Basic Programming Course",
@@ -454,7 +455,7 @@ export const DATA_EN = {
       start: "2023",
       end: "2024",
       slug: "oracleacademy",
-      banner: "/education/oracleacademy.png",
+      banner: "/education/banners/oracle-academy.jpg",
       courses: [
         {
           title: "Basic Programming Course",
@@ -515,7 +516,7 @@ export const DATA_EN = {
       start: "2022",
       end: "2025",
       slug: "senati",
-      banner: "/education/senati.png",
+      banner: "/education/banners/senati.jpg",
       courses: [
         {
           title: "Basic Programming Course",
@@ -594,6 +595,12 @@ export const DATA_EN = {
       ],
       image: "",
       video: "/projects/arxatec.mov",
+      slug: "arxatec",
+      gallery: [
+        "/projects/arxatec/dashboard.png",
+        "/projects/arxatec/documents.png",
+        "/projects/arxatec/mobile.png"
+      ],
     },
     {
       title: "Sistema POS",
@@ -653,6 +660,8 @@ export const DATA_EN = {
       ],
       image: "",
       video: "/projects/aeris.mov",
+      slug: "aeris",
+      gallery: [],
     },
     {
       title: "FocusFlow",
@@ -678,6 +687,8 @@ export const DATA_EN = {
       ],
       image: "/projects/catfocus.png",
       video: "",
+      slug: "focus-flow",
+      gallery: [],
     },
     {
       title: "OpenTravels",
@@ -704,6 +715,8 @@ export const DATA_EN = {
       ],
       image: "/projects/opentravels.png",
       video: "",
+      slug: "opentravels",
+      gallery: [],
     },
   ],
   hackathons: [
@@ -970,7 +983,7 @@ export const DATA_ES = {
       start: "2025",
       end: "2028",
       slug: "continental",
-      banner: "/education/continental.png",
+      banner: "/education/banners/continental.webp",
       courses: [
         {
           title: "Curso de Programación Básica",
@@ -1093,7 +1106,7 @@ export const DATA_ES = {
       start: "2024",
       end: "2025",
       slug: "devtalles",
-      banner: "/education/devtalles.png",
+      banner: "/education/banners/devtalles.png",
       courses: [
         {
           title: "Curso de Programación Básica",
@@ -1154,7 +1167,7 @@ export const DATA_ES = {
       start: "2024",
       end: "2024",
       slug: "edteam",
-      banner: "/education/edteam.png",
+      banner: "/education/banners/edteam.jpg",
       courses: [
         {
           title: "Curso de Programación Básica",
@@ -1215,7 +1228,7 @@ export const DATA_ES = {
       start: "2024",
       end: "2024",
       slug: "codigofacilito",
-      banner: "/education/codigofacilito.png",
+      banner: "/education/banners/codigo-facilito.png",
       courses: [
         {
           title: "Curso de Programación Básica",
@@ -1275,7 +1288,7 @@ export const DATA_ES = {
       start: "2023",
       end: "2024",
       slug: "oracleacademy",
-      banner: "/education/oracleacademy.png",
+      banner: "/education/banners/oracle-academy.jpg",
       courses: [
         {
           title: "Curso de Programación Básica",
@@ -1336,7 +1349,7 @@ export const DATA_ES = {
       start: "2022",
       end: "2025",
       slug: "senati",
-      banner: "/education/senati.png",
+      banner: "/education/banners/senati.jpg",
       courses: [
         {
           title: "Curso de Programación Básica",
@@ -1415,6 +1428,12 @@ export const DATA_ES = {
       ],
       image: "",
       video: "/projects/arxatec.mov",
+      slug: "arxatec",
+      gallery: [
+        "/projects/arxatec/dashboard.png",
+        "/projects/arxatec/documents.png",
+        "/projects/arxatec/mobile.png"
+      ],
     },
     {
       title: "Sistema POS",
@@ -1473,12 +1492,14 @@ export const DATA_ES = {
         },
       ],
       image: "",
-      video: "/projects/aeris.mov", // O la ruta donde alojes el clip de 40s
+      video: "/projects/aeris.mov",
+      slug: "aeris",
+      gallery: [],
     },
     {
       title: "FocusFlow",
       href: "https://github.com/Alexod24/pomodoro-app",
-      dates: "Octubre 2025",
+      dates: "October 2025",
       active: true,
       description:
         "Estación de productividad integral que fusiona la técnica Pomodoro con un sistema dinámico de gestión de tareas y una atmósfera de concentración inmersiva.",
@@ -1499,6 +1520,8 @@ export const DATA_ES = {
       ],
       image: "/projects/catfocus.png",
       video: "",
+      slug: "focus-flow",
+      gallery: [],
     },
     {
       title: "OpenTravels",
@@ -1525,6 +1548,8 @@ export const DATA_ES = {
       ],
       image: "/projects/opentravels.png",
       video: "",
+      slug: "opentravels",
+      gallery: [],
     },
   ],
 };
