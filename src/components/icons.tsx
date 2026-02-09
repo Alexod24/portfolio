@@ -265,10 +265,10 @@ export const Icons = {
       {...props}
     />
   ),
-  kubernetes: (props: IconProps) => (
+  antigravity: (props: IconProps) => (
     <img
-      src="/icons/kubernetes.svg"
-      alt="Kubernetes"
+      src="/icons/antigravity.svg"
+      alt="Antigravity"
       width={24}
       height={24}
       className={props.className || "size-8"}
@@ -285,10 +285,10 @@ export const Icons = {
       {...props}
     />
   ),
-  golang: (props: IconProps) => (
+  javascript: (props: IconProps) => (
     <img
-      src="/icons/go.svg"
-      alt="Go"
+      src="/icons/javascript.svg"
+      alt="JavaScript"
       width={24}
       height={24}
       className={props.className || "size-8"}
@@ -325,4 +325,44 @@ export const Icons = {
       {...props}
     />
   ),
+  gdg: (props: IconProps) => (
+    <img
+      src="/icons/gdg.svg"
+      alt="GDG"
+      width={24}
+      height={24}
+      className={props.className || "size-8"}
+      {...props}
+    />
+  ),
+  platzi: (props: IconProps) => (
+    <img
+      src="/icons/platzi.svg"
+      alt="Platzi"
+      width={24}
+      height={24}
+      className={props.className || "size-8"}
+      {...props}
+    />
+  ),
+  figma: (props: IconProps) => (
+    <img
+      src="/icons/figma.svg"
+      alt="Figma"
+      width={24}
+      height={24}
+      className={props.className || "size-8"}
+      {...props}
+    />
+  ),
+  astro: (props: IconProps) => (
+    <img
+      src="/icons/astro.svg"
+      alt="Astro"
+      width={24}
+      height={24}
+      className={props.className || "size-8"}
+      {...props}
+    />
+  )
 };

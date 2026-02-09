@@ -118,22 +118,26 @@ export default function Page() {
 
           <div className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background py-12 md:shadow-xl">
             <Marquee pauseOnHover className="[--duration:20s]">
-              {/* Requested icons: React, Next.js, Typescript, Node.js, Python, Go, Postgres, Docker, Kubernetes, Java, C++ */}
+
               {[
                 { icon: Icons.react, name: "React" },
                 { icon: Icons.nextjs, name: "Next.js" },
                 { icon: Icons.typescript, name: "Typescript" },
                 { icon: Icons.nodejs, name: "Node.js" },
                 { icon: Icons.python, name: "Python" },
-                { icon: Icons.golang, name: "Go" },
+                { icon: Icons.javascript, name: "JavaScript" },
                 { icon: Icons.postgresql, name: "Postgres" },
                 { icon: Icons.docker, name: "Docker" },
-                { icon: Icons.kubernetes, name: "Kubernetes" },
+                { icon: Icons.antigravity, name: "Antigravity" },
                 { icon: Icons.java, name: "Java" },
                 { icon: Icons.cpp, name: "C++" },
                 { icon: Icons.tailwindcss, name: "Tailwind" },
                 { icon: Icons.supabase, name: "Supabase" },
                 { icon: Icons.mysql, name: "MySQL" },
+                { icon: Icons.gdg, name: "GDG" },
+                { icon: Icons.platzi, name: "Platzi" },
+                { icon: Icons.figma, name: "Figma" },
+                { icon: Icons.astro, name: "Astro" },
               ].map((skill, id) => (
                 <div key={id} className="flex flex-col items-center gap-2 mx-8">
                   <skill.icon className="h-12 w-12" />
