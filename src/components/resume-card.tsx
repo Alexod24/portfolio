@@ -44,11 +44,7 @@ export const ResumeCard = ({
     <Card className="flex h-full">
       <div className="flex-none">
         <Avatar className="border size-12 m-auto bg-muted-background dark:bg-foreground">
-          <AvatarImage
-            src={logoUrl}
-            alt={altText}
-            className="object-contain"
-          />
+          <AvatarImage src={logoUrl} alt={altText} className="object-contain" />
           <AvatarFallback>{altText[0]}</AvatarFallback>
         </Avatar>
       </div>
@@ -70,25 +66,28 @@ export const ResumeCard = ({
                   ))}
                 </span>
               )}
-              {ctaText && (
-                <span className="ml-2 inline-flex items-center justify-center rounded-md bg-primary px-2 py-0.5 text-[10px] font-semibold text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 whitespace-nowrap">
-                  {ctaText}
-                </span>
-              )}
-              {href && (
-                <ChevronRightIcon
-                  className={cn(
-                    "size-4 translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100",
-                    isExpanded ? "rotate-90" : "rotate-0"
-                  )}
-                />
-              )}
+              <ChevronRightIcon
+                className={cn(
+                  "size-4 translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100",
+                  isExpanded ? "rotate-90" : "rotate-0",
+                )}
+              />
             </h3>
             <div className="text-xs sm:text-sm tabular-nums text-muted-foreground text-right">
               {period}
             </div>
           </div>
           {subtitle && <div className="font-sans text-xs">{subtitle}</div>}
+          {ctaText && (
+            <div className="mt-2 text-xs">
+              <Badge
+                variant="outline"
+                className="text-[10px] font-normal text-muted-foreground hover:bg-secondary/50 transition-colors"
+              >
+                {ctaText} <ChevronRightIcon className="size-3 ml-1" />
+              </Badge>
+            </div>
+          )}
         </CardHeader>
         {description && (
           <motion.div

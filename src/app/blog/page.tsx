@@ -1,10 +1,12 @@
 import BlurFade from "@/components/magicui/blur-fade";
 import { getBlogPosts } from "@/data/blog";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata = {
   title: "Blog",
-  description: "Pensamientos sobre tecnología, innovación y crecimiento personal.",
+  description:
+    "Pensamientos sobre tecnología, innovación y crecimiento personal.",
 };
 
 const BLUR_FADE_DELAY = 0.04;
@@ -13,22 +15,23 @@ export default async function BlogPage() {
   const posts = await getBlogPosts();
 
   return (
-    <section>
+    <section className="max-w-3xl mx-auto w-full px-4 py-12">
       <BlurFade delay={BLUR_FADE_DELAY}>
         <h1 className="font-bold text-3xl mb-4 tracking-tighter">
           Pensamientos sobre tecnología, innovación y crecimiento personal.
         </h1>
         <p className="text-muted-foreground mb-12 text-lg">
-          Aquí comparto mis experiencias creando software, liderando proyectos, y
-          explorando temas como IA, productividad y desarrollo personal. Todos los
-          artículos están organizados en orden cronológico.
+          Aquí comparto mis experiencias creando software, liderando proyectos,
+          y explorando temas como IA, productividad y desarrollo personal. Todos
+          los artículos están organizados en orden cronológico.
         </p>
       </BlurFade>
-      <div className="flex flex-col gap-12">
+      <div className="flex flex-col space-y-8">
         {posts
           .sort((a, b) => {
             if (
-              new Date(a.metadata.publishedAt) > new Date(b.metadata.publishedAt)
+              new Date(a.metadata.publishedAt) >
+              new Date(b.metadata.publishedAt)
             ) {
               return -1;
             }
@@ -36,36 +39,51 @@ export default async function BlogPage() {
           })
           .map((post, id) => (
             <BlurFade delay={BLUR_FADE_DELAY * 2 + id * 0.05} key={post.slug}>
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 group">
-                {/* Date Column */}
-                <div className="md:col-span-1">
-                  <p className="text-sm text-muted-foreground pt-1">
+              <Link
+                href={`/blog/${post.slug}`}
+                className="flex flex-col gap-4 md:flex-row hover:bg-muted/50 p-4 rounded-xl transition-colors"
+              >
+                {/* Left Side: Date */}
+                <div className="md:w-32 flex-shrink-0">
+                  <p className="text-sm text-muted-foreground tabular-nums whitespace-nowrap">
                     {new Date(post.metadata.publishedAt).toLocaleDateString(
-                      "en-US",
+                      "es-ES",
                       {
                         month: "long",
                         day: "numeric",
                         year: "numeric",
-                      }
+                      },
                     )}
                   </p>
                 </div>
 
-                {/* Content Column */}
-                <div className="md:col-span-3 flex flex-col space-y-3">
-                  <Link href={`/blog/${post.slug}`} className="block">
-                    <h2 className="text-xl font-bold tracking-tight mb-2 group-hover:underline">
-                      {post.metadata.title}
-                    </h2>
-                    <p className="text-muted-foreground leading-relaxed mb-4">
-                      {post.metadata.summary}
-                    </p>
-                    <span className="text-sm font-medium text-primary hover:underline inline-flex items-center">
-                      Leer artículo &gt;
-                    </span>
-                  </Link>
+                {/* Right Side: Content */}
+                <div className="flex-1 space-y-2">
+                  <h2 className="text-xl font-semibold tracking-tight">
+                    {post.metadata.title}
+                  </h2>
+                  <p className="text-muted-foreground">
+                    {post.metadata.summary}
+                  </p>
+                  <div className="flex items-center gap-2 text-sm font-medium text-primary pt-2">
+                    Leer artículo <span className="text-xs">›</span>
+                  </div>
                 </div>
-              </div>
+
+                {/* Image (Optional) */}
+                {post.metadata.image && (
+                  <div className="hidden md:block w-32 md:w-40 flex-shrink-0">
+                    <div className="relative aspect-video rounded-md overflow-hidden bg-muted">
+                      <Image
+                        src={post.metadata.image}
+                        alt={post.metadata.title}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                  </div>
+                )}
+              </Link>
             </BlurFade>
           ))}
       </div>
