@@ -1,48 +1,48 @@
-# Alex | Full Stack Developer & AI Software Engineer 🚀
+# Hola, soy Alex 👋
+### Full Stack Developer | Next.js & AI Solutions
 
-Soy un desarrollador enfocado en la construcción de **arquitecturas escalables** y productos digitales de alto rendimiento. Mi enfoque combina la excelencia técnica con una disciplina inquebrantable para resolver problemas complejos mediante software.
-
----
-
-### 🛠️ Core Stack & Expertise
-*Especializado en el desarrollo de aplicaciones robustas con enfoque en rendimiento y experiencia de usuario.*
-
-- **Frontend:** Next.js (App Router), React, TypeScript, Tailwind CSS, Shadcn/UI.
-- **Backend & DB:** Node.js, Go, Python, PostgreSQL, Supabase, Prisma ORM.
-- **Cloud & DevOps:** Docker, Kubernetes, CI/CD.
-- **IA & Automatización:** Integración de LLMs (OpenAI API), automatización de flujos legales y administrativos.
+[![Portfolio](https://img.shields.io/badge/🌐_Portafolio-alexod.dev-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://www.alexod.dev)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Conectar-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ordoñez-diego/)
+[![Email](https://img.shields.io/badge/Email-alex.od2408@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:alex.od2408@gmail.com)
 
 ---
 
-### 🏗️ Proyectos Destacados
-- **[Arxatec](https://www.alexod.dev):** Plataforma LegalTech que automatiza la gestión jurídica mediante IA. (Next.js + Supabase).
-- **Sistema POS:** Solución integral de inventario y ventas con control de stock en tiempo real.
-- **AERIS:** Sistema de inteligencia ambiental utilizando datos de la NASA para predicción de contaminación.
+### 👨‍💻 Sobre mí
+Soy un desarrollador enfocado en **crear productos que resuelvan problemas reales**. Me especializo en arquitecturas web modernas y escalables, siempre buscando el equilibrio entre un código limpio y una gran experiencia de usuario.
+
+Actualmente, colaboro en el desarrollo tecnológico e impulso la expansión comercial en Arxatec, transformando procesos legales complejos en soluciones digitales rentables mediante IA.
+
+Me define la **disciplina y la curiosidad**. No solo se trata de programar, sino de entender el "por qué" detrás de cada línea de código para aportar valor real.
 
 ---
 
-### 📈 Stats & Performance
-<p align="left">
-  <img src="https://github-readme-stats.vercel.app/api?username=TU_USUARIO_GITHUB&show_icons=true&theme=transparent&hide_border=true&title_color=000&text_color=333&icon_color=000" height="150" alt="stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=TU_USUARIO_GITHUB&layout=compact&theme=transparent&hide_border=true&title_color=000&text_color=333" height="150" alt="languages" />
-</p>
+### 🛠️ Stack Tecnológico
+
+| Frontend | Backend & Datos | Herramientas |
+| :--- | :--- | :--- |
+| ![Next.js](https://img.shields.io/badge/Next.js-black?style=flat-square&logo=next.js&logoColor=white) ![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB) ![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white) | ![Node.js](https://img.shields.io/badge/Node.js-43853D?style=flat-square&logo=node.js&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql&logoColor=white) | ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white) ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white) ![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white) |
 
 ---
 
-### 🧠 Filosofía de Trabajo
-> *"Stay hard. La disciplina es el puente entre las metas y los logros."*
+### 🚀 Proyectos Destacados
 
-No solo escribo código; diseño sistemas. Mi proceso se basa en:
-1. **Arquitectura:** Pensar antes de ejecutar.
-2. **Escalabilidad:** Código que soporte el crecimiento.
-3. **Iteración:** Mejora continua basada en datos y fallos lógicos.
+| Proyecto | Descripción | Tech |
+| :--- | :--- | :--- |
+| **[Arxatec Platform](https://arxatec.net)** | **SaaS LegalTech.** Plataforma que automatiza la gestión jurídica y redacción de documentos usando Inteligencia Artificial. | `Next.js` `OpenAI` `Postgres` |
+| **[AERIS](https://github.com/AERIS-UCCI/aeris)** | **Ciencia de Datos.** Sistema que utiliza datos de la **NASA** para predecir y visualizar niveles de contaminación ambiental. | `Python` `FastAPI` `React` |
+| **[Inventory POS](https://github.com/Alexod24/inventory-next)** | **Gestión Comercial.** Sistema ERP integral para control de inventarios y optimización de ventas en tiempo real. | `Next.js` `Prisma` `Stripe` |
+| **[FocusFlow](https://github.com/Alexod24/pomodoro-app)** | **Productividad.** Aplicación diseñada para potenciar el "Deep Work" fusionando la técnica Pomodoro con gestión de tareas. | `Next.js` `Zustand` `Framer` |
 
 ---
 
-### 🤝 Conectemos
-- **Portfolio:** [alexod.dev](https://www.alexod.dev)
-- **LinkedIn:** [Tu LinkedIn]
-- **YouTube:** [Canal de Desarrollo Personal/Tech]
-- **Email:** alex.od2408@gmail.com
+### ⚡ Un poco más personal...
+* 📚 **Aprendizaje constante:** Siempre estoy explorando nuevas tecnologías.
+* 🐈 **Cat Lover:** Mi oficina en casa la comparto con **muchos de mis gatos**.
+* 🎯 **Enfoque:** Creo firmemente en la productividad consciente y los buenos hábitos para lograr resultados consistentes.
 
-"Busco retos que me fuercen a evolucionar. Si tienes un problema difícil, yo tengo la solución técnica."
+---
+
+<div align="center">
+  <p>¿Tienes una idea o proyecto interesante? ¡Hablemos!</p>
+  <img src="https://github-readme-stats.vercel.app/api?username=Alexod24&show_icons=true&theme=gotham&hide_border=true&bg_color=000000" alt="GitHub Stats" />
+</div>

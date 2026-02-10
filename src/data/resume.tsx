@@ -1014,7 +1014,7 @@ export const DATA_ES = {
   summary:
     "Soy Alex, estoy especializado en el diseño de arquitecturas escalables y la construcción de productos digitales de alto rendimiento. Enfoque integral centrado en la eficiencia técnica y la excelencia en el desarrollo de software.",
   about:
-    "Hola, soy Alex. Desarrollador por vocación y curioso por elección.\n\nEstudio Ingeniería de Software y desde mis primeros años en la carrera me enamoré del desarrollo web. Me gusta construir proyectos funcionales, aprender nuevas tecnologías y explorar cómo la programación puede mejorar la productividad y la vida diaria.",
+    "Hola, soy Alex. Desarrollador Full Stack",
   navbar: [
     { href: "/", icon: HomeIcon, label: "Inicio" },
     { href: "/blog", icon: NotebookIcon, label: "Blog" },
