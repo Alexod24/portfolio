@@ -50,11 +50,11 @@ export const ResumeCard = ({
       </div>
       <div className="flex-grow ml-4 items-center flex-col group">
         <CardHeader>
-          <div className="flex items-center justify-between gap-x-2 text-base">
-            <div className="inline-flex items-center justify-center font-semibold leading-none text-xs sm:text-sm">
-              {title}
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-y-1 sm:gap-x-2 text-base">
+            <div className="flex flex-wrap items-center justify-start font-semibold leading-none text-xs sm:text-sm gap-y-1">
+              <span className="mr-2">{title}</span>
               {badges && (
-                <div className="inline-flex gap-x-1">
+                <div className="inline-flex flex-wrap gap-x-1">
                   {badges.map((badge, index) => (
                     <Badge
                       variant="secondary"

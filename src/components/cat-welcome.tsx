@@ -73,7 +73,7 @@ export default function CatWelcome() {
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ y: 100, opacity: 0 }}
                     transition={{ duration: 1.5, ease: "easeInOut" }}
-                    className="fixed -bottom-8 right-10 z-50 w-32 h-32 pointer-events-none md:right-20 dark:invert"
+                    className="fixed -bottom-4 right-2 z-50 w-24 h-24 sm:-bottom-6 sm:right-10 sm:w-28 sm:h-28 md:-bottom-8 md:right-20 md:w-32 md:h-32 pointer-events-none dark:invert"
                 >
                     <Lottie animationData={animationData} loop={true} />
                 </motion.div>
