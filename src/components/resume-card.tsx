@@ -51,10 +51,10 @@ export const ResumeCard = ({
       <div className="flex-grow ml-4 items-center flex-col group">
         <CardHeader>
           <div className="flex items-center justify-between gap-x-2 text-base">
-            <h3 className="inline-flex items-center justify-center font-semibold leading-none text-xs sm:text-sm">
+            <div className="inline-flex items-center justify-center font-semibold leading-none text-xs sm:text-sm">
               {title}
               {badges && (
-                <span className="inline-flex gap-x-1">
+                <div className="inline-flex gap-x-1">
                   {badges.map((badge, index) => (
                     <Badge
                       variant="secondary"
@@ -64,7 +64,7 @@ export const ResumeCard = ({
                       {badge}
                     </Badge>
                   ))}
-                </span>
+                </div>
               )}
               <ChevronRightIcon
                 className={cn(
@@ -72,7 +72,7 @@ export const ResumeCard = ({
                   isExpanded ? "rotate-90" : "rotate-0",
                 )}
               />
-            </h3>
+            </div>
             <div className="text-xs sm:text-sm tabular-nums text-muted-foreground text-right">
               {period}
             </div>

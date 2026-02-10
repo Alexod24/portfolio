@@ -13,7 +13,9 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Icons } from "@/components/icons";
 import Link from "next/link";
+import Image from "next/image";
 import Markdown from "react-markdown";
+import { motion } from "framer-motion";
 import { IconCloudDemo } from "@/components/IconCloudDemo";
 import { useResume } from "@/components/language-provider";
 import { MapLines } from "@/components/decorative/map-lines";
@@ -32,27 +34,46 @@ export default function Page() {
           <MapLines className="w-full h-full" />
         </div>
 
-        <div className="w-full space-y-8 text-left max-w-3xl relative z-10 px-4 md:px-0">
-          <div className="flex flex-col items-start gap-8">
+        <div className="w-full space-y-8 max-w-3xl relative z-10 px-4 md:px-0 mx-auto">
+          <div className="flex flex-col items-center gap-8">
+            <div className="flex flex-col w-full">
+              <div className="flex justify-center w-full">
+                <motion.div
+                  initial={{ opacity: 0, scale: 1.5, filter: "blur(10px)" }}
+                  animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+                  transition={{
+                    duration: 0.8,
+                    ease: [0.25, 1, 0.5, 1], // Custom bouncy/spray feel
+                    delay: BLUR_FADE_DELAY,
+                  }}
+                >
+                  <Image
+                    src="/logos/logo-black.png"
+                    alt="Logo"
+                    width={200}
+                    height={200}
+                    className="mb-4 object-contain dark:invert"
+                  />
+                </motion.div>
+              </div>
 
+              <div className="flex flex-col space-y-4">
+                <BlurFadeText
+                  delay={BLUR_FADE_DELAY}
+                  className="text-3xl sm:text-4xl md:text-7xl font-bold tracking-tight md:tracking-widest font-cinzel uppercase text-shadow-sm leading-none text-left"
+                  yOffset={8}
+                  text={data.description}
+                  animateByCharacter={true}
+                  characterDelay={0.08}
+                />
 
+                <div className="h-px w-24 bg-gradient-to-r from-transparent via-foreground/50 to-transparent my-4"></div>
 
-            <div className="flex flex-col space-y-4">
-              <BlurFadeText
-                delay={BLUR_FADE_DELAY}
-                className="text-3xl sm:text-4xl md:text-7xl font-bold tracking-tight md:tracking-widest font-cinzel uppercase text-shadow-sm leading-none"
-                yOffset={8}
-                text={data.description}
-                animateByCharacter={true}
-                characterDelay={0.08}
-              />
-
-              <div className="h-px w-24 bg-gradient-to-r from-transparent via-foreground/50 to-transparent my-4"></div>
-
-              <WordPullUp
-                className="max-w-[700px] text-base md:text-xl text-muted-foreground text-left font-light tracking-wide leading-relaxed"
-                words={data.summary}
-              />
+                <WordPullUp
+                  className="max-w-[700px] text-base md:text-xl text-muted-foreground text-left font-light tracking-wide leading-relaxed"
+                  words={data.summary}
+                />
+              </div>
             </div>
           </div>
         </div>

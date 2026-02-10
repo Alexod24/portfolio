@@ -20,7 +20,7 @@ export const AboutSection = () => {
                 {/* Left Column: Text */}
                 <div className="space-y-6">
                     <BlurFade delay={BLUR_FADE_DELAY} inView>
-                        <h2 className="text-4xl md:text-5xl font-black tracking-tighter leading-tight">
+                        <h2 className="text-3xl md:text-5xl font-bold tracking-tighter">
                             {data.about.split('\n')[0]}
                         </h2>
                     </BlurFade>
@@ -28,7 +28,7 @@ export const AboutSection = () => {
                     <BlurFade delay={BLUR_FADE_DELAY * 2} inView>
                         <div className="prose dark:prose-invert text-muted-foreground text-lg leading-relaxed">
                             <Markdown>
-                                {data.about.split('\n').slice(1).join('\n')}
+                                {data.summary}
                             </Markdown>
                         </div>
                     </BlurFade>
@@ -55,32 +55,7 @@ export const AboutSection = () => {
                         </div>
                     </BlurFade>
 
-                    <BlurFade delay={BLUR_FADE_DELAY * 4} inView>
-                        <div className="flex flex-col gap-4 w-full max-w-xs">
-                            {Object.entries(data.contact.social).map(([name, social]) => (
-                                <Link
-                                    key={name}
-                                    href={social.url}
-                                    target="_blank"
-                                    className="flex items-center gap-4 text-muted-foreground hover:text-foreground transition-colors group"
-                                >
-                                    <social.icon className="size-5 group-hover:scale-110 transition-transform" />
-                                    <span className="font-medium text-sm">
-                                        {name === "X" || name === "Kick" ? "Follow me on " : name === "GitHub" ? "Check my projects on " : "Connect on "}
-                                        {name}
-                                    </span>
-                                </Link>
-                            ))}
-                            <Link
-                                href={`mailto:${data.contact.email}`}
-                                target="_blank"
-                                className="flex items-center gap-4 text-muted-foreground hover:text-foreground transition-colors group pt-4 border-t border-dashed"
-                            >
-                                <Icons.email className="size-5 group-hover:scale-110 transition-transform" />
-                                <span className="font-medium text-sm">{data.contact.email}</span>
-                            </Link>
-                        </div>
-                    </BlurFade>
+
                 </div>
             </div>
         </section>

@@ -1012,9 +1012,9 @@ export const DATA_ES = {
   ],
   description: "Desarrollador\nFull Stack",
   summary:
-    "Soy Alex, estoy especializado en el diseño de arquitecturas escalables y la construcción de productos digitales de alto rendimiento. Enfoque integral centrado en la eficiencia técnica y la excelencia en el desarrollo de software.",
+    "La mejor manera de predecir el futuro es implementarlo. Diseño arquitecturas escalables y soluciones con IA, fusionando ingeniería sólida y visión estratégica para construir tecnología que transforme el presente.",
   about:
-    "Hola, soy Alex. Desarrollador Full Stack",
+    "Hola, soy Alex.",
   navbar: [
     { href: "/", icon: HomeIcon, label: "Inicio" },
     { href: "/blog", icon: NotebookIcon, label: "Blog" },

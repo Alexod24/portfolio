@@ -1,4 +1,5 @@
 import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { DATA_EN as DATA } from "@/data/resume";
@@ -63,7 +64,7 @@ export const metadata: Metadata = {
     yandex: "",
   },
   icons: {
-    icon: "/alex.png",
+    icon: "/logos/logo-redondo-black.png",
   },
 };
 
@@ -85,6 +86,7 @@ export default function RootLayout({
           <ThemeProvider attribute="class" defaultTheme="dark">
             <TooltipProvider delayDuration={0}>
               {children}
+              <Footer />
               <Navbar />
             </TooltipProvider>
           </ThemeProvider>
