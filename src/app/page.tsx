@@ -114,7 +114,14 @@ export default function Page() {
       <section id="skills">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY} inView>
-            <h2 className="text-xl font-bold">{data.sectionHeaders.skills}</h2>
+            <div className="flex items-center justify-between gap-x-2 text-base">
+              <h2 className="text-xl font-bold">{data.sectionHeaders.skills}</h2>
+              <Link href="/skills">
+                <Badge variant="outline" className="align-middle text-xs cursor-pointer hover:bg-secondary/50 transition-colors">
+                  Ver todas <ChevronRight className="ml-1 size-3" />
+                </Badge>
+              </Link>
+            </div>
           </BlurFade>
 
           <div className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background py-12 md:shadow-xl">
@@ -149,16 +156,7 @@ export default function Page() {
             <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white dark:from-background"></div>
             <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white dark:from-background"></div>
           </div>
-          <div className="flex justify-center mt-4">
-            <Link href="/skills">
-              <Button variant="outline" className="gap-2">
-                <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
-                  Ver todas las habilidades
-                </span>
-                <ChevronRight className="ml-1 size-4 transition-transform duration-300 group-hover:translate-x-1" />
-              </Button>
-            </Link>
-          </div>
+
 
         </div>
       </section>

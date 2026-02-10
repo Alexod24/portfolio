@@ -90,9 +90,9 @@ export default function AboutMePage() {
                     <BlurFade delay={BLUR_FADE_DELAY * 7}>
                         <h3 className="text-2xl font-bold border-b pb-2 mb-4">Tech Stack</h3>
                         <div className="flex flex-wrap gap-2">
-                            {data.skills.map((skill: string) => (
-                                <Badge key={skill} variant="secondary" className="text-base px-3 py-1">
-                                    {skill}
+                            {data.skillsCategories.flatMap(cat => cat.skills).map((skill) => (
+                                <Badge key={skill.name} variant="secondary" className="text-base px-3 py-1">
+                                    {skill.name}
                                 </Badge>
                             ))}
                         </div>

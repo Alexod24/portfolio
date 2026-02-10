@@ -1014,13 +1014,15 @@ export const DATA_ES = {
   summary:
     "Soy Alex, estoy especializado en el diseño de arquitecturas escalables y la construcción de productos digitales de alto rendimiento. Enfoque integral centrado en la eficiencia técnica y la excelencia en el desarrollo de software.",
   about:
-    "Hola, soy Alex. Desarrollador por vocación y curioso por elección.\n\nEstudio Ingeniería de Software y desde mis primeros años en la carrera me enamoré del desarrollo web. Me gusta construir proyectos funcionales, aprender nuevas tecnologías y explorar cómo la programación puede mejorar la productividad y la vida diaria.\n\nAdemás de programar, disfruto aprender sobre desarrollo personal, hábitos, disciplina y mentalidad. Creo firmemente que el crecimiento profesional empieza por el crecimiento interior.\n\nHe trabajado en proyectos de gestión de inventarios, automatización de procesos y plataformas web para coworkings, además de experimentar con nuevas herramientas.",
+    "Hola, soy Alex. Desarrollador por vocación y curioso por elección.\n\nEstudio Ingeniería de Software y desde mis primeros años en la carrera me enamoré del desarrollo web. Me gusta construir proyectos funcionales, aprender nuevas tecnologías y explorar cómo la programación puede mejorar la productividad y la vida diaria.",
   navbar: [
     { href: "/", icon: HomeIcon, label: "Inicio" },
     { href: "/blog", icon: NotebookIcon, label: "Blog" },
     { href: "/skills", icon: Wrench, label: "Habilidades" },
     { href: "/cv/cv.pdf", icon: FileTextIcon, label: "CV", target: "_blank" },
   ],
+
+  // \n\nAdemás de programar, disfruto aprender sobre desarrollo personal, hábitos, disciplina y mentalidad. Creo firmemente que el crecimiento profesional empieza por el crecimiento interior.\n\nHe trabajado en proyectos de gestión de inventarios, automatización de procesos y plataformas web para coworkings, además de experimentar con nuevas herramientas."
 
   work: [
     {
