@@ -1,5 +1,5 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon, NotebookIcon, FileTextIcon } from "lucide-react";
+import { HomeIcon, NotebookIcon, FileTextIcon, Wrench } from "lucide-react";
 
 export const DATA_EN = {
   sectionHeaders: {
@@ -35,23 +35,60 @@ export const DATA_EN = {
   about:
     "Hello, I'm Alex. Developer by vocation and curious by choice.\n\nI study Software Engineering, and since my early years in the program, I fell in love with web development. I enjoy building functional projects, learning new technologies, and exploring how programming can improve productivity and daily life.\n\nBeyond coding, I enjoy learning about personal development, habits, discipline, and mindset. I firmly believe that professional growth begins with inner growth.\n\nI have worked on inventory management projects, process automation, and web platforms for co-working spaces, in addition to experimenting with new tools.",
   avatarUrl: "/alex.png",
-  skills: [
-    "React",
-    "Next.js",
-    "Typescript",
-    "Node.js",
-    "Python",
-    "Go",
-    "Postgres",
-    "Docker",
-    "Kubernetes",
-    "Java",
-    "C++",
-    "Supabase"
+  skillsCategories: [
+    {
+      title: "Languages",
+      skills: [
+        { name: "JavaScript", icon: Icons.javascript },
+        { name: "TypeScript", icon: Icons.typescript },
+        { name: "Python", icon: Icons.python },
+        { name: "Java", icon: Icons.java },
+        { name: "C++", icon: Icons.cpp },
+        { name: "Go", icon: Icons.go },
+      ],
+    },
+    {
+      title: "Frontend",
+      skills: [
+        { name: "React", icon: Icons.react },
+        { name: "Next.js", icon: Icons.nextjs },
+        { name: "TailwindCSS", icon: Icons.tailwindcss },
+        { name: "Astro", icon: Icons.astro },
+        { name: "Framer Motion", icon: Icons.framermotion },
+      ],
+    },
+    {
+      title: "Backend & DB",
+      skills: [
+        { name: "Node.js", icon: Icons.nodejs },
+        { name: "PostgreSQL", icon: Icons.postgresql },
+        { name: "MySQL", icon: Icons.mysql },
+        { name: "Supabase", icon: Icons.supabase },
+      ],
+    },
+    {
+      title: "Tools & DevOps",
+      skills: [
+        { name: "Git", icon: Icons.github },
+        { name: "Docker", icon: Icons.docker },
+        { name: "Kubernetes", icon: Icons.kubernetes },
+        { name: "Figma", icon: Icons.figma },
+        { name: "Notion", icon: Icons.notion },
+        { name: "OpenAI", icon: Icons.openai },
+      ],
+    },
+    {
+      title: "Communities",
+      skills: [
+        { name: "GDG", icon: Icons.gdg },
+        { name: "Platzi", icon: Icons.platzi },
+      ],
+    },
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
     { href: "/blog", icon: NotebookIcon, label: "Blog" },
+    { href: "/skills", icon: Wrench, label: "Skills" },
     { href: "/cv/cv.pdf", icon: FileTextIcon, label: "CV", target: "_blank" },
   ],
   contact: {
@@ -923,6 +960,56 @@ export const DATA_ES = {
       whatsapp: "Chatea en WhatsApp",
     },
   },
+  skillsCategories: [
+    {
+      title: "Lenguajes",
+      skills: [
+        { name: "JavaScript", icon: Icons.javascript },
+        { name: "TypeScript", icon: Icons.typescript },
+        { name: "Python", icon: Icons.python },
+        { name: "Java", icon: Icons.java },
+        { name: "C++", icon: Icons.cpp },
+        { name: "Go", icon: Icons.go },
+      ],
+    },
+    {
+      title: "Frontend",
+      skills: [
+        { name: "React", icon: Icons.react },
+        { name: "Next.js", icon: Icons.nextjs },
+        { name: "TailwindCSS", icon: Icons.tailwindcss },
+        { name: "Astro", icon: Icons.astro },
+        { name: "Framer Motion", icon: Icons.framermotion },
+      ],
+    },
+    {
+      title: "Backend y Base de Datos",
+      skills: [
+        { name: "Node.js", icon: Icons.nodejs },
+        { name: "PostgreSQL", icon: Icons.postgresql },
+        { name: "MySQL", icon: Icons.mysql },
+        { name: "Supabase", icon: Icons.supabase },
+      ],
+    },
+    {
+      title: "Herramientas y DevOps",
+      skills: [
+        { name: "Git", icon: Icons.github },
+        { name: "Docker", icon: Icons.docker },
+        { name: "Kubernetes", icon: Icons.kubernetes },
+        { name: "Figma", icon: Icons.figma },
+        { name: "Notion", icon: Icons.notion },
+        { name: "OpenAI", icon: Icons.openai },
+      ],
+    },
+    {
+      title: "Comunidades",
+      skills: [
+        { name: "GDG", icon: Icons.gdg },
+        { name: "Platzi", icon: Icons.platzi },
+      ],
+    },
+  ],
   description: "Desarrollador\nFull Stack",
   summary:
     "Soy Alex, estoy especializado en el diseño de arquitecturas escalables y la construcción de productos digitales de alto rendimiento. Enfoque integral centrado en la eficiencia técnica y la excelencia en el desarrollo de software.",
@@ -931,6 +1018,7 @@ export const DATA_ES = {
   navbar: [
     { href: "/", icon: HomeIcon, label: "Inicio" },
     { href: "/blog", icon: NotebookIcon, label: "Blog" },
+    { href: "/skills", icon: Wrench, label: "Habilidades" },
     { href: "/cv/cv.pdf", icon: FileTextIcon, label: "CV", target: "_blank" },
   ],
 

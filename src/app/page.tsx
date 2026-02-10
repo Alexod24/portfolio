@@ -1,6 +1,7 @@
 "use client";
 
 import { HackathonCard } from "@/components/hackathon-card";
+import { ChevronRight } from "lucide-react";
 import BlurFade from "@/components/magicui/blur-fade";
 import Marquee from "@/components/magicui/marquee";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
@@ -43,7 +44,7 @@ export default function Page() {
                 yOffset={8}
                 text={data.description}
                 animateByCharacter={true}
-
+                characterDelay={0.08}
               />
 
               <div className="h-px w-24 bg-gradient-to-r from-transparent via-foreground/50 to-transparent my-4"></div>
@@ -147,6 +148,16 @@ export default function Page() {
             </Marquee>
             <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white dark:from-background"></div>
             <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white dark:from-background"></div>
+          </div>
+          <div className="flex justify-center mt-4">
+            <Link href="/skills">
+              <Button variant="outline" className="gap-2">
+                <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
+                  Ver todas las habilidades
+                </span>
+                <ChevronRight className="ml-1 size-4 transition-transform duration-300 group-hover:translate-x-1" />
+              </Button>
+            </Link>
           </div>
 
         </div>

@@ -364,5 +364,25 @@ export const Icons = {
       className={props.className || "size-8"}
       {...props}
     />
+  ),
+  go: (props: IconProps) => (
+    <img
+      src="/icons/go.svg"
+      alt="Go"
+      width={24}
+      height={24}
+      className={props.className || "size-8"}
+      {...props}
+    />
+  ),
+  kubernetes: (props: IconProps) => (
+    <img
+      src="/icons/kubernetes.svg"
+      alt="Kubernetes"
+      width={24}
+      height={24}
+      className={props.className || "size-8"}
+      {...props}
+    />
   )
 };
