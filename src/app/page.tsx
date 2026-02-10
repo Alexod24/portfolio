@@ -29,7 +29,7 @@ export default function Page() {
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-12 relative">
       <section id="hero" className="min-h-screen flex items-center justify-start py-12 pb-52 relative overflow-hidden">
-        {/* Decorative Map Lines */}
+        {/* Lineas decorativas que quizas elimine */}
         <div className="absolute top-0 left-[-10%] h-full w-1/2 md:w-1/3 z-0 pointer-events-none opacity-60 text-foreground/20">
           <MapLines className="w-full h-full" />
         </div>
@@ -43,17 +43,19 @@ export default function Page() {
                   animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
                   transition={{
                     duration: 0.8,
-                    ease: [0.25, 1, 0.5, 1], // Custom bouncy/spray feel
+                    ease: [0.25, 1, 0.5, 1],
                     delay: BLUR_FADE_DELAY,
                   }}
                 >
-                  <Image
+
+                  {/* Logo en el centro del head pero estoy iterando para ver si queda bien */}
+                  {/* <Image
                     src="/logos/logo-black.png"
                     alt="Logo"
                     width={200}
                     height={200}
                     className="mb-4 object-contain dark:invert"
-                  />
+                  /> */}
                 </motion.div>
               </div>
 

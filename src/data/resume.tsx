@@ -39,54 +39,146 @@ export const DATA_EN = {
     {
       title: "Languages",
       skills: [
-        { name: "JavaScript", icon: Icons.javascript },
-        { name: "TypeScript", icon: Icons.typescript },
-        { name: "Python", icon: Icons.python },
-        { name: "Java", icon: Icons.java },
-        { name: "C++", icon: Icons.cpp },
-        { name: "Go", icon: Icons.go },
+        {
+          name: "JavaScript",
+          icon: Icons.javascript,
+          description: "Lenguaje principal para el desarrollo web interactivo.",
+        },
+        {
+          name: "TypeScript",
+          icon: Icons.typescript,
+          description: "JavaScript con tipado estático para aplicaciones escalables.",
+        },
+        {
+          name: "Python",
+          icon: Icons.python,
+          description: "Versátil para backend, scripts y ciencia de datos.",
+        },
+        {
+          name: "Java",
+          icon: Icons.java,
+          description: "Robusto y orientado a objetos para sistemas empresariales.",
+        },
+        {
+          name: "C++",
+          icon: Icons.cpp,
+          description: "Alto rendimiento y control sobre recursos del sistema.",
+        },
+        {
+          name: "Go",
+          icon: Icons.go,
+          description: "Eficiencia y concurrencia para servicios modernos.",
+        },
       ],
     },
     {
       title: "Frontend",
       skills: [
-        { name: "React", icon: Icons.react },
-        { name: "Next.js", icon: Icons.nextjs },
-        { name: "TailwindCSS", icon: Icons.tailwindcss },
-        { name: "Astro", icon: Icons.astro },
-        { name: "Framer Motion", icon: Icons.framermotion },
+        {
+          name: "React",
+          icon: Icons.react,
+          description: "Biblioteca líder para interfaces de usuario dinámicas.",
+        },
+        {
+          name: "Next.js",
+          icon: Icons.nextjs,
+          description: "Framework de React para producción y renderizado híbrido.",
+        },
+        {
+          name: "TailwindCSS",
+          icon: Icons.tailwindcss,
+          description: "Framework de utilidad para diseño rápido y consistente.",
+        },
+        {
+          name: "Astro",
+          icon: Icons.astro,
+          description: "Rendimiento optimizado para sitios orientados a contenido.",
+        },
+        {
+          name: "Framer Motion",
+          icon: Icons.framermotion,
+          description: "Animaciones fluidas y declarativas para React.",
+        },
       ],
     },
     {
       title: "Backend & DB",
       skills: [
-        { name: "Node.js", icon: Icons.nodejs },
-        { name: "PostgreSQL", icon: Icons.postgresql },
-        { name: "MySQL", icon: Icons.mysql },
-        { name: "Supabase", icon: Icons.supabase },
+        {
+          name: "Node.js",
+          icon: Icons.nodejs,
+          description: "Entorno de ejecución para backend rápido y escalable.",
+        },
+        {
+          name: "PostgreSQL",
+          icon: Icons.postgresql,
+          description: "Base de datos relacional potente y confiable.",
+        },
+        {
+          name: "MySQL",
+          icon: Icons.mysql,
+          description: "Gestión de datos relacional ampliamente utilizada.",
+        },
+        {
+          name: "Supabase",
+          icon: Icons.supabase,
+          description: "Backend como servicio con esteroides sobre PostgreSQL.",
+        },
       ],
     },
     {
       title: "Tools & DevOps",
       skills: [
-        { name: "Git", icon: Icons.github },
-        { name: "Docker", icon: Icons.docker },
-        { name: "Kubernetes", icon: Icons.kubernetes },
-        { name: "Figma", icon: Icons.figma },
-        { name: "Notion", icon: Icons.notion },
-        { name: "OpenAI", icon: Icons.openai },
+        {
+          name: "Git",
+          icon: Icons.github,
+          description: "Control de versiones esencial para colaboración.",
+        },
+        {
+          name: "Docker",
+          icon: Icons.docker,
+          description: "Contenerización para despliegues consistentes.",
+        },
+        {
+          name: "Kubernetes",
+          icon: Icons.kubernetes,
+          description: "Orquestación de contenedores a gran escala.",
+        },
+        {
+          name: "Figma",
+          icon: Icons.figma,
+          description: "Diseño colaborativo de interfaces y prototipos.",
+        },
+        {
+          name: "Notion",
+          icon: Icons.notion,
+          description: "Gestión del, conocimiento y organización de proyectos.",
+        },
+        {
+          name: "OpenAI",
+          icon: Icons.openai,
+          description: "Integración de inteligencia artificial en aplicaciones.",
+        },
       ],
     },
     {
       title: "Communities",
       skills: [
-        { name: "GDG", icon: Icons.gdg },
-        { name: "Platzi", icon: Icons.platzi },
+        {
+          name: "GDG",
+          icon: Icons.gdg,
+          description: "Google Developer Groups: Expandiendo conocimiento tecnológico globalmente.",
+        },
+        {
+          name: "Platzi",
+          icon: Icons.platzi,
+          description: "Comunidad de aprendizaje continuo en tecnología.",
+        },
       ],
     },
   ],
   navbar: [
-    { href: "/", icon: HomeIcon, label: "Home" },
+    // { href: "/", icon: HomeIcon, label: "Home", navbar: false },
     { href: "/blog", icon: NotebookIcon, label: "Blog" },
     { href: "/skills", icon: Wrench, label: "Skills" },
     { href: "/cv/cv.pdf", icon: FileTextIcon, label: "CV", target: "_blank" },
@@ -114,13 +206,13 @@ export const DATA_EN = {
         url: "https://kick.com/alexcode24",
         icon: Icons.kick,
 
-        navbar: true,
+        navbar: false,
       },
       Youtube: {
         name: "Youtube",
         url: "https://www.youtube.com/@Alex.od2408",
         icon: Icons.youtube,
-        navbar: true,
+        navbar: false,
       },
       email: {
         name: "Send Email",

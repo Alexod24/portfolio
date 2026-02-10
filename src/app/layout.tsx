@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     yandex: "",
   },
   icons: {
-    icon: "/logos/logo-redondo-black.png",
+    icon: "/logos/logo-redondo-white.png",
   },
 };
 
