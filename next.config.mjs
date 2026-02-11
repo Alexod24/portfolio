@@ -12,8 +12,24 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "dig-ed.org"
-      }
+        hostname: "dig-ed.org",
+      },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+      },
+      {
+        protocol: "https",
+        hostname: "labase.pe",
+      },
+      {
+        protocol: "https",
+        hostname: "arxatec.net",
+      },
+      {
+        protocol: "https",
+        hostname: "tid.com.pe",
+      },
     ],
   },
   reactStrictMode: true,

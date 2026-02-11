@@ -3,6 +3,7 @@
 import { useResume } from "@/components/language-provider";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
+import { Icons } from "@/components/icons";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
@@ -62,6 +63,12 @@ export default function WorksPage() {
                                         {work.href && (
                                             <Link href={work.href} target="_blank" className="hover:text-primary transition-colors flex items-center gap-1">
                                                 <LinkIcon className="size-4" /> Website
+                                            </Link>
+                                        )}
+                                        {/* @ts-ignore */}
+                                        {work.youtube && (
+                                            <Link href={work.youtube} target="_blank" className="hover:text-red-500 transition-colors flex items-center gap-1">
+                                                <Icons.youtube className="size-4" /> YouTube
                                             </Link>
                                         )}
                                     </div>

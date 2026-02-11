@@ -118,7 +118,14 @@ export default function Page() {
       <section id="education">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY} inView>
-            <h2 className="text-xl font-bold">{data.sectionHeaders.education}</h2>
+            <div className="flex items-center justify-between gap-x-2 text-base">
+              <h2 className="text-xl font-bold">{data.sectionHeaders.education}</h2>
+              <Link href="/education">
+                <Badge variant="outline" className="align-middle text-xs cursor-pointer hover:bg-secondary/50 transition-colors">
+                  Ver todas <ChevronRight className="ml-1 size-3" />
+                </Badge>
+              </Link>
+            </div>
           </BlurFade>
           {data.education.map((education, id) => (
             <BlurFade
@@ -207,6 +214,11 @@ export default function Page() {
                   {data.sectionHeaders.projects.description}
                 </p>
               </div>
+              <Link href="/projects">
+                <Badge variant="outline" className="align-middle text-xs cursor-pointer hover:bg-accent hover:text-accent-foreground transition-colors py-2 px-4">
+                  Ver todos los proyectos <ChevronRight className="ml-1 size-3" />
+                </Badge>
+              </Link>
             </div>
           </BlurFade>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">

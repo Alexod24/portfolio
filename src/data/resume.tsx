@@ -239,7 +239,7 @@ export const DATA_EN = {
   work: [
     {
       company: "Arxatec",
-      href: "https://arxatec.com",
+      href: "https://arxatec.net",
       badges: ["Next.js", "TypeScript", "OpenAI", "Shadcn UI", "PostgreSQL"],
       location: "Remote",
       title: "Full Stack Developer",
@@ -248,8 +248,9 @@ export const DATA_EN = {
       end: "Present",
       className: "md:col-span-2",
       backgroundUrl: "/projects/arxatec/dashboard.png",
-      companyProfile: "A leading LegalTech company dedicated to the digital transformation of the legal sector. Arxatec combines cutting-edge technology with legal expertise to automate processes and improve efficiency for law firms.",
-      services: ["Legal Automation", "Case Management", "Digital Consulting"],
+      companyProfile: "Arxatec is the all-in-one legal platform for lawyers and law firms: case management, documents, clients, billing, and an AI legal assistant. Faster, safer, and designed to maximize legal productivity.",
+      services: ["Legal Automation", "Case Management", "Client Portal", "AI Legal Assistant", "Billing & Invoicing"],
+      youtube: "https://www.youtube.com/@Arxatec",
       gallery: [
         "/projects/arxatec/dashboard.png",
         "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2664&auto=format&fit=crop",
@@ -261,7 +262,7 @@ export const DATA_EN = {
     {
       company: "La Base Cowork",
       badges: ["React", "PHP", "MySQL", "SEO", "Payment Integrations"],
-      href: "https://labasecowork.com",
+      href: "https://labase.pe",
       location: "On-site",
       title: "Web Developer",
       logoUrl:
@@ -270,8 +271,9 @@ export const DATA_EN = {
       end: "2025",
       className: "md:col-span-1",
       backgroundUrl: "/projects/inventory.png",
-      companyProfile: "The first military-themed coworking space. A space designed to empower ideas, foster discipline, and create a solid community of entrepreneurs. It offers an environment where strategy and creativity come together.",
-      services: ["Private Offices", "Flexible Desks", "Meeting Rooms", "Networking", "High-Speed Internet"],
+      companyProfile: "La Base Cowork offers a unique environment where creativity becomes innovation. Themed spaces inspired by the military world, constant collaboration, and the necessary technology for your team to grow.",
+      services: ["Private Offices", "Flexible Desks", "Meeting Rooms", "Networking", "Auditorium", "Coffee Break"],
+      youtube: "https://www.youtube.com/@basecowork",
       gallery: [
         "/projects/inventory.png",
         "https://labase.pe/assets/img/espacios/oficina-privada.jpg",
@@ -283,7 +285,7 @@ export const DATA_EN = {
     },
     {
       company: "TID",
-      href: "https://tid.com.pe",
+      href: "https://tid.com.pe/dashboard/inicio.php",
       badges: ["React", "CodeIgniter", "Electronic Invoicing", "SQL"],
       location: "On-site",
       title: "Systems Developer",
@@ -293,7 +295,7 @@ export const DATA_EN = {
       className: "md:col-span-1",
       backgroundUrl: "",
       companyProfile: "Specialists in integral technology solutions for business management. TID develops robust ERP systems focused on operational efficiency, electronic invoicing, and regulatory compliance for various sectors.",
-      services: ["Software Development", "Electronic Invoicing", "IT Consulting", "ERP Systems"],
+      services: ["Software Development", "Electronic Invoicing", "IT Consulting", "ERP Systems", "Business Intelligence"],
       gallery: [
         "https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2670&auto=format&fit=crop",
         "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2670&auto=format&fit=crop"
@@ -1153,7 +1155,7 @@ export const DATA_ES = {
     {
       company: "Arxatec",
       href: "https://arxatec.com",
-      badges: ["Next.js", "TypeScript", "OpenAI", "Shadcn UI", "PostgreSQL"],
+      // badges: ["Next.js", "TypeScript", "OpenAI", "Shadcn UI", "PostgreSQL"],
       location: "Remoto",
       title: "Desarrollador Full Stack",
       logoUrl: "/logos/arxatec.jpg",
@@ -1173,7 +1175,7 @@ export const DATA_ES = {
     },
     {
       company: "La Base Cowork",
-      badges: ["React", "PHP", "MySQL", "SEO", "Payment Integrations"],
+      // badges: ["React", "PHP", "MySQL", "SEO", "Payment Integrations"],
       href: "https://labasecowork.com",
       location: "Presencial",
       title: "Desarrollador Web",
@@ -1197,7 +1199,7 @@ export const DATA_ES = {
     {
       company: "TID",
       href: "https://tid.com.pe",
-      badges: ["React", "CodeIgniter", "Electronic Invoicing", "SQL"],
+      // badges: ["React", "CodeIgniter", "Electronic Invoicing", "SQL"],
       location: "Presencial",
       title: "Desarrollador de Sistemas",
       logoUrl: "https://tid.com.pe/assets/img/logos/logo_tid_SF.png",
