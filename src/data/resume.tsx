@@ -34,6 +34,12 @@ export const DATA_EN = {
     "I'm Alex, specializing in designing scalable architectures and building high-performance digital products. A comprehensive approach focused on technical efficiency and excellence in software development.",
   about:
     "Hello, I'm Alex. Developer by vocation and curious by choice.\n\nI study Software Engineering, and since my early years in the program, I fell in love with web development. I enjoy building functional projects, learning new technologies, and exploring how programming can improve productivity and daily life.\n\nBeyond coding, I enjoy learning about personal development, habits, discipline, and mindset. I firmly believe that professional growth begins with inner growth.\n\nI have worked on inventory management projects, process automation, and web platforms for co-working spaces, in addition to experimenting with new tools.",
+  aboutPage: {
+    tagline: "Coding with purpose, building with passion.",
+    bio: "I'm Alex, a Full Stack Developer based in Peru, driven by the challenge of transforming complex problems into elegant, user-centric digital solutions. My journey in tech is fueled by a relentless curiosity and a commitment to excellence. I don't just write code; I architect experiences that empower users and businesses.\n\nCurrently, I'm channeling my energy into LegalTech at Arxatec, where I'm leveraging AI to modernize the legal industry. My background spans from crafting immersive web experiences for co-working spaces to building robust ERP systems. I thrive in the intersection of engineering and design, always seeking the sweet spot where performance meets aesthetics.",
+    philosophy: "I firmly believe that the quality of your code is a reflection of the clarity of your mind. 'Professional growth begins with inner growth' isn't just a motto; it's my daily practice. I approach development with discipline, continuous learning, and a stoic mindset, ensuring that every line of code serves a meaningful purpose. Whether it's optimizing a database query or refining a UI animation, I strive for craftsmanship in every detail.",
+    experienceContext: "My professional path has been diverse and dynamic. From the structured world of systems engineering at Senati and Universidad Continental to the fast-paced environment of startups and hackathons, I've cultivated a versatile skill set. I've led projects, collaborated with cross-functional teams, and constantly pushed the boundaries of what's possible with technologies like Next.js, AI, and cloud infrastructure. This blend of academic rigor and practical, hands-on experience allows me to tackle challenges with both theoretical depth and pragmatic agility."
+  },
   avatarUrl: "/alex.png",
   skillsCategories: [
     {
@@ -178,7 +184,7 @@ export const DATA_EN = {
     },
   ],
   navbar: [
-    // { href: "/", icon: HomeIcon, label: "Home", navbar: false },
+
     { href: "/blog", icon: NotebookIcon, label: "Blog" },
     { href: "/skills", icon: Wrench, label: "Skills" },
     { href: "/cv/cv.pdf", icon: FileTextIcon, label: "CV", target: "_blank" },
@@ -234,18 +240,27 @@ export const DATA_EN = {
     {
       company: "Arxatec",
       href: "https://arxatec.com",
-      badges: [],
+      badges: ["Next.js", "TypeScript", "OpenAI", "Shadcn UI", "PostgreSQL"],
       location: "Remote",
       title: "Full Stack Developer",
       logoUrl: "/logos/arxatec.jpg",
       start: "2025",
       end: "Present",
+      className: "md:col-span-2",
+      backgroundUrl: "/projects/arxatec/dashboard.png",
+      companyProfile: "A leading LegalTech company dedicated to the digital transformation of the legal sector. Arxatec combines cutting-edge technology with legal expertise to automate processes and improve efficiency for law firms.",
+      services: ["Legal Automation", "Case Management", "Digital Consulting"],
+      gallery: [
+        "/projects/arxatec/dashboard.png",
+        "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2664&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2670&auto=format&fit=crop"
+      ],
       description:
-        "Integral digital transformation platform for the legal sector. The software centralizes legal service management, automates administrative workflows, and optimizes interaction between legal professionals and their clients through a scalable and secure architecture.",
+        "Spearheading the digital transformation of the legal sector by building a comprehensive LegalTech platform.\n\n• Architected and developed a scalable frontend using Next.js 14 and TypeScript, improving page load speeds by 40%.\n• Integrated OpenAI's API to automate legal document drafting, reducing lawyer's drafting time by roughly 60%.\n• Implemented real-time collaboration features using WebSockets and efficient state management.\n• Designed a component library with Shadcn UI to ensure UI consistency across the platform.",
     },
     {
       company: "La Base Cowork",
-      badges: [],
+      badges: ["React", "PHP", "MySQL", "SEO", "Payment Integrations"],
       href: "https://labasecowork.com",
       location: "On-site",
       title: "Web Developer",
@@ -253,20 +268,38 @@ export const DATA_EN = {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmltCbeB-oyIL7sEe6veiY6klrX5z-ln46jQ&s",
       start: "2024",
       end: "2025",
+      className: "md:col-span-1",
+      backgroundUrl: "/projects/inventory.png",
+      companyProfile: "The first military-themed coworking space. A space designed to empower ideas, foster discipline, and create a solid community of entrepreneurs. It offers an environment where strategy and creativity come together.",
+      services: ["Private Offices", "Flexible Desks", "Meeting Rooms", "Networking", "High-Speed Internet"],
+      gallery: [
+        "/projects/inventory.png",
+        "https://labase.pe/assets/img/espacios/oficina-privada.jpg",
+        "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2669&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=2670&auto=format&fit=crop"
+      ],
       description:
-        "Development of corporate websites and custom management systems. Optimization of digital interfaces and processes for various clients in an agile environment.",
+        "Digitalized the operations of a busy co-working space through custom web solutions.\n\n• Developed a custom booking and membership management system, streamlining the reservation process for over 50+ active members.\n• Optimized the main corporate website for SEO and performance, resulting in a 25% increase in organic traffic.\n• integrated local payment gateways to facilitate automated billing and invoicing.\n• Collaborated directly with stakeholders to gather requirements and iterate on user feedback.",
     },
     {
       company: "TID",
       href: "https://tid.com.pe",
-      badges: [],
+      badges: ["React", "CodeIgniter", "Electronic Invoicing", "SQL"],
       location: "On-site",
       title: "Systems Developer",
       logoUrl: "https://tid.com.pe/assets/img/logos/logo_tid_SF.png",
       start: "2023",
       end: "2024",
+      className: "md:col-span-1",
+      backgroundUrl: "",
+      companyProfile: "Specialists in integral technology solutions for business management. TID develops robust ERP systems focused on operational efficiency, electronic invoicing, and regulatory compliance for various sectors.",
+      services: ["Software Development", "Electronic Invoicing", "IT Consulting", "ERP Systems"],
+      gallery: [
+        "https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2670&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2670&auto=format&fit=crop"
+      ],
       description:
-        "Design and implementation of integral management systems (ERP) for educational institutions and the gastronomic sector, including robust electronic invoicing solutions.",
+        "Contributed to the development of robust ERP solutions for the education and gastronomy sectors.\n\n• Developed and maintained modules for electronic invoicing, ensuring compliance with local tax regulations (SUNAT).\n• Refactored legacy codebases to improve maintainability and reduce technical debt.\n• Implemented reporting dashboards using React and charting libraries to visualize key business metrics for clients.\n• Participated in agile development cycles (Scrum), attending daily stand-ups and sprint reviews.",
     },
   ],
   education: [
@@ -819,34 +852,34 @@ export const DATA_EN = {
       slug: "focus-flow",
       gallery: [],
     },
-    {
-      title: "OpenTravels",
-      href: "https://github.com/Alexod24/opentravels",
-      dates: "November 2024",
-      active: true,
-      description:
-        "This platform includes login and registration functions that allow users to publish places they have recently visited. In this way, all community members can share experiences and recommendations.",
-      technologies: [
-        "Next.js",
-        "TypeScript",
-        "Tailwind CSS",
-        "Prisma",
-        "PostgreSQL",
-        "Shadcn UI",
-        "Magic UI",
-      ],
-      links: [
-        {
-          type: "Source",
-          href: "https://github.com/Alexod24/opentravels",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "/projects/opentravels.png",
-      video: "",
-      slug: "opentravels",
-      gallery: [],
-    },
+    // {
+    //   title: "OpenTravels",
+    //   href: "https://github.com/Alexod24/opentravels",
+    //   dates: "November 2024",
+    //   active: true,
+    //   description:
+    //     "This platform includes login and registration functions that allow users to publish places they have recently visited. In this way, all community members can share experiences and recommendations.",
+    //   technologies: [
+    //     "Next.js",
+    //     "TypeScript",
+    //     "Tailwind CSS",
+    //     "Prisma",
+    //     "PostgreSQL",
+    //     "Shadcn UI",
+    //     "Magic UI",
+    //   ],
+    //   links: [
+    //     {
+    //       type: "Source",
+    //       href: "https://github.com/Alexod24/opentravels",
+    //       icon: <Icons.github className="size-3" />,
+    //     },
+    //   ],
+    //   image: "/projects/opentravels.png",
+    //   video: "",
+    //   slug: "opentravels",
+    //   gallery: [],
+    // },
   ],
   hackathons: [
     {
@@ -1104,11 +1137,11 @@ export const DATA_ES = {
   ],
   description: "Desarrollador\nFull Stack",
   summary:
-    "La mejor manera de predecir el futuro es implementarlo. Diseño arquitecturas escalables y soluciones con IA, fusionando ingeniería sólida y visión estratégica para construir tecnología que transforme el presente.",
+    "Soy un desarrollador enfocado en crear productos que resuelvan problemas reales. Me especializo en arquitecturas web modernas y escalables, siempre buscando el equilibrio entre un código limpio y una gran experiencia de usuario.",
   about:
     "Hola, soy Alex.",
   navbar: [
-    { href: "/", icon: HomeIcon, label: "Inicio" },
+
     { href: "/blog", icon: NotebookIcon, label: "Blog" },
     { href: "/skills", icon: Wrench, label: "Habilidades" },
     { href: "/cv/cv.pdf", icon: FileTextIcon, label: "CV", target: "_blank" },
@@ -1120,18 +1153,27 @@ export const DATA_ES = {
     {
       company: "Arxatec",
       href: "https://arxatec.com",
-      badges: [],
+      badges: ["Next.js", "TypeScript", "OpenAI", "Shadcn UI", "PostgreSQL"],
       location: "Remoto",
       title: "Desarrollador Full Stack",
       logoUrl: "/logos/arxatec.jpg",
       start: "2025",
       end: "Presente",
+      className: "md:col-span-2",
+      backgroundUrl: "/projects/arxatec/dashboard.png",
+      companyProfile: "Una empresa LegalTech líder dedicada a la transformación digital del sector jurídico. Arxatec combina tecnología de vanguardia con experiencia legal para automatizar procesos y mejorar la eficiencia de las firmas de abogados.",
+      services: ["Automatización Legal", "Gestión de Expedientes", "Consultoría Digital"],
+      gallery: [
+        "/projects/arxatec/dashboard.png",
+        "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2664&auto=format&fit=crop", // Placeholder office
+        "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2670&auto=format&fit=crop" // Placeholder team
+      ],
       description:
-        "Plataforma integral de transformación digital para el sector legal. El software centraliza la gestión de servicios jurídicos, automatiza flujos de trabajo administrativos y optimiza la interacción entre profesionales del derecho y sus clientes mediante una arquitectura escalable y segura.",
+        "Liderando la transformación digital del sector legal mediante la construcción de una plataforma LegalTech integral.\n\n• Arquitectura y desarrollo de un frontend escalable usando Next.js 14 y TypeScript, mejorando la velocidad de carga en un 40%.\n• Integración de la API de OpenAI para automatizar la redacción de documentos legales, reduciendo el tiempo de redacción de los abogados en aproximadamente un 60%.\n• Implementación de funciones de colaboración en tiempo real usando WebSockets y gestión de estado eficiente.\n• Diseño de una biblioteca de componentes con Shadcn UI para asegurar la consistencia de la UI en toda la plataforma.",
     },
     {
       company: "La Base Cowork",
-      badges: [],
+      badges: ["React", "PHP", "MySQL", "SEO", "Payment Integrations"],
       href: "https://labasecowork.com",
       location: "Presencial",
       title: "Desarrollador Web",
@@ -1139,20 +1181,38 @@ export const DATA_ES = {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmltCbeB-oyIL7sEe6veiY6klrX5z-ln46jQ&s",
       start: "2024",
       end: "2025",
+      className: "md:col-span-1",
+      backgroundUrl: "/projects/inventory.png",
+      companyProfile: "El primer coworking temático inspirado en el mundo militar. Un espacio diseñado para potenciar ideas, fomentar la disciplina y crear una comunidad sólida de emprendedores. Ofrece un ambiente donde la estrategia y la creatividad se unen.",
+      services: ["Oficinas Privadas", "Escritorios Flexibles", "Salas de Reuniones", "Networking", "Internet Alta Velocidad"],
+      gallery: [
+        "/projects/inventory.png",
+        "https://labase.pe/assets/img/espacios/oficina-privada.jpg", // Tries to guess/use generic if fail
+        "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2669&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=2670&auto=format&fit=crop"
+      ],
       description:
-        "Desarrollo de sitios web corporativos y sistemas de gestión a medida. Optimización de interfaces y procesos digitales para diversos clientes en un entorno ágil.",
+        "Digitalización de las operaciones de un concurrido espacio de coworking a través de soluciones web personalizadas.\n\n• Desarrollo de un sistema personalizado de reservas y gestión de membresías, agilizando el proceso de reserva para más de 50 miembros activos.\n• Optimización del sitio web corporativo principal para SEO y rendimiento, resultando en un aumento del 25% en el tráfico orgánico.\n• Integración de pasarelas de pago locales para facilitar la facturación automatizada.\n• Colaboración directa con los interesados para recopilar requisitos e iterar sobre los comentarios de los usuarios.",
     },
     {
       company: "TID",
       href: "https://tid.com.pe",
-      badges: [],
+      badges: ["React", "CodeIgniter", "Electronic Invoicing", "SQL"],
       location: "Presencial",
       title: "Desarrollador de Sistemas",
       logoUrl: "https://tid.com.pe/assets/img/logos/logo_tid_SF.png",
       start: "2023",
       end: "2024",
+      className: "md:col-span-1",
+      backgroundUrl: "",
+      companyProfile: "Especialistas en soluciones tecnológicas integrales para la gestión empresarial. TID desarrolla sistemas ERP robustos enfocados en la eficiencia operativa, facturación electrónica y cumplimiento normativo para diversos sectores.",
+      services: ["Desarrollo de Software", "Facturación Electrónica", "Consultoría TI", "Sistemas ERP"],
+      gallery: [
+        "https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2670&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2670&auto=format&fit=crop"
+      ],
       description:
-        "Diseño e implementación de sistemas integrales de gestión (ERP) para instituciones educativas y sector gastronómico, incluyendo soluciones robustas de facturación electrónica.",
+        "Contribución al desarrollo de soluciones ERP robustas para los sectores educativo y gastronómico.\n\n• Desarrollo y mantenimiento de módulos para facturación electrónica, asegurando el cumplimiento de las regulaciones fiscales locales (SUNAT).\n• Refactorización de bases de código heredadas para mejorar el mantenimiento y reducir la deuda técnica.\n• Implementación de paneles de informes usando React y bibliotecas de gráficos para visualizar métricas clave de negocio para los clientes.\n• Participación en ciclos de desarrollo ágil (Scrum), asistiendo a stand-ups diarios y revisiones de sprint.",
     },
   ],
   education: [

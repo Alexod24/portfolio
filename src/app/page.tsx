@@ -8,6 +8,7 @@ import BlurFadeText from "@/components/magicui/blur-fade-text";
 import WordPullUp from "@/components/magicui/word-pull-up";
 import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
+import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -84,7 +85,14 @@ export default function Page() {
       <section id="work">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY} inView>
-            <h2 className="text-2xl font-bold tracking-tighter">{data.sectionHeaders.work}</h2>
+            <div className="flex items-center justify-between gap-x-2 text-base">
+              <h2 className="text-2xl font-bold tracking-tighter">{data.sectionHeaders.work}</h2>
+              <Link href="/works">
+                <Badge variant="outline" className="align-middle text-xs cursor-pointer hover:bg-secondary/50 transition-colors">
+                  Ver todas <ChevronRight className="ml-1 size-3" />
+                </Badge>
+              </Link>
+            </div>
           </BlurFade>
           {data.work.map((work, id) => (
             <BlurFade
@@ -321,10 +329,13 @@ export default function Page() {
                   target="_blank"
                   className="no-underline"
                 >
-                  <Button className="gap-2 bg-[#25D366] hover:bg-[#25D366]/90 text-white text-lg px-8 py-6 rounded-full shadow-lg transition-transform hover:scale-105">
+                  <InteractiveHoverButton
+                    className="gap-2 bg-[#25D366] hover:bg-[#25D366]/90 text-white text-lg px-8 py-6 rounded-full shadow-lg transition-transform hover:scale-105"
+                    onClick={() => window.open(data.contact.social.WhatsApp.url, "_blank")}
+                  >
                     <Icons.whatsapp className="size-6" />
                     {data.sectionHeaders.contact.whatsapp}
-                  </Button>
+                  </InteractiveHoverButton>
                 </Link>
               </div>
             </div>

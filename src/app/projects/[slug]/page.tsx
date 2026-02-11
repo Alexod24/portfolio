@@ -5,6 +5,7 @@ import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
 import { Carousel } from "@/components/ui/carousel";
 import { ArrowLeftIcon, ExternalLinkIcon, GithubIcon } from "lucide-react";
 import Link from "next/link";
@@ -38,10 +39,10 @@ export default function ProjectPage({ params }: Props) {
     return (
         <main className="flex flex-col min-h-[100dvh] space-y-12 max-w-4xl mx-auto py-12 px-4 md:px-0 relative">
             <Link href="/#projects">
-                <Button variant="ghost" className="-ml-4 gap-2 mb-8">
+                <InteractiveHoverButton className="ml-0 gap-2 mb-8 w-auto px-6 border bg-background hover:bg-accent text-foreground">
                     <ArrowLeftIcon className="size-4" />
                     Back to Projects
-                </Button>
+                </InteractiveHoverButton>
             </Link>
 
             <section className="flex flex-col gap-8">
@@ -72,10 +73,10 @@ export default function ProjectPage({ params }: Props) {
                         <div className="flex gap-4">
                             {project.links.map((link: any, idx: number) => (
                                 <Link key={idx} href={link.href} target="_blank">
-                                    <Button className="gap-2">
+                                    <InteractiveHoverButton className="gap-2 w-full sm:w-auto">
                                         {link.type === "Source" || link.type === "GitHub" ? <GithubIcon className="size-4" /> : <ExternalLinkIcon className="size-4" />}
                                         {link.type}
-                                    </Button>
+                                    </InteractiveHoverButton>
                                 </Link>
                             ))}
                         </div>

@@ -6,6 +6,7 @@ import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
 import { ArrowLeftIcon } from "lucide-react";
 import Link from "next/link";
 import Markdown from "react-markdown";
@@ -18,10 +19,10 @@ export default function AboutMePage() {
     return (
         <main className="flex flex-col min-h-[100dvh] space-y-12 max-w-3xl mx-auto py-12 px-4 md:px-0 relative">
             <Link href="/">
-                <Button variant="ghost" className="-ml-4 gap-2 mb-8">
+                <InteractiveHoverButton className="ml-0 gap-2 mb-8 w-auto px-6 border bg-background hover:bg-accent text-foreground">
                     <ArrowLeftIcon className="size-4" />
                     Back to Home
-                </Button>
+                </InteractiveHoverButton>
             </Link>
 
             <section id="hero" className="flex flex-col items-center text-center space-y-6">
@@ -40,7 +41,7 @@ export default function AboutMePage() {
                     />
                     <BlurFade delay={BLUR_FADE_DELAY * 3}>
                         <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto">
-                            {data.description}
+                            {data.aboutPage?.tagline || data.description}
                         </p>
                     </BlurFade>
                 </div>
@@ -52,10 +53,7 @@ export default function AboutMePage() {
                     <BlurFade delay={BLUR_FADE_DELAY * 4}>
                         <h3 className="text-2xl font-bold border-b pb-2 mb-4">The Developer</h3>
                         <div className="prose dark:prose-invert text-muted-foreground leading-relaxed text-lg text-justify">
-                            <Markdown>{data.about.split('\n\n')[0]}</Markdown>
-                            <div className="mt-4">
-                                <Markdown>{data.about.split('\n\n')[1]}</Markdown>
-                            </div>
+                            <Markdown>{data.aboutPage?.bio || data.about}</Markdown>
                         </div>
                     </BlurFade>
                 </section>
@@ -66,7 +64,7 @@ export default function AboutMePage() {
                         <h3 className="text-2xl font-bold border-b pb-2 mb-4">Philosophy & Mindset</h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div className="prose dark:prose-invert text-muted-foreground leading-relaxed">
-                                <Markdown>{data.about.split('\n\n')[2]}</Markdown>
+                                <Markdown>{data.aboutPage?.philosophy}</Markdown>
                             </div>
                             <div className="bg-muted/30 p-6 rounded-xl border flex items-center justify-center italic text-center text-muted-foreground">
                                 "Professional growth begins with inner growth."
@@ -80,7 +78,7 @@ export default function AboutMePage() {
                     <BlurFade delay={BLUR_FADE_DELAY * 6}>
                         <h3 className="text-2xl font-bold border-b pb-2 mb-4">Experience Context</h3>
                         <div className="prose dark:prose-invert text-muted-foreground leading-relaxed text-justify">
-                            <Markdown>{data.about.split('\n\n')[3]}</Markdown>
+                            <Markdown>{data.aboutPage?.experienceContext}</Markdown>
                         </div>
                     </BlurFade>
                 </section>
