@@ -1,0 +1,35 @@
+---
+title: "Building this Portfolio: A Journey with Next.js and MagicUI"
+publishedAt: "2024-03-10"
+summary: "How I built my personal portfolio using the latest web technologies, focusing on performance, accessibility, and design."
+image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=2555&auto=format&fit=crop"
+---
+
+Building a portfolio is more than just showcasing work; it's about creating an experience that reflects your personality and technical skills. For this version of my portfolio, I decided to go all-in with **Next.js 14**, **Tailwind CSS**, and **MagicUI**.
+
+## The Tech Stack
+
+I chose this stack for several reasons:
+
+1.  **Performance**: Next.js provides excellent performance out of the box with server-side rendering and static site generation.
+2.  **Design Freedom**: Tailwind CSS allowed me to rapidly prototype and style components without fighting against a framework.
+3.  **Visual Spark**: MagicUI provided those beautiful, subtle animations that make the site feel "alive".
+
+## Challenges faced
+
+One of the main challenges was integrating the blog system. I wanted to write posts in **MDX** so I could embed React components directly into my articles. This allows for interactive demos and a richer reading experience.
+
+```tsx
+// A sneak peek at the MDX setup
+export function BlogLayout({ children }) {
+  return (
+    <article className="prose dark:prose-invert mx-auto">
+      {children}
+    </article>
+  )
+}
+```
+
+## Future Plans
+
+I plan to add more interactive elements, perhaps a guestbook or a "now" page to share what I'm currently up to. Stay tuned!
