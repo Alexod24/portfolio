@@ -1535,27 +1535,27 @@ export const DATA_ES = {
       banner: "/education/banners/oracle-academy.jpg",
       courses: [
         {
-          title: "Curso de Programación Básica",
+          title: "Artificial Intelligence with Machine Learning",
           date: "2023",
           description:
             "Fundamentos de lógica de programación, algoritmos y estructuras de datos básicos.",
-          image: "/education/platzi/programacion-basica.png",
+          image: "/education/oracle/Artificial Intelligence with Machine Learning.jpg",
           content: "",
         },
         {
-          title: "Curso Definitivo de HTML y CSS",
+          title: "Database Design",
           date: "2023",
           description:
             "Maquetación web profesional, semántica, SEO y diseño responsivo.",
-          image: "/education/platzi/html-css.png",
+          image: "/education/oracle/Database Design.jpg",
           content: "",
         },
         {
-          title: "Curso Básico de JavaScript",
+          title: "Database Programming",
           date: "2023",
           description:
             "Fundamentos del lenguaje, variables, funciones, arrays y manipulación del DOM.",
-          image: "/education/platzi/js.png",
+          image: "/education/oracle/Database Programming.jpg",
           content: "",
         },
         {
@@ -1567,21 +1567,14 @@ export const DATA_ES = {
           content: "",
         },
         {
-          title: "Curso de SQL y MySQL",
+          title: "Java Foundations",
           date: "2024",
           description:
             "Gestión de bases de datos relacionales, consultas complejas y diseño de esquemas.",
-          image: "/education/platzi/sql-mysql.png",
+          image: "/education/oracle/Java Foundations.jpg",
           content: "",
         },
-        {
-          title: "Curso de Fundamentos de Python con Pandas y NumPy",
-          date: "2024",
-          description:
-            "Análisis de datos, manipulación de arrays y estructuras de datos para ciencia de datos.",
-          image: "/education/platzi/pandas-numpy.png",
-          content: "",
-        },
+
       ],
     },
     {

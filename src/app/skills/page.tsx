@@ -10,8 +10,10 @@ const BLUR_FADE_DELAY = 0.04;
 export default function SkillsPage() {
     const { data } = useResume();
 
-    // Combine all skills for the marquee
-    const allSkills = data.skillsCategories.flatMap((category) => category.skills);
+    // Combine all skills for the marquee (using a Set to avoid duplicates if any)
+    const allSkills = Array.from(
+        new Set(data.skillsCategories.flatMap((category) => category.skills.map(s => JSON.stringify(s))))
+    ).map(s => JSON.parse(s));
 
     return (
         <main className="flex flex-col min-h-[100dvh] space-y-12 py-12 px-4 md:px-8 max-w-5xl mx-auto">
@@ -33,7 +35,7 @@ export default function SkillsPage() {
                 <BlurFade delay={BLUR_FADE_DELAY * 3} className="w-full">
                     <div className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background py-10 md:shadow-xl border">
                         <Marquee pauseOnHover className="[--duration:40s]">
-                            {allSkills.map((skill, id) => (
+                            {allSkills.map((skill: any, id) => (
                                 <div key={id} className="flex flex-col items-center gap-2 mx-6">
                                     {skill.icon && <skill.icon className="h-12 w-12" />}
                                     <span className="text-sm font-medium">{skill.name}</span>
@@ -52,31 +54,33 @@ export default function SkillsPage() {
                         key={category.title}
                         delay={BLUR_FADE_DELAY * (idx + 4)}
                     >
-                        <div className="flex flex-col gap-4">
-                            <h2 className="text-2xl font-bold border-b pb-2">
+                        <div className="flex flex-col gap-6">
+                            <h2 className="text-3xl font-bold border-b pb-4">
                                 {category.title}
                             </h2>
                             {/* Detailed Cards Grid */}
-                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                                {category.skills.map((skill) => (
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                {category.skills.map((skill: any) => (
                                     <div
                                         key={skill.name}
-                                        className="group relative flex items-start gap-4 rounded-xl border bg-card p-5 shadow-sm transition-all hover:shadow-md hover:border-foreground/20 hover:-translate-y-1"
+                                        className="group relative flex flex-col gap-4 rounded-xl border bg-card p-6 shadow-sm transition-all hover:shadow-lg hover:-translate-y-1 overflow-hidden"
                                     >
-                                        <div className="flex-shrink-0 relative flex h-12 w-12 items-center justify-center rounded-lg bg-muted/50 p-2 ring-1 ring-border group-hover:bg-background transition-colors">
-                                            {skill.icon && (
-                                                <skill.icon className="h-full w-full object-contain" />
-                                            )}
-                                        </div>
-                                        <div className="flex flex-col gap-1">
-                                            <span className="text-base font-semibold group-hover:text-primary transition-colors">
+                                        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+
+                                        <div className="flex items-center gap-4 z-10">
+                                            <div className="flex-shrink-0 relative flex h-14 w-14 items-center justify-center rounded-xl bg-muted/50 p-3 ring-1 ring-border group-hover:bg-background group-hover:scale-110 transition-all duration-300">
+                                                {skill.icon && (
+                                                    <skill.icon className="h-full w-full object-contain" />
+                                                )}
+                                            </div>
+                                            <h3 className="text-lg font-bold group-hover:text-primary transition-colors">
                                                 {skill.name}
-                                            </span>
-                                            {/* Render description if it exists in the data type, assuming we added it */}
-                                            <p className="text-sm text-muted-foreground line-clamp-3">
-                                                {(skill as any).description || "Proficient in using this technology for building scalable solutions."}
-                                            </p>
+                                            </h3>
                                         </div>
+
+                                        <p className="text-sm text-muted-foreground leading-relaxed z-10">
+                                            {skill.description || "Proficient in using this technology for building scalable solutions."}
+                                        </p>
                                     </div>
                                 ))}
                             </div>
