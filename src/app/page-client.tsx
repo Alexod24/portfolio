@@ -30,10 +30,10 @@ export default function PageClient({ posts }: { posts: BlogPost[] }) {
   const { data } = useResume();
 
   return (
-    <main className="flex flex-col min-h-[100dvh] space-y-12 relative">
+    <main className="flex flex-col min-h-[100dvh] space-y-12 relative max-w-4xl mx-auto px-6 py-12 sm:py-24">
       <section
         id="hero"
-        className="min-h-screen flex items-center justify-start py-12 pb-52 relative overflow-hidden"
+        className="min-h-screen flex items-center justify-start pb-52 relative overflow-hidden"
       >
         {/* Lineas decorativas que quizas elimine */}
         <div className="absolute top-0 left-[-10%] h-full w-1/2 md:w-1/3 z-0 pointer-events-none opacity-60 text-foreground/20">
@@ -67,7 +67,8 @@ export default function PageClient({ posts }: { posts: BlogPost[] }) {
               <div className="flex flex-col space-y-4">
                 <BlurFadeText
                   delay={BLUR_FADE_DELAY}
-                  className="text-3xl sm:text-4xl md:text-6xl font-bold tracking-tight md:tracking-widest font-sans uppercase text-shadow-sm leading-none text-left"
+                  className="text-3xl sm:text-4xl md:text-6xl font-bold tracking-tighter md:tracking-widest font-sans uppercase text-shadow-sm leading-none text-left"
+                  // className="text-4xl md:text-6xl font-bold tracking-tighter leading-none text-left"
                   yOffset={8}
                   text={data.description}
                   animateByCharacter={true}
@@ -195,14 +196,14 @@ export default function PageClient({ posts }: { posts: BlogPost[] }) {
                 { icon: Icons.javascript, name: "JavaScript" },
                 { icon: Icons.postgresql, name: "Postgres" },
                 { icon: Icons.docker, name: "Docker" },
-                { icon: Icons.antigravity, name: "Antigravity" },
-                { icon: Icons.java, name: "Java" },
+                // { icon: Icons.antigravity, name: "Antigravity" },
+                // { icon: Icons.java, name: "Java" },
                 { icon: Icons.cpp, name: "C++" },
                 { icon: Icons.tailwindcss, name: "Tailwind" },
                 { icon: Icons.supabase, name: "Supabase" },
                 { icon: Icons.mysql, name: "MySQL" },
-                { icon: Icons.gdg, name: "GDG" },
-                { icon: Icons.platzi, name: "Platzi" },
+                // { icon: Icons.gdg, name: "GDG" },
+                // { icon: Icons.platzi, name: "Platzi" },
                 { icon: Icons.figma, name: "Figma" },
                 { icon: Icons.astro, name: "Astro" },
               ].map((skill, id) => (

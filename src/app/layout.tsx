@@ -25,10 +25,12 @@ export const metadata: Metadata = {
     default: "Alex | Full Stack Developer",
     template: `%s | Alex Portfolio`,
   },
-  description: "Specializing in designing scalable architectures and building high-performance digital products.",
+  description:
+    "Specializing in designing scalable architectures and building high-performance digital products.",
   openGraph: {
     title: "Alex | Full Stack Developer",
-    description: "Specializing in designing scalable architectures and building high-performance digital products.",
+    description:
+      "Specializing in designing scalable architectures and building high-performance digital products.",
     url: DATA.url,
     siteName: "Alex Portfolio",
     locale: "en_US",
@@ -56,7 +58,8 @@ export const metadata: Metadata = {
   twitter: {
     title: "Alex | Full Stack Developer",
     card: "summary_large_image",
-    description: "Specializing in designing scalable architectures and building high-performance digital products.",
+    description:
+      "Specializing in designing scalable architectures and building high-performance digital products.",
     images: ["/alex.png"],
   },
   verification: {
@@ -77,9 +80,9 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased max-w-4xl mx-auto py-12 sm:py-24 px-6",
+          "min-h-screen bg-background font-sans antialiased",
           fontSans.variable,
-          fontCinzel.variable
+          fontCinzel.variable,
         )}
       >
         <LanguageProvider>

@@ -778,7 +778,7 @@ export const DATA_EN = {
       school: "IBM",
       href: "https://www.ibm.com",
       degree: "Data Science Orientation",
-      logoUrl: "/education/ibm/IBM.jpg",
+      logoUrl: "/logos/ibm.png",
       start: "2023",
       end: "2023",
       description: "Introduction to data science, methodologies, and tools.",
@@ -798,7 +798,7 @@ export const DATA_EN = {
       school: "LinkedIn Learning",
       href: "https://limitless.linkedin.com/",
       degree: "Career Essentials",
-      logoUrl: "/education/linkedin/Linkedin.jpg",
+      logoUrl: "/logos/linkedin.png",
       start: "2023",
       end: "2023",
       description: "Developing soft skills and career management strategies.",
@@ -1601,7 +1601,7 @@ export const DATA_ES = {
       school: "IBM",
       href: "https://www.ibm.com",
       degree: "Data Science Orientation",
-      logoUrl: "/education/ibm/IBM.jpg",
+      logoUrl: "/logos/ibm.png",
       start: "2023",
       end: "2023",
       description:
@@ -1623,7 +1623,7 @@ export const DATA_ES = {
       school: "LinkedIn Learning",
       href: "https://limitless.linkedin.com/",
       degree: "Career Essentials",
-      logoUrl: "/education/linkedin/Linkedin.jpg",
+      logoUrl: "/logos/linkedin.png",
       start: "2023",
       end: "2023",
       description:
@@ -1812,5 +1812,17 @@ export const DATA_ES = {
       links: [],
       slug: "nasa-space-apps",
     },
-  ],
+  ] as readonly {
+    title: string;
+    dates: string;
+    location: string;
+    description: string;
+    image: string;
+    links: readonly {
+      icon: React.ReactNode;
+      type: string;
+      href: string;
+    }[];
+    slug: string;
+  }[],
 };

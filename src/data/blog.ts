@@ -3,6 +3,8 @@ import matter from "gray-matter";
 import path from "path";
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeStringify from "rehype-stringify";
+import rehypeSlug from "rehype-slug";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import remarkGfm from "remark-gfm";
 import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
@@ -18,6 +20,14 @@ export async function markdownToHTML(markdown: string) {
     .use(remarkParse)
     .use(remarkGfm)
     .use(remarkRehype)
+    .use(rehypeSlug)
+    .use(rehypeAutolinkHeadings, {
+      behavior: "wrap",
+      properties: {
+        className: ["subheading-anchor"],
+        ariaLabel: "Link to section",
+      },
+    })
     .use(rehypePrettyCode, {
       // https://rehype-pretty.pages.dev/#usage
       theme: {
@@ -39,7 +49,7 @@ export async function getPost(slug: string) {
   const content = await markdownToHTML(rawContent);
   return {
     source: content,
-    metadata,
+    metadata: metadata as Metadata,
     slug,
   };
 }
@@ -62,4 +72,3 @@ async function getAllPosts(dir: string) {
 export async function getBlogPosts(): Promise<BlogPost[]> {
   return getAllPosts(path.join(process.cwd(), "content"));
 }
-

@@ -3,14 +3,10 @@
 import { useResume } from "@/components/language-provider";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { ProjectCard } from "@/components/project-card"; // Reuse ProjectCard
 import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
 import { ArrowLeftIcon } from "lucide-react";
 import Link from "next/link";
-import Markdown from "react-markdown";
-import Image from "next/image";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -18,7 +14,7 @@ export default function HackathonsPageClient() {
   const { data } = useResume();
 
   return (
-    <main className="flex flex-col min-h-[100dvh] space-y-12 max-w-3xl mx-auto py-12 px-4 md:px-0 relative">
+    <main className="flex flex-col min-h-[100dvh] space-y-12 max-w-4xl mx-auto py-12 px-4 md:px-0 relative">
       <Link href="/">
         <InteractiveHoverButton className="ml-0 gap-2 mb-8 w-auto px-6 border bg-background hover:bg-accent text-foreground">
           <ArrowLeftIcon className="size-4" />
@@ -28,7 +24,7 @@ export default function HackathonsPageClient() {
 
       <section
         id="hero"
-        className="flex flex-col items-center text-center space-y-6"
+        className="flex flex-col items-center text-center space-y-6 mb-12"
       >
         <div className="space-y-2">
           <BlurFadeText
@@ -44,41 +40,23 @@ export default function HackathonsPageClient() {
         </div>
       </section>
 
-      <div className="space-y-16">
-        {data.hackathons.map((hackathon, index) => (
-          <section key={hackathon.title} className="space-y-6">
-            <BlurFade delay={BLUR_FADE_DELAY * (4 + index)}>
-              <div className="flex flex-col space-y-4">
-                <div className="relative w-full overflow-hidden rounded-xl border bg-muted shadow-sm hover:shadow-lg transition-all">
-                  {/* Display the image clearly, serving as certificate/proof */}
-                  <Image
-                    src={hackathon.image || ""}
-                    alt={hackathon.title}
-                    width={1200}
-                    height={630}
-                    className="w-full h-auto object-cover"
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <div className="flex items-center justify-between">
-                    <h3 className="text-2xl font-bold">{hackathon.title}</h3>
-                    <span className="text-sm text-muted-foreground">
-                      {hackathon.dates}
-                    </span>
-                  </div>
-
-                  <span className="text-sm text-muted-foreground block">
-                    {hackathon.location}
-                  </span>
-
-                  <div className="prose dark:prose-invert text-muted-foreground leading-relaxed text-justify">
-                    <Markdown>{hackathon.description}</Markdown>
-                  </div>
-                </div>
-              </div>
-            </BlurFade>
-          </section>
+      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
+        {data.hackathons.map((hackathon, id) => (
+          <BlurFade
+            key={hackathon.title}
+            delay={BLUR_FADE_DELAY * 12 + id * 0.05}
+          >
+            <ProjectCard
+              href={(hackathon.links as any)?.[0]?.href || "#"}
+              key={hackathon.title}
+              title={hackathon.title}
+              description={hackathon.description}
+              dates={hackathon.dates}
+              tags={[hackathon.location]} // Using location as a tag
+              image={hackathon.image}
+              links={hackathon.links}
+            />
+          </BlurFade>
         ))}
       </div>
     </main>
