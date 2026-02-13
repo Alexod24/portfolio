@@ -23,6 +23,11 @@ export const DATA_EN = {
       description: "Send me a message",
       whatsapp: "Chat on WhatsApp",
     },
+    hackathons: {
+      tag: "Hackathons",
+      title: "Hackathons",
+      description: "I like building things during weekends.",
+    },
   },
   name: "Alex",
   initials: "DV",
@@ -1129,6 +1134,11 @@ export const DATA_ES = {
       title: "Contáctame",
       description: "Envíame un mensaje",
       whatsapp: "Chatea en WhatsApp",
+    },
+    hackathons: {
+      tag: "Hackathons",
+      title: "Hackathon",
+      description: "Me gusta construir cosas los fines de semana.",
     },
   },
   skillsCategories: [
