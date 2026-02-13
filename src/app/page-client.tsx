@@ -34,17 +34,17 @@ export default function PageClient({ posts }: { posts: BlogPost[] }) {
       : `Hi, I'm ${data.name}\u00A0👋`;
 
   return (
-    <main className="flex flex-col min-h-[100dvh] space-y-12 relative max-w-4xl mx-auto px-6 py-12 sm:py-24">
+    <main className="flex flex-col min-h-[100dvh] space-y-12 relative max-w-4xl mx-auto px-6 pb-12 pt-0 sm:pb-24 sm:pt-0">
       <section
         id="hero"
-        className="min-h-[60vh] flex flex-col-reverse md:flex-row items-center justify-between gap-12 pb-12 pt-24 relative overflow-hidden"
+        className="min-h-[100dvh] flex flex-col md:flex-row items-center justify-center md:justify-between gap-12 pt-0 pb-12 md:pb-0 relative overflow-hidden"
       >
         {/* Lineas decorativas que quizas elimine */}
         <div className="absolute top-0 left-[-10%] h-full w-1/2 md:w-1/3 z-0 pointer-events-none opacity-60 text-foreground/20">
           <MapLines className="w-full h-full" />
         </div>
 
-        <div className="w-full space-y-8 max-w-3xl relative z-10 px-4 md:px-0 mx-auto md:mx-0 flex-1">
+        <div className="w-full space-y-8 max-w-3xl relative z-10 px-4 md:px-0 mx-auto md:mx-0 md:flex-1">
           <div className="flex flex-col items-center gap-8 md:items-start">
             <div className="flex flex-col w-full text-center md:text-left">
               <BlurFadeText
@@ -63,7 +63,7 @@ export default function PageClient({ posts }: { posts: BlogPost[] }) {
         </div>
 
         {/* Imagen a la derecha */}
-        <div className="relative flex-1 flex justify-center md:justify-end z-10">
+        <div className="relative flex-1 hidden md:flex justify-center md:justify-end z-10">
           <BlurFade delay={BLUR_FADE_DELAY}>
             <Avatar className="size-40 md:size-40 border-2 border-border">
               <AvatarImage
@@ -78,18 +78,7 @@ export default function PageClient({ posts }: { posts: BlogPost[] }) {
       </section>
 
       {/* Get to know me section */}
-      <section id="about" className="w-full py-0">
-        <BlurFade delay={BLUR_FADE_DELAY * 3}>
-          <div className="flex flex-col gap-2">
-            <h2 className="text-2xl font-bold tracking-tighter">
-              {data.sectionHeaders.about.title}
-            </h2>
-            <Markdown className="prose max-w-full text-pretty font-sans text-base/relaxed text-muted-foreground dark:prose-invert">
-              {data.summary}
-            </Markdown>
-          </div>
-        </BlurFade>
-      </section>
+      <AboutSection />
       {/* About section moved to Hero */}
       <section id="work">
         <div className="flex min-h-0 flex-col gap-y-3">
@@ -375,6 +364,50 @@ export default function PageClient({ posts }: { posts: BlogPost[] }) {
           <Link href="/hackathons">
             <Button variant="outline" className="gap-2">
               Ver más detalles
+              <ChevronRight className="h-4 w-4" />
+            </Button>
+          </Link>
+        </div>
+      </section>
+      <section id="community" className="flex flex-col gap-y-3">
+        <BlurFade delay={BLUR_FADE_DELAY * 15}>
+          <div className="flex flex-col items-center justify-center space-y-4 text-center">
+            <div className="space-y-2">
+              <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                {data.sectionHeaders.beyondTheCode.title}
+              </div>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                {data.sectionHeaders.beyondTheCode.title}
+              </h2>
+              <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                {data.sectionHeaders.beyondTheCode.description}
+              </p>
+            </div>
+          </div>
+        </BlurFade>
+        <div className="mx-auto max-w-[800px] w-full">
+          <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
+            {data.beyondTheCode.map((project, id) => (
+              <BlurFade
+                key={project.title + project.dates}
+                delay={BLUR_FADE_DELAY * 16 + id * 0.05}
+              >
+                <HackathonCard
+                  title={project.title}
+                  description={project.description}
+                  location={project.location}
+                  dates={project.dates}
+                  image={project.image}
+                  links={project.links}
+                />
+              </BlurFade>
+            ))}
+          </ul>
+        </div>
+        <div className="flex justify-center mt-4">
+          <Link href="/community">
+            <Button variant="outline" className="gap-2">
+              Ver todas
               <ChevronRight className="h-4 w-4" />
             </Button>
           </Link>

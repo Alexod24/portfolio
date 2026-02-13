@@ -28,6 +28,10 @@ export const DATA_EN = {
       title: "Hackathons",
       description: "I like building things during weekends.",
     },
+    beyondTheCode: {
+      title: "Beyond the Code",
+      description: "Explore my community involvement and volunteering.",
+    },
   },
   name: "Alex",
   initials: "DV",
@@ -967,14 +971,14 @@ export const DATA_EN = {
   ],
   hackathons: [
     {
-      title: "Hackathon Transforma + Experiencia",
-      dates: "2024",
-      location: "Lima, Perú",
+      title: "7 horas hackathon",
+      dates: "2025",
+      location: "Barranco, Perú",
       description:
-        "Participated in a challenge to transform user experience through innovative digital solutions.",
-      image: "/logo/continental.png",
+        "Developed a solution for one of the global challenges posed by NASA, collaborating with a multidisciplinary team.",
+      image: "/logos/7h.png",
       links: [],
-      slug: "transforma-experiencia",
+      slug: "nasa-space-apps",
     },
     {
       title: "NASA Space Apps Challenge",
@@ -985,6 +989,36 @@ export const DATA_EN = {
       image: "/logo/nasa.png",
       links: [],
       slug: "nasa-space-apps",
+    },
+    {
+      title: "Hackathon Transforma + Experiencia",
+      dates: "2024",
+      location: "Lima, Perú",
+      description:
+        "Participated in a challenge to transform user experience through innovative digital solutions.",
+      image: "/logo/continental.png",
+      links: [],
+      slug: "transforma-experiencia",
+    },
+  ],
+  beyondTheCode: [
+    {
+      title: "GDG Huancayo",
+      dates: "2025 - Present",
+      location: "Huancayo, Perú",
+      description:
+        "Active member of the Google Developer Group Huancayo, participating in tech events and knowledge sharing sessions.",
+      image:
+        "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2.0,f_auto,g_center,h_1080,q_100,w_1080/v1/gcs/platform-data-goog/events/OIG4.59W714154743213.jpg",
+      links: [
+        {
+          title: "Community",
+          type: "Community",
+          icon: <Icons.globe className="h-4 w-4" />,
+          href: "https://gdg.community.dev/gdg-huancayo/",
+        },
+      ],
+      slug: "gdg-huancayo",
     },
   ],
 };
@@ -1016,6 +1050,10 @@ export const DATA_ES = {
       tag: "Hackathons",
       title: "Hackathon",
       description: "Me gusta construir cosas los fines de semana.",
+    },
+    beyondTheCode: {
+      title: "Más allá del código",
+      description: "Explora mi participación en comunidades y voluntariado.",
     },
   },
   skillsCategories: [
@@ -1104,8 +1142,7 @@ export const DATA_ES = {
         "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2664&auto=format&fit=crop", // Placeholder office
         "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2670&auto=format&fit=crop", // Placeholder team
       ],
-      description:
-        "Liderando la transformación digital del sector legal mediante la construcción de una plataforma LegalTech integral.\n\n• Arquitectura y desarrollo de un frontend escalable usando Next.js 14 y TypeScript, mejorando la velocidad de carga en un 40%.\n• Integración de la API de OpenAI para automatizar la redacción de documentos legales, reduciendo el tiempo de redacción de los abogados en aproximadamente un 60%.\n• Implementación de funciones de colaboración en tiempo real usando WebSockets y gestión de estado eficiente.\n• Diseño de una biblioteca de componentes con Shadcn UI para asegurar la consistencia de la UI en toda la plataforma.",
+      description: "lorem ipsum",
     },
     {
       company: "La Base Cowork",
@@ -1792,6 +1829,16 @@ export const DATA_ES = {
     },
   ],
   hackathons: [
+    {
+      title: "7 horas hackathon",
+      dates: "2025",
+      location: "Barranco, Perú",
+      description:
+        "Developed a solution for one of the global challenges posed by NASA, collaborating with a multidisciplinary team.",
+      image: "/logos/7h.png",
+      links: [],
+      slug: "nasa-space-apps",
+    },
     {
       title: "Hackathon Transforma + Experiencia",
       dates: "2024",
