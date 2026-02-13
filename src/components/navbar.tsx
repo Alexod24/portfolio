@@ -38,7 +38,7 @@ export default function Navbar() {
                   alt="Home"
                   width={300}
                   height={300}
-                  className="size-50 object-contain dark:invert"
+                  className="size-8 object-contain dark:invert dark:brightness-200"
                 />
               </Link>
             </TooltipTrigger>

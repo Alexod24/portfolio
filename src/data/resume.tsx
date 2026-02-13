@@ -1068,7 +1068,7 @@ export const DATA_ES = {
       ],
     },
   ],
-  description: "Hola, soy Alex. 👋",
+  description: "Desarrollador Full Stack",
   summary:
     "Soy un desarrollador enfocado en crear productos que resuelvan problemas reales. Me especializo en arquitecturas web modernas y escalables, siempre buscando el equilibrio entre un código limpio y una gran experiencia de usuario.",
   about: "Hola, soy Alex.",

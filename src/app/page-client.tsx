@@ -27,64 +27,68 @@ import { BlogPost } from "@/types/blog";
 const BLUR_FADE_DELAY = 0.04;
 
 export default function PageClient({ posts }: { posts: BlogPost[] }) {
-  const { data } = useResume();
+  const { data, language } = useResume();
+  const greeting =
+    language === "es"
+      ? `Hola, soy ${data.name}\u00A0👋`
+      : `Hi, I'm ${data.name}\u00A0👋`;
 
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-12 relative max-w-4xl mx-auto px-6 py-12 sm:py-24">
       <section
         id="hero"
-        className="min-h-screen flex items-center justify-start pb-52 relative overflow-hidden"
+        className="min-h-[60vh] flex flex-col-reverse md:flex-row items-center justify-between gap-12 pb-12 pt-24 relative overflow-hidden"
       >
         {/* Lineas decorativas que quizas elimine */}
         <div className="absolute top-0 left-[-10%] h-full w-1/2 md:w-1/3 z-0 pointer-events-none opacity-60 text-foreground/20">
           <MapLines className="w-full h-full" />
         </div>
 
-        <div className="w-full space-y-8 max-w-3xl relative z-10 px-4 md:px-0 mx-auto">
-          <div className="flex flex-col items-center gap-8">
-            <div className="flex flex-col w-full">
-              <div className="flex justify-center w-full">
-                <motion.div
-                  initial={{ opacity: 0, scale: 1.5, filter: "blur(10px)" }}
-                  animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
-                  transition={{
-                    duration: 0.8,
-                    ease: [0.25, 1, 0.5, 1],
-                    delay: BLUR_FADE_DELAY,
-                  }}
-                >
-                  {/* Logo en el centro del head pero estoy iterando para ver si queda bien */}
-                  {/* <Image
-                    src="/logos/logo-black.png"
-                    alt="Logo"
-                    width={200}
-                    height={200}
-                    className="mb-4 object-contain dark:invert"
-                  /> */}
-                </motion.div>
-              </div>
-
-              <div className="flex flex-col space-y-4">
-                <BlurFadeText
-                  delay={BLUR_FADE_DELAY}
-                  className="text-3xl sm:text-4xl md:text-6xl font-bold tracking-tighter md:tracking-widest font-sans uppercase text-shadow-sm leading-none text-left"
-                  // className="text-4xl md:text-6xl font-bold tracking-tighter leading-none text-left"
-                  yOffset={8}
-                  text={data.description}
-                  animateByCharacter={true}
-                  characterDelay={0.08}
-                />
-
-                <div className="h-px w-24 bg-gradient-to-r from-transparent via-foreground/50 to-transparent my-4"></div>
-
-                <WordPullUp
-                  className="max-w-[700px] text-base md:text-xl text-muted-foreground text-left font-light tracking-wide leading-relaxed"
-                  words={data.summary}
-                />
-              </div>
+        <div className="w-full space-y-8 max-w-3xl relative z-10 px-4 md:px-0 mx-auto md:mx-0 flex-1">
+          <div className="flex flex-col items-center gap-8 md:items-start">
+            <div className="flex flex-col w-full text-center md:text-left">
+              <BlurFadeText
+                delay={BLUR_FADE_DELAY}
+                className="text-3xl sm:text-4xl md:text-6xl font-bold tracking-tighter font-sans leading-none mb-2 whitespace-nowrap"
+                yOffset={8}
+                text={greeting}
+              />
+              <BlurFadeText
+                delay={BLUR_FADE_DELAY * 2}
+                className="text-xl md:text-2xl font-medium text-muted-foreground"
+                text={data.description}
+              />
             </div>
           </div>
         </div>
+
+        {/* Imagen a la derecha */}
+        <div className="relative flex-1 flex justify-center md:justify-end z-10">
+          <BlurFade delay={BLUR_FADE_DELAY}>
+            <Avatar className="size-40 md:size-40 border-2 border-border">
+              <AvatarImage
+                alt={data.name}
+                src={data.avatarUrl}
+                className="object-cover"
+              />
+              <AvatarFallback>{data.initials}</AvatarFallback>
+            </Avatar>
+          </BlurFade>
+        </div>
+      </section>
+
+      {/* Get to know me section */}
+      <section id="about" className="w-full py-0">
+        <BlurFade delay={BLUR_FADE_DELAY * 3}>
+          <div className="flex flex-col gap-2">
+            <h2 className="text-2xl font-bold tracking-tighter">
+              {data.sectionHeaders.about.title}
+            </h2>
+            <Markdown className="prose max-w-full text-pretty font-sans text-base/relaxed text-muted-foreground dark:prose-invert">
+              {data.summary}
+            </Markdown>
+          </div>
+        </BlurFade>
       </section>
       {/* About section moved to Hero */}
       <section id="work">
@@ -130,7 +134,7 @@ export default function PageClient({ posts }: { posts: BlogPost[] }) {
           <BlurFade delay={BLUR_FADE_DELAY} inView>
             <div className="flex items-center justify-between gap-x-2 text-base">
               <h2 className="text-xl font-bold">
-                {data.sectionHeaders.education}
+                35 {data.sectionHeaders.education}
               </h2>
               <Link href="/education">
                 <Badge
@@ -171,7 +175,7 @@ export default function PageClient({ posts }: { posts: BlogPost[] }) {
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY} inView>
             <div className="flex items-center justify-between gap-x-2 text-base">
-              <h2 className="text-xl font-bold">
+              <h2 className="text-2xl font-bold tracking-tighter">
                 {data.sectionHeaders.skills}
               </h2>
               <Link href="/skills">
@@ -278,25 +282,7 @@ export default function PageClient({ posts }: { posts: BlogPost[] }) {
         </BlurFade>
       </section>
 
-      {/* About Me Section - Inserted before Certifications */}
-      <section id="about">
-        <BlurFade delay={BLUR_FADE_DELAY} inView>
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <div className="space-y-2">
-              <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                {data.sectionHeaders.about.tag}
-              </div>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                {data.sectionHeaders.about.title}
-              </h2>
-              <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                {data.sectionHeaders.about.description}
-              </p>
-            </div>
-          </div>
-        </BlurFade>
-        <AboutSection />
-      </section>
+      {/* About Me Section Moved Up */}
 
       <section id="certifications">
         {/* ... Certifications Content ... */}
