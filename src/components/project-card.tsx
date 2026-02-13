@@ -1,11 +1,5 @@
 import { Badge } from "@/components/ui/badge";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
@@ -47,16 +41,13 @@ export function ProjectCard({
   const destination = slug ? `/projects/${slug}` : href || "#";
 
   return (
-    <Card
-      className={
-        "group flex flex-col overflow-hidden border bg-card text-card-foreground shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1 h-full"
-      }
+    <div
+      className={cn(
+        "group flex flex-col h-full overflow-hidden rounded-xl border bg-card text-card-foreground shadow-sm transition-all hover:shadow-lg hover:-translate-y-1",
+        className,
+      )}
     >
-      <Link
-        href={destination}
-        className={cn("block cursor-pointer", className)}
-        target={target}
-      >
+      <Link href={destination} className="block cursor-pointer" target={target}>
         {video && (
           <video
             src={video}
@@ -64,7 +55,7 @@ export function ProjectCard({
             loop
             muted
             playsInline
-            className="pointer-events-none mx-auto h-40 w-full object-cover object-top"
+            className="pointer-events-none mx-auto aspect-video w-full object-cover object-top"
           />
         )}
         {image && (
@@ -78,14 +69,16 @@ export function ProjectCard({
           </div>
         )}
       </Link>
-      <CardHeader className="px-5 py-4">
+      <div className="flex flex-col flex-1 p-6 space-y-4">
         <div className="space-y-2">
-          <time className="font-sans text-xs text-muted-foreground">{dates}</time>
-          <CardTitle className="mt-1 text-xl font-bold tracking-tight group-hover:text-primary transition-colors">
+          <div className="flex items-center gap-2 text-xs text-muted-foreground">
+            {dates}
+          </div>
+          <h2 className="text-xl font-bold tracking-tight group-hover:text-primary transition-colors">
             <Link href={destination} target={target} className="block">
               {title}
             </Link>
-          </CardTitle>
+          </h2>
           <div className="hidden font-sans text-xs underline print:visible">
             {link?.replace("https://", "").replace("www.", "").replace("/", "")}
           </div>
@@ -93,36 +86,37 @@ export function ProjectCard({
             {description}
           </Markdown>
         </div>
-      </CardHeader>
-      <CardContent className="mt-auto flex flex-col px-5 pb-4">
-        {tags && tags.length > 0 && (
-          <div className="mt-2 flex flex-wrap gap-2">
-            {tags?.map((tag) => (
-              <Badge
-                className="px-2 py-0.5 text-[10px] font-medium"
-                variant="secondary"
-                key={tag}
-              >
-                {tag}
-              </Badge>
-            ))}
-          </div>
-        )}
-      </CardContent>
-      <CardFooter className="px-5 pb-5 pt-0">
-        {links && links.length > 0 && (
-          <div className="flex flex-row flex-wrap items-start gap-2">
-            {links?.map((link, idx) => (
-              <Link href={link?.href} key={idx} target="_blank">
-                <Badge key={idx} className="flex gap-2 px-3 py-1 text-[10px] hover:bg-primary hover:text-primary-foreground transition-colors">
-                  {link.icon}
-                  {link.type}
+        <div className="mt-auto flex flex-col gap-4">
+          {tags && tags.length > 0 && (
+            <div className="flex flex-wrap gap-2">
+              {tags?.map((tag) => (
+                <Badge
+                  className="px-2 py-0.5 text-[10px] font-medium"
+                  variant="secondary"
+                  key={tag}
+                >
+                  {tag}
                 </Badge>
-              </Link>
-            ))}
-          </div>
-        )}
-      </CardFooter>
-    </Card>
+              ))}
+            </div>
+          )}
+          {links && links.length > 0 && (
+            <div className="flex flex-row flex-wrap items-start gap-2">
+              {links?.map((link, idx) => (
+                <Link href={link?.href} key={idx} target="_blank">
+                  <Badge
+                    key={idx}
+                    className="flex gap-2 px-3 py-1 text-[10px] hover:bg-primary hover:text-primary-foreground transition-colors"
+                  >
+                    {link.icon}
+                    {link.type}
+                  </Badge>
+                </Link>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
   );
 }

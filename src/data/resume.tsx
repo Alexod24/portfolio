@@ -37,8 +37,10 @@ export const DATA_EN = {
   aboutPage: {
     tagline: "Coding with purpose, building with passion.",
     bio: "I'm Alex, a Full Stack Developer based in Peru, driven by the challenge of transforming complex problems into elegant, user-centric digital solutions. My journey in tech is fueled by a relentless curiosity and a commitment to excellence. I don't just write code; I architect experiences that empower users and businesses.\n\nCurrently, I'm channeling my energy into LegalTech at Arxatec, where I'm leveraging AI to modernize the legal industry. My background spans from crafting immersive web experiences for co-working spaces to building robust ERP systems. I thrive in the intersection of engineering and design, always seeking the sweet spot where performance meets aesthetics.",
-    philosophy: "I firmly believe that the quality of your code is a reflection of the clarity of your mind. 'Professional growth begins with inner growth' isn't just a motto; it's my daily practice. I approach development with discipline, continuous learning, and a stoic mindset, ensuring that every line of code serves a meaningful purpose. Whether it's optimizing a database query or refining a UI animation, I strive for craftsmanship in every detail.",
-    experienceContext: "My professional path has been diverse and dynamic. From the structured world of systems engineering at Senati and Universidad Continental to the fast-paced environment of startups and hackathons, I've cultivated a versatile skill set. I've led projects, collaborated with cross-functional teams, and constantly pushed the boundaries of what's possible with technologies like Next.js, AI, and cloud infrastructure. This blend of academic rigor and practical, hands-on experience allows me to tackle challenges with both theoretical depth and pragmatic agility."
+    philosophy:
+      "I firmly believe that the quality of your code is a reflection of the clarity of your mind. 'Professional growth begins with inner growth' isn't just a motto; it's my daily practice. I approach development with discipline, continuous learning, and a stoic mindset, ensuring that every line of code serves a meaningful purpose. Whether it's optimizing a database query or refining a UI animation, I strive for craftsmanship in every detail.",
+    experienceContext:
+      "My professional path has been diverse and dynamic. From the structured world of systems engineering at Senati and Universidad Continental to the fast-paced environment of startups and hackathons, I've cultivated a versatile skill set. I've led projects, collaborated with cross-functional teams, and constantly pushed the boundaries of what's possible with technologies like Next.js, AI, and cloud infrastructure. This blend of academic rigor and practical, hands-on experience allows me to tackle challenges with both theoretical depth and pragmatic agility.",
   },
   avatarUrl: "/alex.png",
   skillsCategories: [
@@ -53,7 +55,8 @@ export const DATA_EN = {
         {
           name: "TypeScript",
           icon: Icons.typescript,
-          description: "JavaScript con tipado estático para aplicaciones escalables.",
+          description:
+            "JavaScript con tipado estático para aplicaciones escalables.",
         },
         {
           name: "Python",
@@ -63,7 +66,8 @@ export const DATA_EN = {
         {
           name: "Java",
           icon: Icons.java,
-          description: "Robusto y orientado a objetos para sistemas empresariales.",
+          description:
+            "Robusto y orientado a objetos para sistemas empresariales.",
         },
         {
           name: "C++",
@@ -88,17 +92,20 @@ export const DATA_EN = {
         {
           name: "Next.js",
           icon: Icons.nextjs,
-          description: "Framework de React para producción y renderizado híbrido.",
+          description:
+            "Framework de React para producción y renderizado híbrido.",
         },
         {
           name: "TailwindCSS",
           icon: Icons.tailwindcss,
-          description: "Framework de utilidad para diseño rápido y consistente.",
+          description:
+            "Framework de utilidad para diseño rápido y consistente.",
         },
         {
           name: "Astro",
           icon: Icons.astro,
-          description: "Rendimiento optimizado para sitios orientados a contenido.",
+          description:
+            "Rendimiento optimizado para sitios orientados a contenido.",
         },
         {
           name: "Framer Motion",
@@ -163,7 +170,8 @@ export const DATA_EN = {
         {
           name: "OpenAI",
           icon: Icons.openai,
-          description: "Integración de inteligencia artificial en aplicaciones.",
+          description:
+            "Integración de inteligencia artificial en aplicaciones.",
         },
       ],
     },
@@ -173,7 +181,8 @@ export const DATA_EN = {
         {
           name: "GDG",
           icon: Icons.gdg,
-          description: "Google Developer Groups: Expandiendo conocimiento tecnológico globalmente.",
+          description:
+            "Google Developer Groups: Expandiendo conocimiento tecnológico globalmente.",
         },
         {
           name: "Platzi",
@@ -184,7 +193,6 @@ export const DATA_EN = {
     },
   ],
   navbar: [
-
     { href: "/blog", icon: NotebookIcon, label: "Blog" },
     { href: "/skills", icon: Wrench, label: "Skills" },
     { href: "/cv/cv.pdf", icon: FileTextIcon, label: "CV", target: "_blank" },
@@ -248,13 +256,20 @@ export const DATA_EN = {
       end: "Present",
       className: "md:col-span-2",
       backgroundUrl: "/projects/arxatec/dashboard.png",
-      companyProfile: "Arxatec is the all-in-one legal platform for lawyers and law firms: case management, documents, clients, billing, and an AI legal assistant. Faster, safer, and designed to maximize legal productivity.",
-      services: ["Legal Automation", "Case Management", "Client Portal", "AI Legal Assistant", "Billing & Invoicing"],
+      companyProfile:
+        "Arxatec is the all-in-one legal platform for lawyers and law firms: case management, documents, clients, billing, and an AI legal assistant. Faster, safer, and designed to maximize legal productivity.",
+      services: [
+        "Legal Automation",
+        "Case Management",
+        "Client Portal",
+        "AI Legal Assistant",
+        "Billing & Invoicing",
+      ],
       youtube: "https://www.youtube.com/@Arxatec",
       gallery: [
         "/projects/arxatec/dashboard.png",
         "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2664&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2670&auto=format&fit=crop"
+        "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2670&auto=format&fit=crop",
       ],
       description:
         "Spearheading the digital transformation of the legal sector by building a comprehensive LegalTech platform.\n\n• Architected and developed a scalable frontend using Next.js 14 and TypeScript, improving page load speeds by 40%.\n• Integrated OpenAI's API to automate legal document drafting, reducing lawyer's drafting time by roughly 60%.\n• Implemented real-time collaboration features using WebSockets and efficient state management.\n• Designed a component library with Shadcn UI to ensure UI consistency across the platform.",
@@ -271,14 +286,22 @@ export const DATA_EN = {
       end: "2025",
       className: "md:col-span-1",
       backgroundUrl: "/projects/inventory.png",
-      companyProfile: "La Base Cowork offers a unique environment where creativity becomes innovation. Themed spaces inspired by the military world, constant collaboration, and the necessary technology for your team to grow.",
-      services: ["Private Offices", "Flexible Desks", "Meeting Rooms", "Networking", "Auditorium", "Coffee Break"],
+      companyProfile:
+        "La Base Cowork offers a unique environment where creativity becomes innovation. Themed spaces inspired by the military world, constant collaboration, and the necessary technology for your team to grow.",
+      services: [
+        "Private Offices",
+        "Flexible Desks",
+        "Meeting Rooms",
+        "Networking",
+        "Auditorium",
+        "Coffee Break",
+      ],
       youtube: "https://www.youtube.com/@basecowork",
       gallery: [
         "/projects/inventory.png",
         "https://labase.pe/assets/img/espacios/oficina-privada.jpg",
         "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2669&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=2670&auto=format&fit=crop"
+        "https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=2670&auto=format&fit=crop",
       ],
       description:
         "Digitalized the operations of a busy co-working space through custom web solutions.\n\n• Developed a custom booking and membership management system, streamlining the reservation process for over 50+ active members.\n• Optimized the main corporate website for SEO and performance, resulting in a 25% increase in organic traffic.\n• integrated local payment gateways to facilitate automated billing and invoicing.\n• Collaborated directly with stakeholders to gather requirements and iterate on user feedback.",
@@ -294,11 +317,18 @@ export const DATA_EN = {
       end: "2024",
       className: "md:col-span-1",
       backgroundUrl: "",
-      companyProfile: "Specialists in integral technology solutions for business management. TID develops robust ERP systems focused on operational efficiency, electronic invoicing, and regulatory compliance for various sectors.",
-      services: ["Software Development", "Electronic Invoicing", "IT Consulting", "ERP Systems", "Business Intelligence"],
+      companyProfile:
+        "Specialists in integral technology solutions for business management. TID develops robust ERP systems focused on operational efficiency, electronic invoicing, and regulatory compliance for various sectors.",
+      services: [
+        "Software Development",
+        "Electronic Invoicing",
+        "IT Consulting",
+        "ERP Systems",
+        "Business Intelligence",
+      ],
       gallery: [
         "https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2670&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2670&auto=format&fit=crop"
+        "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2670&auto=format&fit=crop",
       ],
       description:
         "Contributed to the development of robust ERP solutions for the education and gastronomy sectors.\n\n• Developed and maintained modules for electronic invoicing, ensuring compliance with local tax regulations (SUNAT).\n• Refactored legacy codebases to improve maintainability and reduce technical debt.\n• Implemented reporting dashboards using React and charting libraries to visualize key business metrics for clients.\n• Participated in agile development cycles (Scrum), attending daily stand-ups and sprint reviews.",
@@ -313,6 +343,8 @@ export const DATA_EN = {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkD6xk77yPxtbVxfClUe-MV7XC48RE2EPIrw&s",
       start: "2025",
       end: "2028",
+      description:
+        "Bachelor's Degree in Systems Engineering. Focused on software architecture, algorithms, and systems design.",
       slug: "continental",
       banner: "/education/banners/continental.webp",
       courses: [
@@ -374,6 +406,8 @@ export const DATA_EN = {
       logoUrl: "/platzi.png",
       start: "2024",
       end: "2025",
+      description:
+        "Comprehensive learning path covering web development, digital marketing, and English for tech professionals.",
       slug: "platzi",
       banner: "/education/platzi.png",
       courses: [
@@ -436,6 +470,8 @@ export const DATA_EN = {
       logoUrl: "/devtalles.png",
       start: "2024",
       end: "2025",
+      description:
+        "Specialized training in modern web stack technologies including React, Next.js, and advanced state management.",
       slug: "devtalles",
       banner: "/education/banners/devtalles.png",
       courses: [
@@ -497,6 +533,8 @@ export const DATA_EN = {
       logoUrl: "/edteam.png",
       start: "2024",
       end: "2024",
+      description:
+        "Focused on backend fundamentals, object-oriented programming, and test-driven development.",
       slug: "edteam",
       banner: "/education/banners/edteam.jpg",
       courses: [
@@ -558,6 +596,8 @@ export const DATA_EN = {
       logoUrl: "/codigofacilito.jpg",
       start: "2024",
       end: "2024",
+      description:
+        "Intensive bootcamps covering AI integration, DevOps practices, and UI/UX design principles.",
       slug: "codigofacilito",
       banner: "/education/banners/codigo-facilito.png",
       courses: [
@@ -618,6 +658,8 @@ export const DATA_EN = {
       logoUrl: "https://dig-ed.org/wp-content/uploads/2024/09/oracl.png",
       start: "2023",
       end: "2024",
+      description:
+        "Certified training in Database Design, SQL programming, and Artificial Intelligence fundamentals.",
       slug: "oracleacademy",
       banner: "/education/banners/oracle-academy.jpg",
       courses: [
@@ -679,6 +721,8 @@ export const DATA_EN = {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUkkUzrgcUkVMHMt3isZ0Cn8i2sCLkpwIZyg&s",
       start: "2022",
       end: "2025",
+      description:
+        "Technical education focused on software development lifecycles and AI implementation.",
       slug: "senati",
       banner: "/education/banners/senati.jpg",
       courses: [
@@ -763,7 +807,7 @@ export const DATA_EN = {
       gallery: [
         "/projects/arxatec/dashboard.png",
         "/projects/arxatec/documents.png",
-        "/projects/arxatec/mobile.png"
+        "/projects/arxatec/mobile.png",
       ],
     },
     {
@@ -1137,13 +1181,11 @@ export const DATA_ES = {
       ],
     },
   ],
-  description: "Desarrollador\nFull Stack",
+  description: "Hola, soy Alex. 👋",
   summary:
     "Soy un desarrollador enfocado en crear productos que resuelvan problemas reales. Me especializo en arquitecturas web modernas y escalables, siempre buscando el equilibrio entre un código limpio y una gran experiencia de usuario.",
-  about:
-    "Hola, soy Alex.",
+  about: "Hola, soy Alex.",
   navbar: [
-
     { href: "/blog", icon: NotebookIcon, label: "Blog" },
     { href: "/skills", icon: Wrench, label: "Habilidades" },
     { href: "/cv/cv.pdf", icon: FileTextIcon, label: "CV", target: "_blank" },
@@ -1163,12 +1205,17 @@ export const DATA_ES = {
       end: "Presente",
       className: "md:col-span-2",
       backgroundUrl: "/projects/arxatec/dashboard.png",
-      companyProfile: "Una empresa LegalTech líder dedicada a la transformación digital del sector jurídico. Arxatec combina tecnología de vanguardia con experiencia legal para automatizar procesos y mejorar la eficiencia de las firmas de abogados.",
-      services: ["Automatización Legal", "Gestión de Expedientes", "Consultoría Digital"],
+      companyProfile:
+        "Una empresa LegalTech líder dedicada a la transformación digital del sector jurídico. Arxatec combina tecnología de vanguardia con experiencia legal para automatizar procesos y mejorar la eficiencia de las firmas de abogados.",
+      services: [
+        "Automatización Legal",
+        "Gestión de Expedientes",
+        "Consultoría Digital",
+      ],
       gallery: [
         "/projects/arxatec/dashboard.png",
         "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2664&auto=format&fit=crop", // Placeholder office
-        "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2670&auto=format&fit=crop" // Placeholder team
+        "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2670&auto=format&fit=crop", // Placeholder team
       ],
       description:
         "Liderando la transformación digital del sector legal mediante la construcción de una plataforma LegalTech integral.\n\n• Arquitectura y desarrollo de un frontend escalable usando Next.js 14 y TypeScript, mejorando la velocidad de carga en un 40%.\n• Integración de la API de OpenAI para automatizar la redacción de documentos legales, reduciendo el tiempo de redacción de los abogados en aproximadamente un 60%.\n• Implementación de funciones de colaboración en tiempo real usando WebSockets y gestión de estado eficiente.\n• Diseño de una biblioteca de componentes con Shadcn UI para asegurar la consistencia de la UI en toda la plataforma.",
@@ -1185,13 +1232,20 @@ export const DATA_ES = {
       end: "2025",
       className: "md:col-span-1",
       backgroundUrl: "/projects/inventory.png",
-      companyProfile: "El primer coworking temático inspirado en el mundo militar. Un espacio diseñado para potenciar ideas, fomentar la disciplina y crear una comunidad sólida de emprendedores. Ofrece un ambiente donde la estrategia y la creatividad se unen.",
-      services: ["Oficinas Privadas", "Escritorios Flexibles", "Salas de Reuniones", "Networking", "Internet Alta Velocidad"],
+      companyProfile:
+        "El primer coworking temático inspirado en el mundo militar. Un espacio diseñado para potenciar ideas, fomentar la disciplina y crear una comunidad sólida de emprendedores. Ofrece un ambiente donde la estrategia y la creatividad se unen.",
+      services: [
+        "Oficinas Privadas",
+        "Escritorios Flexibles",
+        "Salas de Reuniones",
+        "Networking",
+        "Internet Alta Velocidad",
+      ],
       gallery: [
         "/projects/inventory.png",
         "https://labase.pe/assets/img/espacios/oficina-privada.jpg", // Tries to guess/use generic if fail
         "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2669&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=2670&auto=format&fit=crop"
+        "https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=2670&auto=format&fit=crop",
       ],
       description:
         "Digitalización de las operaciones de un concurrido espacio de coworking a través de soluciones web personalizadas.\n\n• Desarrollo de un sistema personalizado de reservas y gestión de membresías, agilizando el proceso de reserva para más de 50 miembros activos.\n• Optimización del sitio web corporativo principal para SEO y rendimiento, resultando en un aumento del 25% en el tráfico orgánico.\n• Integración de pasarelas de pago locales para facilitar la facturación automatizada.\n• Colaboración directa con los interesados para recopilar requisitos e iterar sobre los comentarios de los usuarios.",
@@ -1207,11 +1261,17 @@ export const DATA_ES = {
       end: "2024",
       className: "md:col-span-1",
       backgroundUrl: "",
-      companyProfile: "Especialistas en soluciones tecnológicas integrales para la gestión empresarial. TID desarrolla sistemas ERP robustos enfocados en la eficiencia operativa, facturación electrónica y cumplimiento normativo para diversos sectores.",
-      services: ["Desarrollo de Software", "Facturación Electrónica", "Consultoría TI", "Sistemas ERP"],
+      companyProfile:
+        "Especialistas en soluciones tecnológicas integrales para la gestión empresarial. TID desarrolla sistemas ERP robustos enfocados en la eficiencia operativa, facturación electrónica y cumplimiento normativo para diversos sectores.",
+      services: [
+        "Desarrollo de Software",
+        "Facturación Electrónica",
+        "Consultoría TI",
+        "Sistemas ERP",
+      ],
       gallery: [
         "https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2670&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2670&auto=format&fit=crop"
+        "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2670&auto=format&fit=crop",
       ],
       description:
         "Contribución al desarrollo de soluciones ERP robustas para los sectores educativo y gastronómico.\n\n• Desarrollo y mantenimiento de módulos para facturación electrónica, asegurando el cumplimiento de las regulaciones fiscales locales (SUNAT).\n• Refactorización de bases de código heredadas para mejorar el mantenimiento y reducir la deuda técnica.\n• Implementación de paneles de informes usando React y bibliotecas de gráficos para visualizar métricas clave de negocio para los clientes.\n• Participación en ciclos de desarrollo ágil (Scrum), asistiendo a stand-ups diarios y revisiones de sprint.",
@@ -1226,6 +1286,8 @@ export const DATA_ES = {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkD6xk77yPxtbVxfClUe-MV7XC48RE2EPIrw&s",
       start: "2025",
       end: "2028",
+      description:
+        "Grado de Bachiller en Ingeniería de Sistemas. Enfocado en arquitectura de software, algoritmos y diseño de sistemas.",
       slug: "continental",
       banner: "/education/banners/continental.webp",
       courses: [
@@ -1287,6 +1349,8 @@ export const DATA_ES = {
       logoUrl: "/platzi.png",
       start: "2024",
       end: "2025",
+      description:
+        "Ruta de aprendizaje integral que cubre desarrollo web, marketing digital e inglés para profesionales de la tecnología.",
       slug: "platzi",
       banner: "/education/platzi.png",
       courses: [
@@ -1349,6 +1413,8 @@ export const DATA_ES = {
       logoUrl: "/devtalles.png",
       start: "2024",
       end: "2025",
+      description:
+        "Capacitación especializada en tecnologías modernas de desarrollo web, incluyendo React, Next.js y gestión de estado avanzada.",
       slug: "devtalles",
       banner: "/education/banners/devtalles.png",
       courses: [
@@ -1410,6 +1476,8 @@ export const DATA_ES = {
       logoUrl: "/edteam.png",
       start: "2024",
       end: "2024",
+      description:
+        "Enfocado en fundamentos de backend, programación orientada a objetos y desarrollo guiado por pruebas.",
       slug: "edteam",
       banner: "/education/banners/edteam.jpg",
       courses: [
@@ -1471,6 +1539,8 @@ export const DATA_ES = {
       logoUrl: "/codigofacilito.jpg",
       start: "2024",
       end: "2024",
+      description:
+        "Bootcamps intensivos que cubren integración de IA, prácticas de DevOps y principios de diseño UI/UX.",
       slug: "codigofacilito",
       banner: "/education/banners/codigo-facilito.png",
       courses: [
@@ -1531,6 +1601,8 @@ export const DATA_ES = {
       logoUrl: "https://dig-ed.org/wp-content/uploads/2024/09/oracl.png",
       start: "2023",
       end: "2024",
+      description:
+        "Capacitación certificada en Diseño de Bases de Datos, programación SQL y fundamentos de Inteligencia Artificial.",
       slug: "oracleacademy",
       banner: "/education/banners/oracle-academy.jpg",
       courses: [
@@ -1539,7 +1611,8 @@ export const DATA_ES = {
           date: "2023",
           description:
             "Fundamentos de lógica de programación, algoritmos y estructuras de datos básicos.",
-          image: "/education/oracle/Artificial Intelligence with Machine Learning.jpg",
+          image:
+            "/education/oracle/Artificial Intelligence with Machine Learning.jpg",
           content: "",
         },
         {
@@ -1574,7 +1647,6 @@ export const DATA_ES = {
           image: "/education/oracle/Java Foundations.jpg",
           content: "",
         },
-
       ],
     },
     {
@@ -1669,7 +1741,7 @@ export const DATA_ES = {
       gallery: [
         "/projects/arxatec/dashboard.png",
         "/projects/arxatec/documents.png",
-        "/projects/arxatec/mobile.png"
+        "/projects/arxatec/mobile.png",
       ],
     },
     {
