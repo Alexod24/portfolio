@@ -4,6 +4,10 @@ import { formatDate } from "@/lib/utils";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
+import Link from "next/link";
+import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
+import { ArrowLeftIcon } from "lucide-react";
+import BlurFade from "@/components/magicui/blur-fade";
 
 export async function generateStaticParams() {
   const posts = await getBlogPosts();
@@ -65,7 +69,7 @@ export default async function Blog({
   }
 
   return (
-    <section id="blog">
+    <main className="flex flex-col min-h-[100dvh] max-w-4xl mx-auto py-12 px-4 md:px-0 relative">
       <script
         type="application/ld+json"
         suppressHydrationWarning
@@ -88,20 +92,39 @@ export default async function Blog({
           }),
         }}
       />
-      <h1 className="title font-medium text-2xl tracking-tighter max-w-[650px]">
-        {post.metadata.title}
-      </h1>
-      <div className="flex justify-between items-center mt-2 mb-8 text-sm max-w-[650px]">
-        <Suspense fallback={<p className="h-5" />}>
-          <p className="text-sm text-neutral-600 dark:text-neutral-400">
-            {formatDate(post.metadata.publishedAt)}
-          </p>
-        </Suspense>
-      </div>
-      <article
-        className="prose dark:prose-invert"
-        dangerouslySetInnerHTML={{ __html: post.source }}
-      ></article>
-    </section>
+
+      <Link href="/blog">
+        <InteractiveHoverButton className="ml-0 gap-2 mb-8 w-auto px-6 border bg-background hover:bg-accent text-foreground">
+          <ArrowLeftIcon className="size-4" />
+          Back to Blog
+        </InteractiveHoverButton>
+      </Link>
+
+      <section id="blog" className="space-y-8">
+        <div className="space-y-4">
+          <BlurFade delay={0.04}>
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tighter">
+              {post.metadata.title}
+            </h1>
+          </BlurFade>
+          <BlurFade delay={0.08}>
+            <div className="flex justify-between items-center text-sm max-w-[650px]">
+              <Suspense fallback={<p className="h-5" />}>
+                <p className="text-sm text-muted-foreground">
+                  {formatDate(post.metadata.publishedAt)}
+                </p>
+              </Suspense>
+            </div>
+          </BlurFade>
+        </div>
+
+        <BlurFade delay={0.12}>
+          <article
+            className="prose dark:prose-invert max-w-none text-lg leading-relaxed text-muted-foreground"
+            dangerouslySetInnerHTML={{ __html: post.source }}
+          ></article>
+        </BlurFade>
+      </section>
+    </main>
   );
 }
