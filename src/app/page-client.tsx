@@ -384,6 +384,14 @@ export default function PageClient({ posts }: { posts: BlogPost[] }) {
             ))}
           </ul>
         </div>
+        <div className="flex justify-center mt-4">
+          <Link href="/hackathons">
+            <Button variant="outline" className="gap-2">
+              Ver más detalles
+              <ChevronRight className="h-4 w-4" />
+            </Button>
+          </Link>
+        </div>
       </section>
       <section id="contact">
         <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">

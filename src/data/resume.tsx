@@ -607,51 +607,39 @@ export const DATA_EN = {
       banner: "/education/banners/codigo-facilito.png",
       courses: [
         {
-          title: "Basic Programming Course",
+          title: "Animations with JavaScript Course",
           date: "2023",
           description:
-            "Fundamentals of programming logic, algorithms and basic data structures.",
-          image: "/education/platzi/programacion-basica.png",
+            "Creating interactive characters and animations using JavaScript.",
+          image:
+            "/education/codigofacilito/Certificado - Animaciones con JavaScript - Bootcamp_page-0001.jpg",
           content: "",
         },
         {
-          title: "Definitive HTML and CSS Course",
+          title: "Figma for Developers Course",
           date: "2023",
           description:
-            "Professional web layout, semantic HTML, SEO and responsive design.",
-          image: "/education/platzi/html-css.png",
+            "Interface design, prototyping, and developer handoff using Figma.",
+          image:
+            "/education/codigofacilito/Certificado - Aprendiendo a usar Figma - Bootcamp de Diseño de Interfaces y CSS_page-0001.jpg",
           content: "",
         },
         {
-          title: "Basic JavaScript Course",
+          title: "Professional Git and GitHub Course",
           date: "2023",
           description:
-            "Language fundamentals, variables, functions, arrays and DOM manipulation.",
-          image: "/education/platzi/js.png",
+            "Advanced version control, branching strategies, and collaboration.",
+          image:
+            "/education/codigofacilito/Certificado - Curso a fondo de GitHub_page-0001.jpg",
           content: "",
         },
         {
-          title: "English for Developers: Basic",
+          title: "Professional JavaScript Course",
           date: "2023",
           description:
-            "Technical vocabulary and communication skills in English for development environments.",
-          image: "/education/platzi/basic-english.png",
-          content: "",
-        },
-        {
-          title: "SQL and MySQL Course",
-          date: "2024",
-          description:
-            "Relational database management, complex queries and schema design.",
-          image: "/education/platzi/sql-mysql.png",
-          content: "",
-        },
-        {
-          title: "Python Fundamentals Course with Pandas and NumPy",
-          date: "2024",
-          description:
-            "Data analysis, array manipulation and data structures for data science.",
-          image: "/education/platzi/pandas-numpy.png",
+            "Advanced JavaScript concepts, asynchronous programming, and clean code.",
+          image:
+            "/education/codigofacilito/Certificado - Curso profesional de JavaScript_page-0001.jpg",
           content: "",
         },
       ],
@@ -669,51 +657,34 @@ export const DATA_EN = {
       banner: "/education/banners/oracle-academy.jpg",
       courses: [
         {
-          title: "Basic Programming Course",
+          title: "Artificial Intelligence with Machine Learning in Java",
           date: "2023",
           description:
-            "Fundamentals of programming logic, algorithms and basic data structures.",
-          image: "/education/platzi/programacion-basica.png",
+            "Fundamental concepts of AI and Machine Learning using Java.",
+          image:
+            "/education/oracle/Artificial Intelligence with Machine Learning.jpg",
           content: "",
         },
         {
-          title: "Definitive HTML and CSS Course",
+          title: "Database Design",
           date: "2023",
           description:
-            "Professional web layout, semantic HTML, SEO and responsive design.",
-          image: "/education/platzi/html-css.png",
+            "Design of relational database models and entity-relationship diagrams.",
+          image: "/education/oracle/Database Design.jpg",
           content: "",
         },
         {
-          title: "Basic JavaScript Course",
+          title: "Database Programming with SQL",
           date: "2023",
-          description:
-            "Language fundamentals, variables, functions, arrays and DOM manipulation.",
-          image: "/education/platzi/js.png",
+          description: "Implementation of databases using SQL and PL/SQL.",
+          image: "/education/oracle/Database Programming.jpg",
           content: "",
         },
         {
-          title: "English for Developers: Basic",
-          date: "2023",
-          description:
-            "Technical vocabulary and communication skills in English for development environments.",
-          image: "/education/platzi/basic-english.png",
-          content: "",
-        },
-        {
-          title: "SQL and MySQL Course",
+          title: "Java Foundations",
           date: "2024",
-          description:
-            "Relational database management, complex queries and schema design.",
-          image: "/education/platzi/sql-mysql.png",
-          content: "",
-        },
-        {
-          title: "Python Fundamentals Course with Pandas and NumPy",
-          date: "2024",
-          description:
-            "Data analysis, array manipulation and data structures for data science.",
-          image: "/education/platzi/pandas-numpy.png",
+          description: "Foundations of object-oriented programming with Java.",
+          image: "/education/oracle/Java Foundations.jpg",
           content: "",
         },
       ],
@@ -777,6 +748,68 @@ export const DATA_EN = {
           description:
             "Data analysis, array manipulation and data structures for data science.",
           image: "/education/platzi/pandas-numpy.png",
+          content: "",
+        },
+      ],
+    },
+    {
+      school: "Google Cloud Skills Boost",
+      href: "https://cloud.google.com/",
+      degree: "Google Cloud Computing Foundations",
+      logoUrl: "/logos/google-cloud.jpg",
+      start: "2023",
+      end: "2023",
+      description:
+        "Fundamentals of cloud computing, big data, and machine learning on Google Cloud Platform.",
+      slug: "google-cloud",
+      banner: "/logos/google-cloud.jpg",
+      courses: [
+        {
+          title: "Google Cloud Computing Foundations",
+          date: "2023",
+          description:
+            "Cloud computing basics, big data, and machine learning models.",
+          image: "/education/google/googlecloud.jpg",
+          content: "",
+        },
+      ],
+    },
+    {
+      school: "IBM",
+      href: "https://www.ibm.com",
+      degree: "Data Science Orientation",
+      logoUrl: "/education/ibm/IBM.jpg",
+      start: "2023",
+      end: "2023",
+      description: "Introduction to data science, methodologies, and tools.",
+      slug: "ibm-data-science",
+      banner: "/education/banners/ibm.png",
+      courses: [
+        {
+          title: "Data Science Orientation",
+          date: "2023",
+          description: "Overview of data science and its applications.",
+          image: "/education/ibm/data-science-orientation.png",
+          content: "",
+        },
+      ],
+    },
+    {
+      school: "LinkedIn Learning",
+      href: "https://limitless.linkedin.com/",
+      degree: "Career Essentials",
+      logoUrl: "/education/linkedin/Linkedin.jpg",
+      start: "2023",
+      end: "2023",
+      description: "Developing soft skills and career management strategies.",
+      slug: "linkedin-learning",
+      banner: "/education/banners/linkedin.png",
+      courses: [
+        {
+          title: "Career Development",
+          date: "2023",
+          description: "Career planning and professional development.",
+          image: "/education/linkedin/Linkedin.jpg",
           content: "",
         },
       ],
@@ -934,180 +967,24 @@ export const DATA_EN = {
   ],
   hackathons: [
     {
-      title: "Make School's Student App Competition 2017",
-      dates: "May 19th - 21st, 2017",
-      location: "International",
-      description: "Improved PocketDoc and submitted to online competition",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/make-school-hackathon.png",
-      win: "Top 10 Finalist | Honourable Mention",
-      links: [
-        {
-          title: "Medium Article",
-          icon: <Icons.globe className="h-4 w-4" />,
-          href: "https://medium.com/make-school/the-winners-of-make-schools-student-app-competition-2017-a6b0e72f190a",
-        },
-        {
-          title: "Devpost",
-          icon: <Icons.globe className="h-4 w-4" />,
-          href: "https://devpost.com/software/pocketdoc-react-native",
-        },
-        {
-          title: "YouTube",
-          icon: <Icons.youtube className="h-4 w-4" />,
-          href: "https://www.youtube.com/watch?v=XwFdn5Rmx68",
-        },
-        {
-          title: "Source",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/dillionverma/pocketdoc-react-native",
-        },
-      ],
-    },
-    {
-      title: "HackMining",
-      dates: "May 12th - 14th, 2017",
-      location: "Toronto, Ontario",
-      description: "Developed neural network to optimize a mining process",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-mining.png",
+      title: "Hackathon Transforma + Experiencia",
+      dates: "2024",
+      location: "Lima, Perú",
+      description:
+        "Participated in a challenge to transform user experience through innovative digital solutions.",
+      image: "/logo/continental.png",
       links: [],
+      slug: "transforma-experiencia",
     },
     {
-      title: "Waterloo Equithon",
-      dates: "May 5th - 7th, 2017",
-      location: "Waterloo, Ontario",
+      title: "NASA Space Apps Challenge",
+      dates: "2024",
+      location: "Lima, Perú",
       description:
-        "Developed Pocketdoc, an app in which you take a picture of a physical wound, and the app returns common solutions or cures to the injuries or diseases.",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/waterloo-equithon.png",
-      links: [
-        {
-          title: "Devpost",
-          icon: <Icons.globe className="h-4 w-4" />,
-          href: "https://devpost.com/software/pocketdoc-react-native",
-        },
-        {
-          title: "YouTube",
-          icon: <Icons.youtube className="h-4 w-4" />,
-          href: "https://www.youtube.com/watch?v=XwFdn5Rmx68",
-        },
-        {
-          title: "Source",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/dillionverma/pocketdoc-react-native",
-        },
-      ],
-    },
-    {
-      title: "SpaceApps Waterloo",
-      dates: "April 28th - 30th, 2017",
-      location: "Waterloo, Ontario",
-      description:
-        "Developed Earthwatch, a web application which allows users in a plane to virtually see important points of interest about the world below them. They can even choose to fly away from their route and then fly back if they choose. Special thanks to CesiumJS for providing open source world and plane models.",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/space-apps.png",
-      links: [
-        {
-          title: "Source",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/dillionverma/earthwatch",
-        },
-      ],
-    },
-    {
-      title: "MHacks 9",
-      dates: "March 24th - 26th, 2017",
-      location: "Ann Arbor, Michigan",
-      description:
-        "Developed Super Graphic Air Traffic, a VR website made to introduce people to the world of air traffic controlling. This project was built completely using THREE.js as well as a node backend server.",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/mhacks-9.png",
-      mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2017/white.svg",
-      links: [
-        {
-          title: "Source",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/dillionverma/threejs-planes",
-        },
-      ],
-    },
-    {
-      title: "StartHacks I",
-      dates: "March 4th - 5th, 2017",
-      location: "Waterloo, Ontario",
-      description:
-        "Developed at StartHacks 2017, Recipic is a mobile app which allows you to take pictures of ingredients around your house, and it will recognize those ingredients using ClarifAI image recognition API and return possible recipes to make. Recipic recieved 1st place at the hackathon for best pitch and hack.",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/starthacks.png",
-      win: "1st Place Winner",
-      mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2017/white.svg",
-      links: [
-        {
-          title: "Source (Mobile)",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/mattBlackDesign/recipic-ionic",
-        },
-        {
-          title: "Source (Server)",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/mattBlackDesign/recipic-rails",
-        },
-      ],
-    },
-    {
-      title: "QHacks II",
-      dates: "February 3rd - 5th, 2017",
-      location: "Kingston, Ontario",
-      description:
-        "Developed a mobile game which enables city-wide manhunt with random lobbies",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/qhacks.png",
-      mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2017/white.svg",
-      links: [
-        {
-          title: "Source (Mobile)",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/dillionverma/human-huntr-react-native",
-        },
-        {
-          title: "Source (API)",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/mattBlackDesign/human-huntr-rails",
-        },
-      ],
-    },
-    {
-      title: "Terrible Hacks V",
-      dates: "November 26th, 2016",
-      location: "Waterloo, Ontario",
-      description:
-        "Developed a mock of Windows 11 with interesting notifications and functionality",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/terrible-hacks-v.png",
-      links: [
-        {
-          title: "Source",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/justinmichaud/TerribleHacks2016-Windows11",
-        },
-      ],
-    },
-    {
-      title: "Portal Hackathon",
-      dates: "October 29, 2016",
-      location: "Kingston, Ontario",
-      description:
-        "Developed an internal widget for uploading assignments using Waterloo's portal app",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/portal-hackathon.png",
-      links: [
-        {
-          title: "Source",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/UWPortalSDK/crowmark",
-        },
-      ],
+        "Developed a solution for one of the global challenges posed by NASA, collaborating with a multidisciplinary team.",
+      image: "/logo/nasa.png",
+      links: [],
+      slug: "nasa-space-apps",
     },
   ],
 };
@@ -1555,51 +1432,39 @@ export const DATA_ES = {
       banner: "/education/banners/codigo-facilito.png",
       courses: [
         {
-          title: "Curso de Programación Básica",
+          title: "Curso de Animaciones con JavaScript",
           date: "2023",
           description:
-            "Fundamentos de lógica de programación, algoritmos y estructuras de datos básicos.",
-          image: "/education/platzi/programacion-basica.png",
+            "Creación de animaciones interactivas utilizando tecnologías web y JavaScript.",
+          image:
+            "/education/codigofacilito/Certificado - Animaciones con JavaScript - Bootcamp_page-0001.jpg",
           content: "",
         },
         {
-          title: "Curso Definitivo de HTML y CSS",
+          title: "Curso de Figma para Devs",
           date: "2023",
           description:
-            "Maquetación web profesional, semántica, SEO y diseño responsivo.",
-          image: "/education/platzi/html-css.png",
+            "Diseño de interfaces y prototipado para desarrolladores usando Figma.",
+          image:
+            "/education/codigofacilito/Certificado - Aprendiendo a usar Figma - Bootcamp de Diseño de Interfaces y CSS_page-0001.jpg",
           content: "",
         },
         {
-          title: "Curso Básico de JavaScript",
+          title: "Curso Profesional de Git y GitHub",
           date: "2023",
           description:
-            "Fundamentos del lenguaje, variables, funciones, arrays y manipulación del DOM.",
-          image: "/education/platzi/js.png",
+            "Control de versiones, flujos de trabajo y colaboración avanzada con Git y GitHub.",
+          image:
+            "/education/codigofacilito/Certificado - Curso a fondo de GitHub_page-0001.jpg",
           content: "",
         },
         {
-          title: "English for Developers: Basic",
+          title: "Curso Profesional de JavaScript",
           date: "2023",
           description:
-            "Vocabulario técnico y habilidades de comunicación en inglés para entornos de desarrollo.",
-          image: "/education/platzi/basic-english.png",
-          content: "",
-        },
-        {
-          title: "Curso de SQL y MySQL",
-          date: "2024",
-          description:
-            "Gestión de bases de datos relacionales, consultas complejas y diseño de esquemas.",
-          image: "/education/platzi/sql-mysql.png",
-          content: "",
-        },
-        {
-          title: "Curso de Fundamentos de Python con Pandas y NumPy",
-          date: "2024",
-          description:
-            "Análisis de datos, manipulación de arrays y estructuras de datos para ciencia de datos.",
-          image: "/education/platzi/pandas-numpy.png",
+            "Profundización en JavaScript, incluyendo ES6+, asincronía y patrones de diseño.",
+          image:
+            "/education/codigofacilito/Certificado - Curso profesional de JavaScript_page-0001.jpg",
           content: "",
         },
       ],
@@ -1617,10 +1482,10 @@ export const DATA_ES = {
       banner: "/education/banners/oracle-academy.jpg",
       courses: [
         {
-          title: "Artificial Intelligence with Machine Learning",
+          title: "Artificial Intelligence with Machine Learning in Java",
           date: "2023",
           description:
-            "Fundamentos de lógica de programación, algoritmos y estructuras de datos básicos.",
+            "Fundamental concepts of AI and Machine Learning using Java.",
           image:
             "/education/oracle/Artificial Intelligence with Machine Learning.jpg",
           content: "",
@@ -1629,31 +1494,21 @@ export const DATA_ES = {
           title: "Database Design",
           date: "2023",
           description:
-            "Maquetación web profesional, semántica, SEO y diseño responsivo.",
+            "Design of relational database models and entity-relationship diagrams.",
           image: "/education/oracle/Database Design.jpg",
           content: "",
         },
         {
-          title: "Database Programming",
+          title: "Database Programming with SQL",
           date: "2023",
-          description:
-            "Fundamentos del lenguaje, variables, funciones, arrays y manipulación del DOM.",
+          description: "Implementation of databases using SQL and PL/SQL.",
           image: "/education/oracle/Database Programming.jpg",
-          content: "",
-        },
-        {
-          title: "English for Developers: Basic",
-          date: "2023",
-          description:
-            "Vocabulario técnico y habilidades de comunicación en inglés para entornos de desarrollo.",
-          image: "/education/platzi/basic-english.png",
           content: "",
         },
         {
           title: "Java Foundations",
           date: "2024",
-          description:
-            "Gestión de bases de datos relacionales, consultas complejas y diseño de esquemas.",
+          description: "Foundations of object-oriented programming with Java.",
           image: "/education/oracle/Java Foundations.jpg",
           content: "",
         },
@@ -1716,6 +1571,71 @@ export const DATA_ES = {
           description:
             "Análisis de datos, manipulación de arrays y estructuras de datos para ciencia de datos.",
           image: "/education/platzi/pandas-numpy.png",
+          content: "",
+        },
+      ],
+    },
+    {
+      school: "Google Cloud Skills Boost",
+      href: "https://cloud.google.com/",
+      degree: "Google Cloud Computing Foundations",
+      logoUrl: "/logos/google-cloud.jpg",
+      start: "2023",
+      end: "2023",
+      description:
+        "Fundamentos de computación en la nube, big data y aprendizaje automático en Google Cloud Platform.",
+      slug: "google-cloud",
+      banner: "/logos/google-cloud.jpg",
+      courses: [
+        {
+          title: "Google Cloud Computing Foundations",
+          date: "2023",
+          description:
+            "Conceptos básicos de computación en la nube, big data y modelos de aprendizaje automático.",
+          image: "/education/google/googlecloud.jpg",
+          content: "",
+        },
+      ],
+    },
+    {
+      school: "IBM",
+      href: "https://www.ibm.com",
+      degree: "Data Science Orientation",
+      logoUrl: "/education/ibm/IBM.jpg",
+      start: "2023",
+      end: "2023",
+      description:
+        "Introducción a la ciencia de datos, metodologías y herramientas.",
+      slug: "ibm-data-science",
+      banner: "/education/banners/ibm.png",
+      courses: [
+        {
+          title: "Data Science Orientation",
+          date: "2023",
+          description:
+            "Visión general de la ciencia de datos y sus aplicaciones.",
+          image: "/education/ibm/data-science-orientation.png",
+          content: "",
+        },
+      ],
+    },
+    {
+      school: "LinkedIn Learning",
+      href: "https://limitless.linkedin.com/",
+      degree: "Career Essentials",
+      logoUrl: "/education/linkedin/Linkedin.jpg",
+      start: "2023",
+      end: "2023",
+      description:
+        "Desarrollo de habilidades blandas y estrategias de gestión de carrera.",
+      slug: "linkedin-learning",
+      banner: "/education/banners/linkedin.png",
+      courses: [
+        {
+          title: "Career Development",
+          date: "2023",
+          description: "Planificación de carrera y desarrollo profesional.",
+          image: "/education/linkedin/Linkedin.jpg",
           content: "",
         },
       ],
@@ -1869,6 +1789,28 @@ export const DATA_ES = {
       video: "",
       slug: "opentravels",
       gallery: [],
+    },
+  ],
+  hackathons: [
+    {
+      title: "Hackathon Transforma + Experiencia",
+      dates: "2024",
+      location: "Lima, Perú",
+      description:
+        "Participé en un desafío para transformar la experiencia del usuario a través de soluciones digitales innovadoras.",
+      image: "/logos/continental.png",
+      links: [],
+      slug: "transforma-experiencia",
+    },
+    {
+      title: "NASA Space Apps Challenge",
+      dates: "2024",
+      location: "Lima, Perú",
+      description:
+        "Desarrollé una solución para uno de los desafíos globales planteados por la NASA, colaborando con un equipo multidisciplinario.",
+      image: "/logos/nasa.png",
+      links: [],
+      slug: "nasa-space-apps",
     },
   ],
 };
