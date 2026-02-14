@@ -1014,7 +1014,7 @@ export const DATA_EN = {
           href: "https://gdg.community.dev/gdg-huancayo/",
         },
       ],
-      slug: "gdg-huancayo",
+      slug: "gdg",
     },
   ],
 };
@@ -1134,11 +1134,12 @@ export const DATA_ES = {
         "Consultoría Digital",
       ],
       gallery: [
-        "/projects/arxatec/dashboard.png",
-        "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2664&auto=format&fit=crop", // Placeholder office
-        "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2670&auto=format&fit=crop", // Placeholder team
+        "/projects/arxatec/carrusel.png",
+        "/projects/arxatec/carrusel 1.png",
+        "/projects/arxatec/carrusel 2.png",
       ],
-      description: "lorem ipsum",
+      description:
+        "Desarrollo de soluciones LegalTech enfocadas en la automatización de procesos jurídicos. Implementación de sistemas para la gestión de expedientes y optimización de flujos de trabajo digitales para firmas de abogados.",
     },
     {
       company: "La Base Cowork",
@@ -1168,7 +1169,7 @@ export const DATA_ES = {
         "https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=2670&auto=format&fit=crop",
       ],
       description:
-        "Digitalización de las operaciones de un concurrido espacio de coworking a través de soluciones web personalizadas.\n\n• Desarrollo de un sistema personalizado de reservas y gestión de membresías, agilizando el proceso de reserva para más de 50 miembros activos.\n• Optimización del sitio web corporativo principal para SEO y rendimiento, resultando en un aumento del 25% en el tráfico orgánico.\n• Integración de pasarelas de pago locales para facilitar la facturación automatizada.\n• Colaboración directa con los interesados para recopilar requisitos e iterar sobre los comentarios de los usuarios.",
+        "Me desempeñé como desarrollador full stack liderando el desarrollo de una plataforma para el control de inventarios y gestión de suministros, enfocándome en la digitalización de los procesos internos y la arquitectura lógica para la administración de recursos del espacio.",
     },
     {
       company: "TID",
@@ -1182,7 +1183,7 @@ export const DATA_ES = {
       className: "md:col-span-1",
       backgroundUrl: "",
       companyProfile:
-        "Especialistas en soluciones tecnológicas integrales para la gestión empresarial. TID desarrolla sistemas ERP robustos enfocados en la eficiencia operativa, facturación electrónica y cumplimiento normativo para diversos sectores.",
+        "Desarrollo de módulos de facturación electrónica integrados con SUNAT y mantenimiento de sistemas ERP para sectores educativos y gastronómicos. Creación de dashboards interactivos para la visualización de métricas de negocio en tiempo real.",
       services: [
         "Desarrollo de Software",
         "Facturación Electrónica",
@@ -1209,7 +1210,7 @@ export const DATA_ES = {
       description:
         "Grado de Bachiller en Ingeniería de Sistemas. Enfocado en arquitectura de software, algoritmos y diseño de sistemas.",
       slug: "continental",
-      banner: "/education/banners/continental.webp",
+      banner: "/education/continental/continental.png",
       courses: [
         {
           title: "Curso de Programación Básica",
@@ -1217,46 +1218,6 @@ export const DATA_ES = {
           description:
             "Fundamentos de lógica de programación, algoritmos y estructuras de datos básicos.",
           image: "/education/platzi/programacion-basica.png",
-          content: "",
-        },
-        {
-          title: "Curso Definitivo de HTML y CSS",
-          date: "2023",
-          description:
-            "Maquetación web profesional, semántica, SEO y diseño responsivo.",
-          image: "/education/platzi/html-css.png",
-          content: "",
-        },
-        {
-          title: "Curso Básico de JavaScript",
-          date: "2023",
-          description:
-            "Fundamentos del lenguaje, variables, funciones, arrays y manipulación del DOM.",
-          image: "/education/platzi/js.png",
-          content: "",
-        },
-        {
-          title: "English for Developers: Basic",
-          date: "2023",
-          description:
-            "Vocabulario técnico y habilidades de comunicación en inglés para entornos de desarrollo.",
-          image: "/education/platzi/basic-english.png",
-          content: "",
-        },
-        {
-          title: "Curso de SQL y MySQL",
-          date: "2024",
-          description:
-            "Gestión de bases de datos relacionales, consultas complejas y diseño de esquemas.",
-          image: "/education/platzi/sql-mysql.png",
-          content: "",
-        },
-        {
-          title: "Curso de Fundamentos de Python con Pandas y NumPy",
-          date: "2024",
-          description:
-            "Análisis de datos, manipulación de arrays y estructuras de datos para ciencia de datos.",
-          image: "/education/platzi/pandas-numpy.png",
           content: "",
         },
       ],
@@ -1280,46 +1241,6 @@ export const DATA_ES = {
           description:
             "Fundamentos de lógica de programación, algoritmos y estructuras de datos básicos.",
           image: "/education/platzi/programacion-basica.png",
-          content: "",
-        },
-        {
-          title: "Curso Definitivo de HTML y CSS",
-          date: "2023",
-          description:
-            "Maquetación web profesional, semántica, SEO y diseño responsivo.",
-          image: "/education/platzi/html-css.png",
-          content: "",
-        },
-        {
-          title: "Curso Básico de JavaScript",
-          date: "2023",
-          description:
-            "Fundamentos del lenguaje, variables, funciones, arrays y manipulación del DOM.",
-          image: "/education/platzi/js.png",
-          content: "",
-        },
-        {
-          title: "English for Developers: Basic",
-          date: "2023",
-          description:
-            "Vocabulario técnico y habilidades de comunicación en inglés para entornos de desarrollo.",
-          image: "/education/platzi/basic-english.png",
-          content: "",
-        },
-        {
-          title: "Curso de SQL y MySQL",
-          date: "2024",
-          description:
-            "Gestión de bases de datos relacionales, consultas complejas y diseño de esquemas.",
-          image: "/education/platzi/sql-mysql.png",
-          content: "",
-        },
-        {
-          title: "Curso de Fundamentos de Python con Pandas y NumPy",
-          date: "2024",
-          description:
-            "Análisis de datos, manipulación de arrays y estructuras de datos para ciencia de datos.",
-          image: "/education/platzi/pandas-numpy.png",
           content: "",
         },
       ],
@@ -1346,46 +1267,6 @@ export const DATA_ES = {
           image: "/education/platzi/programacion-basica.png",
           content: "",
         },
-        {
-          title: "Curso Definitivo de HTML y CSS",
-          date: "2023",
-          description:
-            "Maquetación web profesional, semántica, SEO y diseño responsivo.",
-          image: "/education/platzi/html-css.png",
-          content: "",
-        },
-        {
-          title: "Curso Básico de JavaScript",
-          date: "2023",
-          description:
-            "Fundamentos del lenguaje, variables, funciones, arrays y manipulación del DOM.",
-          image: "/education/platzi/js.png",
-          content: "",
-        },
-        {
-          title: "English for Developers: Basic",
-          date: "2023",
-          description:
-            "Vocabulario técnico y habilidades de comunicación en inglés para entornos de desarrollo.",
-          image: "/education/platzi/basic-english.png",
-          content: "",
-        },
-        {
-          title: "Curso de SQL y MySQL",
-          date: "2024",
-          description:
-            "Gestión de bases de datos relacionales, consultas complejas y diseño de esquemas.",
-          image: "/education/platzi/sql-mysql.png",
-          content: "",
-        },
-        {
-          title: "Curso de Fundamentos de Python con Pandas y NumPy",
-          date: "2024",
-          description:
-            "Análisis de datos, manipulación de arrays y estructuras de datos para ciencia de datos.",
-          image: "/education/platzi/pandas-numpy.png",
-          content: "",
-        },
       ],
     },
     {
@@ -1400,56 +1281,17 @@ export const DATA_ES = {
         "Enfocado en fundamentos de backend, programación orientada a objetos y desarrollo guiado por pruebas.",
       slug: "edteam",
       banner: "/education/banners/edteam.jpg",
-      courses: [
-        {
-          title: "Curso de Programación Básica",
-          date: "2023",
-          description:
-            "Fundamentos de lógica de programación, algoritmos y estructuras de datos básicos.",
-          image: "/education/platzi/programacion-basica.png",
-          content: "",
-        },
-        {
-          title: "Curso Definitivo de HTML y CSS",
-          date: "2023",
-          description:
-            "Maquetación web profesional, semántica, SEO y diseño responsivo.",
-          image: "/education/platzi/html-css.png",
-          content: "",
-        },
-        {
-          title: "Curso Básico de JavaScript",
-          date: "2023",
-          description:
-            "Fundamentos del lenguaje, variables, funciones, arrays y manipulación del DOM.",
-          image: "/education/platzi/js.png",
-          content: "",
-        },
-        {
-          title: "English for Developers: Basic",
-          date: "2023",
-          description:
-            "Vocabulario técnico y habilidades de comunicación en inglés para entornos de desarrollo.",
-          image: "/education/platzi/basic-english.png",
-          content: "",
-        },
-        {
-          title: "Curso de SQL y MySQL",
-          date: "2024",
-          description:
-            "Gestión de bases de datos relacionales, consultas complejas y diseño de esquemas.",
-          image: "/education/platzi/sql-mysql.png",
-          content: "",
-        },
-        {
-          title: "Curso de Fundamentos de Python con Pandas y NumPy",
-          date: "2024",
-          description:
-            "Análisis de datos, manipulación de arrays y estructuras de datos para ciencia de datos.",
-          image: "/education/platzi/pandas-numpy.png",
-          content: "",
-        },
-      ],
+      // courses: [
+      //   {
+      //     title: "Curso de Programación Básica",
+      //     date: "2023",
+      //     description:
+      //       "Fundamentos de lógica de programación, algoritmos y estructuras de datos básicos.",
+      //     image: "/education/platzi/programacion-basica.png",
+      //     content: "",
+      //   }
+
+      // ],
     },
     {
       school: "Codigo Facilito",
@@ -1702,9 +1544,9 @@ export const DATA_ES = {
       video: "/projects/arxatec.mov",
       slug: "arxatec",
       gallery: [
-        "/projects/arxatec/dashboard.png",
-        "/projects/arxatec/documents.png",
-        "/projects/arxatec/mobile.png",
+        "/projects/arxatec/carrusel.png",
+        "/projects/arxatec/carrusel 1.png",
+        "/projects/arxatec/carrusel 2.png",
       ],
     },
     {
