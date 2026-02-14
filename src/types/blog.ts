@@ -1,12 +1,13 @@
 export type Metadata = {
-    title: string;
-    publishedAt: string;
-    summary: string;
-    image?: string;
+  title: string;
+  publishedAt: string;
+  summary: string;
+  image?: string;
+  tags?: string[];
 };
 
 export type BlogPost = {
-    metadata: Metadata;
-    slug: string;
-    source: string;
+  metadata: Metadata;
+  slug: string;
+  source: string;
 };

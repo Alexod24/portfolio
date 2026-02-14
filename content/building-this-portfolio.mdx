@@ -3,6 +3,7 @@ title: "Building this Portfolio: A Journey with Next.js and MagicUI"
 publishedAt: "2024-03-10"
 summary: "How I built my personal portfolio using the latest web technologies, focusing on performance, accessibility, and design."
 image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=2555&auto=format&fit=crop"
+tags: ["Developer"]
 ---
 
 Building a portfolio is more than just showcasing work; it's about creating an experience that reflects your personality and technical skills. For this version of my portfolio, I decided to go all-in with **Next.js 14**, **Tailwind CSS**, and **MagicUI**.
@@ -23,10 +24,8 @@ One of the main challenges was integrating the blog system. I wanted to write po
 // A sneak peek at the MDX setup
 export function BlogLayout({ children }) {
   return (
-    <article className="prose dark:prose-invert mx-auto">
-      {children}
-    </article>
-  )
+    <article className="prose dark:prose-invert mx-auto">{children}</article>
+  );
 }
 ```
 

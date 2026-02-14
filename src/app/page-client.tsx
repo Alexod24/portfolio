@@ -78,7 +78,7 @@ export default function PageClient({ posts }: { posts: BlogPost[] }) {
       </section>
 
       {/* Get to know me section */}
-      <AboutSection />
+
       {/* About section moved to Hero */}
       <section id="work">
         <div className="flex min-h-0 flex-col gap-y-3">
@@ -264,6 +264,8 @@ export default function PageClient({ posts }: { posts: BlogPost[] }) {
         </div>
       </section>
 
+      <AboutSection />
+
       {/* Latest Posts Section */}
       <section id="blog">
         <BlurFade delay={BLUR_FADE_DELAY} inView>
@@ -369,6 +371,9 @@ export default function PageClient({ posts }: { posts: BlogPost[] }) {
           </Link>
         </div>
       </section>
+
+      {/* Seccion de Comunidad */}
+
       <section id="community" className="flex flex-col gap-y-3">
         <BlurFade delay={BLUR_FADE_DELAY * 15}>
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -385,6 +390,9 @@ export default function PageClient({ posts }: { posts: BlogPost[] }) {
             </div>
           </div>
         </BlurFade>
+
+        {/* Hackathones  */}
+
         <div className="mx-auto max-w-[800px] w-full">
           <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
             {data.beyondTheCode.map((project, id) => (
