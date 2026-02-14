@@ -4,6 +4,7 @@ import { BlogCard } from "@/components/blog-card";
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
 import BlurFade from "@/components/magicui/blur-fade";
+import { SectionHeader } from "@/components/section-header";
 
 interface LatestPostsProps {
   posts: BlogPost[];
@@ -24,19 +25,19 @@ export function LatestPosts({
 
   return (
     <section className={`w-full py-12 ${className}`}>
-      <div className="flex min-h-0 flex-col gap-y-3 mb-8">
-        <BlurFade delay={BLUR_FADE_DELAY} inView>
-          <div className="flex items-center justify-between gap-x-2 text-base">
-            <h2 className="text-2xl font-bold tracking-tighter">{title}</h2>
-            <Link href="/blog">
-              <Button variant="ghost" className="text-xs group">
-                Ver todos
-                <ChevronRight className="ml-1 size-3 transition-transform group-hover:translate-x-1" />
-              </Button>
-            </Link>
-          </div>
-        </BlurFade>
-      </div>
+      <SectionHeader
+        title={title}
+        action={
+          <Link href="/blog">
+            <Button variant="ghost" className="text-xs group">
+              Ver todos
+              <ChevronRight className="ml-1 size-3 transition-transform group-hover:translate-x-1" />
+            </Button>
+          </Link>
+        }
+        className="mb-8"
+        delay={BLUR_FADE_DELAY}
+      />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {displayPosts.map((post, id) => (

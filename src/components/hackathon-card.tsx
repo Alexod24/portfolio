@@ -13,6 +13,7 @@ interface Props {
     title: string;
     href: string;
   }[];
+  slug?: string;
 }
 
 export function HackathonCard({
@@ -22,6 +23,7 @@ export function HackathonCard({
   location,
   image,
   links,
+  slug,
 }: Props) {
   return (
     <li className="relative ml-10 py-4">
@@ -45,7 +47,7 @@ export function HackathonCard({
           </span>
         )}
       </div>
-      {links && links.length > 0 && (
+      {((links && links.length > 0) || slug) && (
         <div className="mt-2 flex flex-row flex-wrap items-start gap-2">
           {links?.map((link, idx) => (
             <Link href={link.href} key={idx} target="_blank">
@@ -55,6 +57,17 @@ export function HackathonCard({
               </Badge>
             </Link>
           ))}
+          {slug && (
+            <Link href={`/community/${slug}`}>
+              <Badge
+                title="Ver detalles"
+                className="flex gap-2"
+                variant="secondary"
+              >
+                Ver detalles
+              </Badge>
+            </Link>
+          )}
         </div>
       )}
     </li>

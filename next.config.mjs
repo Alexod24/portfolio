@@ -30,6 +30,14 @@ const nextConfig = {
         protocol: "https",
         hostname: "tid.com.pe",
       },
+      {
+        protocol: "https",
+        hostname: "res.cloudinary.com",
+      },
+      {
+        protocol: "https",
+        hostname: "encrypted-tbn0.gstatic.com",
+      },
     ],
   },
   reactStrictMode: true,

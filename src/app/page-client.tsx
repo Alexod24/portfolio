@@ -23,6 +23,7 @@ import { MapLines } from "@/components/decorative/map-lines";
 import { AboutSection } from "@/components/about-section";
 import { LatestPosts } from "@/components/latest-posts";
 import { BlogPost } from "@/types/blog";
+import { SectionHeader } from "@/components/section-header";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -40,9 +41,9 @@ export default function PageClient({ posts }: { posts: BlogPost[] }) {
         className="min-h-[100dvh] flex flex-col md:flex-row items-center justify-center md:justify-between gap-12 pt-0 pb-12 md:pb-0 relative overflow-hidden"
       >
         {/* Lineas decorativas que quizas elimine */}
-        <div className="absolute top-0 left-[-10%] h-full w-1/2 md:w-1/3 z-0 pointer-events-none opacity-60 text-foreground/20">
+        {/* <div className="absolute top-0 left-[-10%] h-full w-1/2 md:w-1/3 z-0 pointer-events-none opacity-60 text-foreground/20">
           <MapLines className="w-full h-full" />
-        </div>
+        </div> */}
 
         <div className="w-full space-y-8 max-w-3xl relative z-10 px-4 md:px-0 mx-auto md:mx-0 md:flex-1">
           <div className="flex flex-col items-center gap-8 md:items-start">
@@ -82,11 +83,10 @@ export default function PageClient({ posts }: { posts: BlogPost[] }) {
       {/* About section moved to Hero */}
       <section id="work">
         <div className="flex min-h-0 flex-col gap-y-3">
-          <BlurFade delay={BLUR_FADE_DELAY} inView>
-            <div className="flex items-center justify-between gap-x-2 text-base">
-              <h2 className="text-2xl font-bold tracking-tighter">
-                {data.sectionHeaders.work}
-              </h2>
+          <SectionHeader
+            delay={BLUR_FADE_DELAY}
+            title={data.sectionHeaders.work}
+            action={
               <Link href="/works">
                 <Badge
                   variant="outline"
@@ -95,8 +95,8 @@ export default function PageClient({ posts }: { posts: BlogPost[] }) {
                   Ver todas <ChevronRight className="ml-1 size-3" />
                 </Badge>
               </Link>
-            </div>
-          </BlurFade>
+            }
+          />
           {data.work.map((work, id) => (
             <BlurFade
               key={work.company}
@@ -120,11 +120,10 @@ export default function PageClient({ posts }: { posts: BlogPost[] }) {
       </section>
       <section id="education">
         <div className="flex min-h-0 flex-col gap-y-3">
-          <BlurFade delay={BLUR_FADE_DELAY} inView>
-            <div className="flex items-center justify-between gap-x-2 text-base">
-              <h2 className="text-xl font-bold">
-                35 {data.sectionHeaders.education}
-              </h2>
+          <SectionHeader
+            delay={BLUR_FADE_DELAY}
+            title={data.sectionHeaders.education}
+            action={
               <Link href="/education">
                 <Badge
                   variant="outline"
@@ -133,8 +132,8 @@ export default function PageClient({ posts }: { posts: BlogPost[] }) {
                   Ver todas <ChevronRight className="ml-1 size-3" />
                 </Badge>
               </Link>
-            </div>
-          </BlurFade>
+            }
+          />
           {data.education.map((education, id) => (
             <BlurFade
               key={education.school}
@@ -162,11 +161,10 @@ export default function PageClient({ posts }: { posts: BlogPost[] }) {
       {/* SKILLS SECTION WITH MARQUEE */}
       <section id="skills">
         <div className="flex min-h-0 flex-col gap-y-3">
-          <BlurFade delay={BLUR_FADE_DELAY} inView>
-            <div className="flex items-center justify-between gap-x-2 text-base">
-              <h2 className="text-2xl font-bold tracking-tighter">
-                {data.sectionHeaders.skills}
-              </h2>
+          <SectionHeader
+            delay={BLUR_FADE_DELAY}
+            title={data.sectionHeaders.skills}
+            action={
               <Link href="/skills">
                 <Badge
                   variant="outline"
@@ -175,8 +173,8 @@ export default function PageClient({ posts }: { posts: BlogPost[] }) {
                   Ver todas <ChevronRight className="ml-1 size-3" />
                 </Badge>
               </Link>
-            </div>
-          </BlurFade>
+            }
+          />
 
           <div className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background py-12 md:shadow-xl">
             <Marquee pauseOnHover className="[--duration:20s]">
@@ -214,19 +212,12 @@ export default function PageClient({ posts }: { posts: BlogPost[] }) {
 
       <section id="projects">
         <div className="space-y-12 w-full py-12">
-          <BlurFade delay={BLUR_FADE_DELAY} inView>
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                  {data.sectionHeaders.projects.tag}
-                </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  {data.sectionHeaders.projects.title}
-                </h2>
-                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  {data.sectionHeaders.projects.description}
-                </p>
-              </div>
+          <SectionHeader
+            delay={BLUR_FADE_DELAY}
+            title={data.sectionHeaders.projects.title}
+            description={data.sectionHeaders.projects.description}
+            tag={data.sectionHeaders.projects.tag}
+            action={
               <Link href="/projects">
                 <Badge
                   variant="outline"
@@ -236,8 +227,8 @@ export default function PageClient({ posts }: { posts: BlogPost[] }) {
                   <ChevronRight className="ml-1 size-3" />
                 </Badge>
               </Link>
-            </div>
-          </BlurFade>
+            }
+          />
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 w-full">
             {data.projects.map((project, id) => (
               <BlurFade
@@ -328,21 +319,20 @@ export default function PageClient({ posts }: { posts: BlogPost[] }) {
         </div>
       </section> */}
       <section id="hackathons" className="flex flex-col gap-y-3">
-        <BlurFade delay={BLUR_FADE_DELAY * 13}>
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <div className="space-y-2">
-              <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                {data.sectionHeaders.hackathons.tag}
-              </div>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                {data.sectionHeaders.hackathons.title}
-              </h2>
-              <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                {data.sectionHeaders.hackathons.description}
-              </p>
-            </div>
-          </div>
-        </BlurFade>
+        <SectionHeader
+          delay={BLUR_FADE_DELAY * 13}
+          title={data.sectionHeaders.hackathons.title}
+          description={data.sectionHeaders.hackathons.description}
+          tag={data.sectionHeaders.hackathons.tag}
+          action={
+            <Link href="/hackathons">
+              <Button variant="outline" className="gap-2">
+                Ver más detalles
+                <ChevronRight className="h-4 w-4" />
+              </Button>
+            </Link>
+          }
+        />
         <div className="mx-auto max-w-[800px] w-full">
           <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
             {data.hackathons.map((project, id) => (
@@ -362,34 +352,17 @@ export default function PageClient({ posts }: { posts: BlogPost[] }) {
             ))}
           </ul>
         </div>
-        <div className="flex justify-center mt-4">
-          <Link href="/hackathons">
-            <Button variant="outline" className="gap-2">
-              Ver más detalles
-              <ChevronRight className="h-4 w-4" />
-            </Button>
-          </Link>
-        </div>
       </section>
 
       {/* Seccion de Comunidad */}
 
       <section id="community" className="flex flex-col gap-y-3">
-        <BlurFade delay={BLUR_FADE_DELAY * 15}>
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <div className="space-y-2">
-              <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                {data.sectionHeaders.beyondTheCode.title}
-              </div>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                {data.sectionHeaders.beyondTheCode.title}
-              </h2>
-              <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                {data.sectionHeaders.beyondTheCode.description}
-              </p>
-            </div>
-          </div>
-        </BlurFade>
+        <SectionHeader
+          delay={BLUR_FADE_DELAY * 15}
+          title={data.sectionHeaders.beyondTheCode.title}
+          description={data.sectionHeaders.beyondTheCode.description}
+          tag={data.sectionHeaders.beyondTheCode.title}
+        />
 
         {/* Hackathones  */}
 
@@ -407,52 +380,38 @@ export default function PageClient({ posts }: { posts: BlogPost[] }) {
                   dates={project.dates}
                   image={project.image}
                   links={project.links}
+                  slug={project.slug}
                 />
               </BlurFade>
             ))}
           </ul>
         </div>
-        <div className="flex justify-center mt-4">
-          <Link href="/community">
-            <Button variant="outline" className="gap-2">
-              Ver todas
-              <ChevronRight className="h-4 w-4" />
-            </Button>
-          </Link>
-        </div>
       </section>
       <section id="contact">
         <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
-          <BlurFade delay={BLUR_FADE_DELAY} inView>
-            <div className="space-y-3">
-              {/* <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                Contacto
-              </div> */}
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                {data.sectionHeaders.contact.title}
-              </h2>
-              <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                {data.sectionHeaders.contact.description}
-              </p>
-              <div className="flex justify-center mt-4">
-                <Link
-                  href={data.contact.social.WhatsApp.url}
-                  target="_blank"
-                  className="no-underline"
+          <SectionHeader
+            delay={BLUR_FADE_DELAY}
+            title={data.sectionHeaders.contact.title}
+            description={data.sectionHeaders.contact.description}
+            className="text-center md:text-left"
+            action={
+              <Link
+                href={data.contact.social.WhatsApp.url}
+                target="_blank"
+                className="no-underline"
+              >
+                <InteractiveHoverButton
+                  className="gap-2 bg-[#25D366] hover:bg-[#25D366]/90 text-white text-lg px-8 py-6 rounded-full shadow-lg transition-transform hover:scale-105"
+                  onClick={() =>
+                    window.open(data.contact.social.WhatsApp.url, "_blank")
+                  }
                 >
-                  <InteractiveHoverButton
-                    className="gap-2 bg-[#25D366] hover:bg-[#25D366]/90 text-white text-lg px-8 py-6 rounded-full shadow-lg transition-transform hover:scale-105"
-                    onClick={() =>
-                      window.open(data.contact.social.WhatsApp.url, "_blank")
-                    }
-                  >
-                    <Icons.whatsapp className="size-6" />
-                    {data.sectionHeaders.contact.whatsapp}
-                  </InteractiveHoverButton>
-                </Link>
-              </div>
-            </div>
-          </BlurFade>
+                  <Icons.whatsapp className="size-6" />
+                  {data.sectionHeaders.contact.whatsapp}
+                </InteractiveHoverButton>
+              </Link>
+            }
+          />
         </div>
       </section>
     </main>
