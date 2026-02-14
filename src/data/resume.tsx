@@ -807,7 +807,7 @@ export const DATA_EN = {
       end: "2023",
       description: "Developing soft skills and career management strategies.",
       slug: "linkedin-learning",
-      banner: "/education/banners/linkedin.png",
+      banner: "",
       courses: [
         {
           title: "Career Development",
@@ -846,11 +846,7 @@ export const DATA_EN = {
       image: "",
       video: "/projects/arxatec.mov",
       slug: "arxatec",
-      gallery: [
-        "/projects/arxatec/dashboard.png",
-        "/projects/arxatec/documents.png",
-        "/projects/arxatec/mobile.png",
-      ],
+      gallery: [] as string[],
     },
     {
       title: "Sistema POS",

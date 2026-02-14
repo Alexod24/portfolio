@@ -145,11 +145,7 @@ export const BlogHeaderFeaturedPost01 = ({
                 selectedKey={sortBy}
                 onSelectionChange={(value) => setSortBy(value as string)}
                 items={sortByOptions}
-              >
-                {(item: any) => (
-                  <Select.Item id={item.id}>{item.label}</Select.Item>
-                )}
-              </Select>
+              />
             </div>
           </div>
         </BlurFade>

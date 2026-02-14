@@ -1,7 +1,7 @@
 "use client";
 
 import Lottie from "lottie-react";
-import loadingCat from "@/assets/loading-cat.json";
+import loadingCat from "../assets/loading-cat.json";
 
 export function Loader() {
   return (
